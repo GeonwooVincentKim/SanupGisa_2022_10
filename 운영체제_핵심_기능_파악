@@ -188,7 +188,7 @@ XI. Linux / Unix Process 관리 방법
 
 
 XI. 가상화, Cloud
-1. Platform 가상화, Resource 가상화
+* Platform 가상화, Resource 가상화
 - 1. Platform 가상화 
   -> 1. H/W Platform 위에서 실행되는 Host Program 이 Guest Program 을 만듦
   -> 2. 마치 독립된 환경을 만들어 낸 것처럼 보여주는 것
@@ -200,4 +200,21 @@ XI. 가상화, Cloud
   -> 2. 사용자는 가상화된 물리적 장치들이 어떤 위치에 있는지 모르는 경우 많음
 
 2. Cloud
+* Internet 기반에서 구동되는 Computing 기술
+- 1. Cloud Computing 이용
+  -> 1. 응용 프로그램을 필요에 따라 불러 사용
+  -> 2. Data 를 손쉽게 저장 및 추출 가능
+  
+- 2. Tablet, 휴대폰 등 사용 Device 가 다양해지면서 Cloud Computing 의 중요도 증대
 
+
+** Cloud Service 종류
+1. 최초 Cloud Service 
+- 1. Gmail, Dropbox
+- 2. S/W 를 Web 에서 사용 가능한 Sass (Software as a Service)
+
+2. Server, Storage, Network 장비 등의 IT Infra 장비 대여
+- Iass (Infrastructrue as a Service)
+
+3. Platform (개발 환경) 대여 
+- Paas (Platform as a Service)
