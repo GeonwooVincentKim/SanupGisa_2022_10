@@ -124,3 +124,68 @@ V. 비선점 > FIFO (First-In First-Out) = FCFS (First-Come First-Service)
 
 
 VI. 비선점 > SJF (Shortest Job First)
+1. 작업 끝나기까지의 실행 시간 추정치가 가장 작은 작업 먼저 실행
+2. FIFO 보다 평균 대기 시간 작고, 긴 작업의 경우, FIFO 기법보다 더 크고 예측 더욱 어려움
+3. 작업 시간이 큰 경우, 오랫동안 대기
+- 긴 작업과 짧은 작업 간의 지나친 불평등
+
+** Example
+[ C | B | A ]
+ 3초 6초 20초
+ 
+ - 1. 도착 시간이 주어졌을 경우
+ 20초 3초 6초
+[ A | C | B ]
+
+ - 2. 실행시간이 큰 작업은 무한연기 (기근 현상) 가능성 o
+   = 해결 (Aging 기법) : 강제 우선순위 부여
+   
+
+VII. 비선점 > HRN (Highest response ratio Next)
+1. SJF 방식의 단점 보완 (긴 작업과 짧은 작업 간의 지나친 불평등)
+2. 우선 순위 계산식 -> (대기 시간 + 서비스 시간) / 서비스 시간
+
+** Example
+(기출) 우선 순위가 가장 높은 작업
+
+작업  대기시간  서비스시간
+  A     5         5
+  B    10         6
+  C    15         7
+  D    20         8
+
+
+VIII. 선점 > RR (Round Robin)
+1. 대화식 시분할 시스템 (Time Sharing System) 을 위해 고안된 방식
+2. FIFO 방식으로 선점형 기법
+- 1. 할당되는 시간 ↑ = FCFS 기법
+- 2. 할당되는 시간 ↓ = 문맥교환 및 오버헤드 자주 발생
+
+
+IX. 선점 > SRT (Shortest Remaining Time)
+1. SJF 방식으로 선점형 기법
+2. Process 남은 시간, 준비상태 Queue 에 새로 도착한 Process 의 실행 시간 비교
+3. 가장 짧은 실행 시간을 요구하는 Process 에게 CPU 를 할당하는 기법
+
+
+작업  도착 시간  실행 시간
+A        0         15                   A    B    C   B    A
+B        1          6                  1초  1초  3초  5초  14초
+C        2          3
+
+
+X. Windows Process 관리 방법
+- Process 우선 순위 설정
+  = 작업관리자 -> 세부 설정 -> 우선 순위 설정 -> 보통
+  
+  
+XI. Linux / Unix Process 관리 방법
+1. /proc Directory 아래, 현재 실행되는 Process 확인
+2. 세부적인 Process 확인, Process PID (Process 고유 번호), 해당 Directory 로 이동하여 명령어 사용하여 확인
+- 해당 PID Process 가 종료되면 임시로 생성되었던 Directory 는 사라지는 것을 확인
+
+3. Top Tool (명령어) 을 사용, 현재 System 의 CPU 와 RAM 사용률을 Monitoring
+
+
+XI. 가상화, Cloud
+1. 
