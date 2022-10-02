@@ -112,3 +112,15 @@ IV. Process Scheduling (CPU Scheduling)
     -> 4. 대표적인 Scheduling => RR, SRT
 
 
+V. 비선점 > FIFO (First-In First-Out) = FCFS (First-Come First-Service)
+1. 준비상태에서 도착한 순서에 따라 CPU 할당
+2. 평균 반환시간 = 평균 실행시간 + 평균 대기시간
+
+** Example
+[ A | B | C ]
+ 20초 6초 3초
+
+- C -> B -> A 순서로 실행
+
+
+VI. 비선점 > SJF (Shortest Job First)
