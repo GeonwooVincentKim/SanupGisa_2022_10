@@ -69,9 +69,20 @@ III. Process 관리
 - 2. Timer Run Out 
   -> 1. CPU 할당 받아 실행 중인 Process 가 할당시간을 초과
   -> 2. CPU 를 다른 Process 에게 양도하고 자신은 준비상태로 전이되는 것
+  -> 3. 실행 상태 --> 준비 상태 => Timer Run Out
 
-- 3. 준비 상태 (Ready) -> Process 가 CPU 를 사용하여 실행될 수 있는 상태
-- 4. 대기 상태 (Wait, Block) -> 어떤 사건이 발생하기를 기다리는 상태
+- 3. 준비 상태 (Ready) 
+  -> Process 가 CPU 를 사용하여 실행될 수 있는 상태
+  -> 준비 상태 --> 실행 상태 => Dispatch 
+  
+- 4. 대기 상태 (Wait, Block) 
+  -> 1. 어떤 사건이 발생하기를 기다리는 상태
+  -> 2. 대기 상태 --> 준비 상태 => Wake Up
+
 - 5. Block 
   -> 1. 실행 중인 Process 가 지정된 시간 이전
   -> 2. 다른 작업을 위하여 스스로 Process 를 양도, 대기 상태로 전이되는 것
+  -> 3. 실행 상태 --> 대기 상태 => Block
+
+
+IV. Process Scheduling
