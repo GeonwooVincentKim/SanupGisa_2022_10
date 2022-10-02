@@ -58,6 +58,22 @@ III. UNIX / LINUX 주요 명령어
 ** -rwxr-xr-x 권한
 - 이 파일은 모든 사용자가 실행 가능
 
+- 6. 사용자
+  = 1. u -> user (Owner)
+  = 2. g -> group (Group)
+  = 3. o -> other (다른 User)
+  = 4. a -> all (모두)
+ 
+- 7. 설정 기호
+  = 1. + -> 권한 추가
+  = 2. - -> 권한 삭제
+  = 3. = -> 권한 부여
+  
+- 8. 권한
+  = 1. r -> read (읽기)
+  = 2. w -> write (쓰기)
+  = 3. x -> execute (실행)
+
 
 
  
