@@ -85,4 +85,30 @@ III. Process 관리
   -> 3. 실행 상태 --> 대기 상태 => Block
 
 
-IV. Process Scheduling
+IV. Process Scheduling (CPU Scheduling)
+1. Computer System 성능 증대, Process 사용 순서를 결정하기 위한 정책
+2. 목적 
+- 1. 처리율 증가, CPU 이용률 증가, 우선 순위 제도
+- 2. 오버헤드(부하) 최소화, 응답 시간 / 반환 시간 / 대기 시간 최소화
+- 3. 균형 있는 자원의 사용, 무한 연기 회피
+
+3. 종류
+- 1. Process Scheduling 기법
+  = 1. 비선점 Scheduling (Non Preemptive) 
+    -> 1. 비효율적, 비양보
+    -> 2. Process 에게 이미 할당된 CPU 를 강제로 빼앗기 X
+    -> 3. 사용이 끝날 때까지 기다려야 하는 방법
+    -> 4. 일괄처리(오버헤드 발생 X), 실시간 처리 X, 중요한 작업이 기다리는 경우 발생
+    -> 5. 대표적인 Scheduling => FIFO, SJF, HRN
+
+** Example
+1. Word -> Music -> Internet
+2. Word 부터 하나씩 순서대로 처리
+
+  = 2. 선점 Scheduling (양보)
+    -> 1. 효율적
+    -> 2. 우선 순위가 높은 다른 Process 가 할당된 CPU 를 강제로 빼앗기 O
+    -> 3. 실시간 처리, 대화식 시분할 처리 (오버헤드 발생 O)
+    -> 4. 대표적인 Scheduling => RR, SRT
+
+
