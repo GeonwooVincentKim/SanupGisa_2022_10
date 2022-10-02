@@ -188,4 +188,16 @@ XI. Linux / Unix Process 관리 방법
 
 
 XI. 가상화, Cloud
-1. 
+1. Platform 가상화, Resource 가상화
+- 1. Platform 가상화 
+  -> 1. H/W Platform 위에서 실행되는 Host Program 이 Guest Program 을 만듦
+  -> 2. 마치 독립된 환경을 만들어 낸 것처럼 보여주는 것
+  -> 3. Guest S/W 위에서 사용자는 독립된 H/W 에서 S/W 가 실행되는 것처럼 사용 가능
+  -> 4. VM ??
+
+- 2. Resource 가상화
+  -> 1. 메모리, 저장장치, 네트워크 등을 결합, 나누는 것
+  -> 2. 사용자는 가상화된 물리적 장치들이 어떤 위치에 있는지 모르는 경우 많음
+
+2. Cloud
+
