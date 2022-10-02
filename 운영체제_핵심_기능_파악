@@ -29,3 +29,49 @@ First Fit, Best Fit, Worst Fit 방법에 대해서 10K 프로그램이 할당될
 ** 단편화
 - 1. 내부 -> 할당 후 남은 공간 (15K -> 5K, 30K -> 20K)
 - 2. 외부 -> 할당하지 못한 공간 (9K)
+
+
+II. Windows Memory & Linux / Unix Memory 관리 방법
+1. Windows Memory 관리 방법
+- 작업 관리자에서 Memory 관리
+  = 1. Memory 상태 확인 
+  = 2. 필요 이상의 Memory 를 활용하고 있어 Program 을 중단시켜야 할 경우, Process 끝내기 클릭
+
+2. Linux / Unix Memory 관리 방법
+- 1. meminfo 명령어 -> 메모리 상태 점검
+- 2. swapping -> Memory 부족 시, Program 에 할당된 Memory 일부를 Disk 에 저장
+- 3. /proc/sys/vm/min_free_kbytes -> 최소 가용 Memory 확보 기준 해제
+
+
+III. Process 관리
+1. Process 정의 / 특징
+- 1. 정의
+  = 1. 주기억장치에 저장된 Program (실행중인 프로그램)
+  = 2. OS 가 관리하는 최소 단위의 작업
+  = 3. 비동기적 (비연속적, 독립적) 행위를 일으키는 주체
+ 
+- 2. 특징
+  = 1. Procedure (Program 일부) 활용
+  = 2. PCB 를 가진 Program
+  = 3. CPU 에 의해 수행되는 사용자 및 시스템 Program
+  = 4. Process 가 자원을 이용하는 정상적인 작동의 순서
+    -> 요청 - 사용 - 해제
+  
+  = 5. 지정된 결과를 얻기 위한 일련의 동작
+  = 6. Disk (보조기억장치) 에 저장된 Program (X)
+
+
+** PCB (Process Control Block, Process 제어 활용)
+- OS (운영체제) 가 Process 에 대한 중요한 정보를 저장해 놓은 곳 (Process 정보 List)
+
+2. Process 상태 전이도 <보조기억장치를 활용>
+- 1. 실행 상태 (Run) -> Process 가 CPU 를 차지하여 실행 중인 상태
+- 2. Timer Run Out 
+  -> 1. CPU 할당 받아 실행 중인 Process 가 할당시간을 초과
+  -> 2. CPU 를 다른 Process 에게 양도하고 자신은 준비상태로 전이되는 것
+
+- 3. 준비 상태 (Ready) -> Process 가 CPU 를 사용하여 실행될 수 있는 상태
+- 4. 대기 상태 (Wait, Block) -> 어떤 사건이 발생하기를 기다리는 상태
+- 5. Block 
+  -> 1. 실행 중인 Process 가 지정된 시간 이전
+  -> 2. 다른 작업을 위하여 스스로 Process 를 양도, 대기 상태로 전이되는 것
