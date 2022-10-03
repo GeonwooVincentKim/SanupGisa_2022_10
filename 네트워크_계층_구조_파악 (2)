@@ -1,0 +1,59 @@
+I. OSI 7계층 (Open System Interconnection)
+1. ISO (국제표준화기구) 에서 제안한 7단계 표준화 Protocol
+2. 계층화 (부품화) 개념 이해
+- 1. 특징 -> 응용 계층에 가까워질수록 사용자, 물리 계층에 가까워질수록 Computer System
+- 2. 상위 계층
+  = 1. 응용 계층 (S/W)
+    -> 1. 응용 계층 (사용자 프로그램 => KakaoTalk)
+    -> 2. 표현 (Presentation) 계층 => Data 표현 규정 (암호화, 코드)
+    -> 3. Session 계층 => Data 교환 관리 규정 (대화 제어)
+
+- 3. Interface 계층 (O/S) 
+  = 전송 (Transport) 계층 -> 실제 전송위한 규정 (다중화, 주소 설정)
+
+- 4. 하위 계층
+  = 1. Interface 계층 (O/S)
+    -> Network 계층 => 여러 컴퓨터간 데이터 통신 규정 (경로 선택, 교환 기술)
+  
+  = 2. 물리 계층 (H/W)
+    -> 1. Data Link 계층 => 두 컴퓨터 간 Data 통신 규정 (오류 제어, 흐름 제어)
+    -> 2. 물리 계층 => 물리적인 연결 방식 (Cable)
+  
+
+II. OSI 참조 모델 목적 및 특징
+- 1. OSI 규격 개발 + System 상호 간 접속
+- 2. 관련 규격 적합성 조정, 공동 기반 제공
+- 3. 적절 수 계층 -> 시스템 복잡도 최소화
+- 4. 서비스 접점 경계 -> 적은 상호 작용 유지
+- 5. 상, 하위 계층 간 Interface 를 둠
+
+** 계층 간 Interface
+송신측 OSI 7계층 <------------------------> 수신측 OSI 7계층
+        |         각 계층 간 Protocol 일치     ↑
+        ---------------전송 매체 --------------|
+
+
+III. OSI 참조 모델의 계층 기능 및 표준 Protocol
+1. 물리 계층
+- 1. 매체 간 Interface -> 전기, 기능, 절차적 기능 정의 (표준 Protocol -> RS-232C, X.21)
+- 2. Repeater, Hub
+
+2. Data Link 계층
+- 1. 흐름 제어, Frame 동기화, 오류 제어, 에러검출 및 정정, 순서 제어 (HDLC, LAPB, LLC, MAC, LAPD, PPP)
+- 2. Bridge, Switch, 랜카드
+
+3. Network 계층
+- 1. Network 연결, 설정, 유지, 해제
+- 2. 교환 기술, 경로 설정, Packet 정보 전송 (X.25, IP)
+- 3. Router
+
+
+** NIC (Network interface card, 랜카드, 이더넷카드, 네트워크 어댑터)
+- Computer 를 Network 에 연결하는 장치
+- 정보가 전송 매체를 통해 전송될 수 있도록 정보 형태 변경
+
+** 오류 제어
+- 오류 검출 및 수정 기능 ('새로고침')
+
+** 흐름 제어
+- Network 내 원할한 흐름, 송수신 측 사이 전송되는 양, 속도 규제 (Frame 전송률 조정)
