@@ -87,3 +87,41 @@ III. OSI 참조 모델의 계층 기능 및 표준 Protocol
 ** 동기 (Synchronization)
 1. 여러 개, 시간적 관계 일치
 2. 컴퓨터 간 Data 교환, Data 전송, 수신 측의 Timing 을 맞추는 것
+
+
+IV. Protocol Data 단위 (PDU; Protocol Data Unit)
+1. 물리 계층 - bit
+2. Data Link 계층 - Frame
+3. Network 계층 - Packet
+4. 전송 계층 - Segment
+5. 세션, 표현, 응용 계층 - Message (Data)
+
+
+** Frame (프레임, 틀)
+- Block 단위, 전송, 정보 Package 단위
+
+** 세그먼트 (Segment)
+- Message 를 작은 조각으로 분할
+
+<OSI 7 Layer 별 전달 정보>
+1. TCP Header -> 송수신자 Port 번호, 순서 번호, 응답 번호
+2. IP Header 
+-> 1. IP Version, 전송지 IP, 목적지 IP, Protocol 종류, Service Type
+-> 2. IPv4, IPv6
+
+3. Mac 주소 (Media Access Control Address) 
+- 통신을 위해 랜카드 등에 부여된 주소 (물리적 주소)
+
+
+-----------------------------------------------
+응용
+표현
+
+세션        Data
+전송        Data  TCP Header
+Network    Data  TCP Header  IP Header
+DataLink   Data  TCP Header  IP Header  Mac 주소
+물리       010101000001011011
+----------------------------------------------
+
+- 랜카드가 있어야만 2대 Computer 끼리 통신 (Data Link) 가능
