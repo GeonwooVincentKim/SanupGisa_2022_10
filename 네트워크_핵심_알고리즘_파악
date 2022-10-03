@@ -52,3 +52,17 @@ II. 서킷 스위칭 (Circuit Switching)
 6. Circuit Switching 방식 -> Data 일부 송수신, 전달 경로 파악 및 확보, 실 Data 전달
 7. Packet 전달 방식 -> Header 주소 정보에 따라 수신 측으로 Data 를 전송
 
+
+구분   Circuit 교환 방식                                   Pacjet 교환 방식
+의미   - 전송 경로 설정, Data 송수신                        - Data 단위를 보내는 방식
+
+장점   - 경로 접속 시간 1초 내외, 매우 빠름                  - 회선 효율 우수
+       - 전송 제어 절차, 형식에 제약 X                      - 비동기 전송 가능
+                                                          - 연결 설정 필요 없고, 다중 전달 용이
+
+단점   - 송수신 측 모두 Data 교환 준비 완료되어야 함          - 실시간 전송 부적합
+       - 회선 독점                                         - Network 지연 발생
+
+활용   - 영상, 비디오                                      - Email, Message
+
+
