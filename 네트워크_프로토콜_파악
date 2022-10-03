@@ -6,17 +6,55 @@ I. 프로토콜 (Protocol)
 - 3. 의미 (Semantics) : 오류, 제어 정보
 
 3. Protocol 의 기능
-- 1. 캡슐화 (요약화): Data + 제어정보 (Protocol 제어 정보, Error 검출 코드, 주소) => 기법: HDLC (2계층 Protocol)
-- 2. HDLC (High-Level Link Control): Bit Frame 동기 방식, Data Link 제어 Protocol
-  = 1. 각 Frame, Bit 열 삽입, 전송 제어 (문자, BYTE 방식 X)
-  = 2. HDLC Frame 구조 (Flag, 주소부, 제어부, 정보부, FCS, Flag)
-  
-- 3. 플래그 (Flag) -> Frame 시작과 끝 (01111110), 동기 유지 => 혼선 방지
-- 4. 주소부 -> 송수신 Station (Computer, 단말기) 구별
-- 5. 제어부 
-  -> Frame 종류 
-    = 1. 정보 Frame: 사용자 Data
-    = 2. 감독 Frame: 오류 제어
-    = 3. 비번호 Frame: Link 동작 모드) 
 
-- 6. FCS (Frame Check Sequeunce Field, 검사부) -> Frame 내용에 대한 오류 검출
+*** HDLC (High-Level Link Control): Bit Frame 동기 방식, Data Link 제어 Protocol
+1. 각 Frame, Bit 열 삽입, 전송 제어 (문자, BYTE 방식 X)
+2. HDLC Frame 구조 (Flag, 주소부, 제어부, 정보부, FCS, Flag)
+
+- 1. 캡슐화 (요약화): Data + 제어정보 (Protocol 제어 정보, Error 검출 코드, 주소) => 기법: HDLC (2계층 Protocol)
+  = 1. 플래그 (Flag) -> Frame 시작과 끝 (01111110), 동기 유지 => 혼선 방지
+  = 2. 주소부 -> 송수신 Station (Computer, 단말기) 구별
+  = 3. 제어부 
+    -> Frame 종류 
+      => 1. 정보 Frame: 사용자 Data
+      => 2. 감독 Frame: 오류 제어
+      => 3. 비번호 Frame: Link 동작 모드) 
+
+  = 4. FCS (Frame Check Sequeunce Field, 검사부) -> Frame 내용에 대한 오류 검출
+
+- 2. 동기 제어 -> 송신, 수신 측 시점 맞추는 것 (기법 -> 동기/비동기식)
+- 3. 경로 제어 (Routing) -> 기법) Flooding, RIP, RGP
+- 4. Error (오류) 제어 -> 전송 중 발생하는 오류 검출, 정정 -> Data, 제어 정보 파손 대비하는 기능 => ARQ, 해밍 코드
+- 5. 흐름 제어 -> 수신 측 처리 능력, 송신 측에서 송신하는 Data (전송량, 전송 속도 조절)
+  = 기법) Stop-and-Wait (정지-대기, Packet 하나씩 보냄), Sliding Window (여러 Packet 보냄)
+  
+- 6. 순서 제어 -> 순서적 전송, 흐름 제어, 오류 제어
+- 7. 주소 지정 -> 정확하게 전송, 목적지 이름, 주소, 경로 부여
+- 8. 다중화 -> 한 개의 통신 회선, 여러 가입자들 동시 사용
+  = 기법) FDM (주파수 분할 다중화), TDM (시분할 다중화), STDM (동기식 시분할 다중화), ATDM (비동기식 시분할 다중화)
+  
+- 9. 단편화 -> 송신 측 전송할 Data, 알맞는 일정 크기의 작은 Block 으로 자르는 작업 (PDU; Protocol Data Unit)
+- 10. 재결합 -> 수신 측, 단편화된 Block, 원래 Data 로 모으는 것
+  = 역다중화 (X)
+
+
+II. TCP / IP Protocol
+1. 정의
+- 1. 서로 다른 기종 Computer, Data 주고 받기 가능, Internet 표준 Protocol
+- 2. TCP / IP, UDP (User Datagram, Protocol), ICMP (Internet Control Message Protocol), ARP (Addresses Resolution Protocol), RARP (Reverse ARP)
+- 3. TCP, UDP 구분 Protocol, Transport 계층에서 응용 계층과 Internet 계층 사이 통신 담당
+
+2. 계층구조
+OSI 계층     TCP / IP     기능
+  응용                      - 1. 응용 Program 간 Data 송수신 제공
+  표현        응용          - 2. HTTP (HTML 문서), TELNET )원격 접속), FTP (파일 전송), SMTP (메일 전송), SNMP, DNS (Domain Name - IP 주소 Mapping)
+  세션
+  
+  전송        전송          - 1. Host 들 간 신뢰성 있는 통신 제공
+                           - 2. TCP, UDP
+                        
+ Network     Internet       - 1. Data 전송 위한 주소 지정, 경로 설정 제공
+                            - 2. IP, ICMP, IGMP, ARP (IP 주소 -> MAC 주소), RARP (MAC 주소 -> IP 주소)
+                          
+Data Link  Network Access  - 1. 실제 Data (Frame) 송수신 역할
+                           - 2. IEEE 802, Ethernet, HDLC, X.25, RS-232C, ARQ
