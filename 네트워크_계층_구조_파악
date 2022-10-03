@@ -124,3 +124,33 @@ IV. IPv6 (Internet Protocol version 6)
 6. 일정한 수준 QoS
 7. 인증, 데이터 무결성, 데이터 기밀성을 지원하도록 보안 기능 
 
+
+** QoS (Quality of Service)
+- 1. Network 에서 통신 품질 보장
+- 2. 양 끝 단에서 요구 (Data 전송 대역폭 (전달 능력)), 전송 계층에 필요한 품질 보장 목적
+
+
+** 도메인 네임 (Domain Name)
+- 숫자로 된 IP 주소를 쉬운 문자 형태로 표현
+
+       www.gisafirst.co.kr
+
+- www -> Host Computer 이름
+- gisafirst -> 소속 기관
+- co -> 소속 기관의 종류
+- kr -> 소속 국가
+
+
+** DNS (Domain Name System)
+- IP 주소와 Host 이름 (Domain Name) 간 변환 제공 System
+
+
+V. IP 설정 확인 및 주소 부여
+1. Windows
+- 제어판 -> 모든 제아판 항목 -> Network 연결 -> Ethernet -> Internet Protocol Version 4 (TCP / IPv4) -> 자동으로 IP 주소 받기 (O)
+- 제어판 -> 모든 제아판 항목 -> Network 연결 -> Ethernet -> Internet Protocol Version 6 (TCP / IPv6) -> 자동으로 IP 주소 받기 (O)
+
+2. Linux
+- network-scripts 경로 관련 파일 Open, Interface 장치 편집기 Open, 설정 변경
+
+
