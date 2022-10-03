@@ -101,9 +101,12 @@ Datagram (비연결) 과 가상회선 방식 (논리적 연결)
   = 3. (긍정 : ACK, 부정 : NAK) 보내올 때까지 기다리는 방식 (오버헤드 가장 큼)
   
 - 6. 연속 ARQ > Go-Back-N ARQ
-  = 여러 Block 을 연속적으로 전송, 부정 응답 (NAK) 이후 모든 Block 재전송
+  = 1. 여러 Block 을 연속적으로 전송, 부정 응답 (NAK) 이후 모든 Block 재전송
+  = 2. 하나의 Block 이 아닌 여러 Block 을 전송
 
 - 7. 연속 ARQ > Selective-Repeat ARQ (선택적 재전송)
   = 여러 Block 을 연속적으로 전송, 부정 응답 (NAK) 이 있던 Block 만 재전송
   
+- 8. 적응적 (Adaptive) ARQ
+  = 동적 블록 (가변적 Frame) => 전송 효율 우수 => 구현 복잡
 
