@@ -66,3 +66,7 @@ II. 서킷 스위칭 (Circuit Switching)
 활용   - 영상, 비디오                                      - Email, Message
 
 
+
+Circuit 교환 방식                         Packet 교환 방식
+PSTN, ISDN, B-Channel, CSD, HSCSD,       X.25, Frame Relay, ATM, TCP
+GSM, X.21
