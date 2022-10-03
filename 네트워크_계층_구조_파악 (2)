@@ -136,11 +136,31 @@ V. MAC Address 확인
 
 
 VI. Network 장비
-- 하나 이상의 Network 를 상호 연결하는 장비
+1. 정의 - 하나 이상의 Network 를 상호 연결하는 장비
 
 [옥상] Com  ----> Repeater ------┐ ┌-- Gateway -- Router -- Internet
                                  ↓ ↑
 LAN => [ Com 1, Com 2, Com 3, ( Hub ) ]
                                  |-> Bridge
 LAN => [ Com 1, Com 2, Com 3, ( Hub ) ]
+
+2. 허브 (Hub): OSI 1계층 장비
+- 여러 대 Computer 연결, Network 전송
+
+3. 리피터 (Repeater): OSI 1계층 장비
+- 장거리 Data 전송, 신호 증폭 장치
+
+4. 브리지 (Bridge), 스위치 (Switch): OSI 2계층 장비
+- 1. 두 System 연겯, 두 개의 LAN 연결 -> 훨씬 더 큰 LAN 생성
+- 2. Switch = H/W, 속도 빠름, Bridge = S/W, 속도 느림
+- 3. Switch = MAC 주소 테이블, 목적지 MAC 주소 + 장비 측 Port -> Frame 전송
+- 4. 스위칭 허브 = Switch 기능 가진 Hub, 요즘 사용하는 대부분의 Hub
+- 5. 망 (백본) 스위칭 허브 = 광역 Network 커버, 경남권 스위칭, 부산권 스위칭
+- 6. Bridge = Port 들의 같은 속도 지원, Switch = 각기 다른 속도 지원하도록 제어 가능
+- 7. Bridge = Store and Forwarding, Switch = Cut Through + Fragment Free
+
+**
+1. Store and Forwarding -> Data 모두 받은 (저장, Store) 후, 스위칭
+2. Cut Through -> Data 목적지 주소만 확인, 스위칭
+3. Fragment Free: Store and forwarding 장점 + Cut-Through 장점
 
