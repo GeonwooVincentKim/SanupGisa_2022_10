@@ -133,3 +133,14 @@ V. MAC Address 확인
 
 2. Linux, Unix
 - 'root@hostname:~#ifconfig' -> Mac 주소 확인
+
+
+VI. Network 장비
+- 하나 이상의 Network 를 상호 연결하는 장비
+
+[옥상] Com  ----> Repeater ------┐ ┌-- Gateway -- Router -- Internet
+                                 ↓ ↑
+LAN => [ Com 1, Com 2, Com 3, ( Hub ) ]
+                                 |-> Bridge
+LAN => [ Com 1, Com 2, Com 3, ( Hub ) ]
+
