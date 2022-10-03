@@ -82,3 +82,8 @@ III. OSI 참조 모델의 계층 기능 및 표준 Protocol
 - 1. 사용자의 OSI 환경 접근 도와주는 Service 제공
 - 2. 응용 Process 정보 교환, 전자 사서함, 파일 전송, 가상 Terminal
 - 3. PC
+
+
+** 동기 (Synchronization)
+1. 여러 개, 시간적 관계 일치
+2. 컴퓨터 간 Data 교환, Data 전송, 수신 측의 Timing 을 맞추는 것
