@@ -187,4 +187,56 @@ LAN => [ Com 1, Com 2, Com 3, ( Hub ) ]
     
   = 4. L7 Switch: OSI 7계층 장비 -> 세밀한 로드밸런싱 수행
   
-    
+
+VII. 라우팅 (Routing, 경로 제어) Algorithm
+1. Data 는 송신 ~ 수신, Data 전달하는 과정, 다양한 물리적인 장치들을 거쳐 감, 목적지까지 최적 경로 산출하기 위한 법칙
+2. 거리 벡터 알고리즘 (Distance Vector Algorithm)
+- 1. Router ~ Router 간 거리 (Distance), 방향 (Vector) 정보
+- 2. 최단 경로, 최적 경로 이용 불가 시, 다른 경로 찾음
+- 3. Protocol 종류 -> RIP, IGRP
+
+3. 링크 상태 알고리즘 (Link State Algorithm)
+- 1. Router ~ Router 간 모든 경로 파악, 대체 경로 사전에 마련
+- 2. Network 일관성 있게 파악, 거리 벡터 알고리즘에 비해 계산 더 복잡, Traffic 광범위한 범위까지 전달
+- 3. Protocol 종류 -> OSRF
+
+4. Routing Protocol 종류
+- 1. RIP (Routing Information Protocol, 경로 선택 정보 Protocol)
+  = 최초의 Routing Protocol
+    -> 1. 30초 주기로 전체 Routing 정보 갱신 => 변화 Update 시 많은 시간 소요 => 소규모 동종 Network
+    -> 2. 자율 시스템 (AS; Autonomous System, 하나의 도메인(회사) 에 속한 Router 집합) 에 적합
+    -> 3. 최대 홉(Hop) 수 => 15
+    -> 4. 최단 경로 탐색 => 벨만 포드 알고리즘 (Bellman Ford Algorithm)
+
+- 2. IGRP (Interior Gateway Routing Protocol)
+  = 1. RIP 문제점 개선, 시스코에서 개발
+  = 2. Network 상태 고려, Routing (대역폭, 속도 등) -> 중규모 Network
+  
+- 3. OSRF (Open Shortest Path First, 최단 경로 우선 Protocol)
+  = 1. Link State 방식 (링크 상태 알고리즘) -> Routing 정보 변화 발생, 변화된 정보만 모든 Router 에게 알림
+  = 2. 최단 경로, Routing 정보에 Node 간 거리 정보, Link 상태 정보 실시간 조합 -> Routing 지원
+  = 3. RIP (경로 선택 정보 Protocol) 의 난점 해결 -> 발생한 변경 정보에 대해 RIP 보다 빠른 Update
+  = 4. 경로주에 제한 X, 대규모 Network
+  
+- 4. BGP (Border Gateway Protocol)
+  = 1. 자율 시스템 (AS) 간 Routing -> 규모가 큰 Network 의 상호 연결
+  = 2. Internet Service 업체 (ISP; Internet Service Provider) 간 상호 Routing
+
+*** 정지-대기 (Stop-and-Wait) -> 수신 측 확인 신호 (ACK), 한 번에 하나씩만 Packet 전송
+*** 슬라이딩 윈도우 (Sliding Window) -> ACK 없어도 전송 가능, 연속적, 한 번에 여러 개 Packet 전송, Packet 최대치 = Window Size
+
+
+VIII. Routing 경로 설정
+1. Windowws
+- 1. Routing 설정 확인
+  = CMD -> route print 명령어 입력
+  
+- 2. Routing 경로 변경
+  = 'route add' -> 특정 경로 Packet 을 다른 곳으로 우회 (변경)
+  = 'route -p add' -> 리부팅 후, 지속적 설정 유지
+  = 'route delete' -> Routing 삭제
+
+2. Linux
+- 1. 'route add -net' -> 특정 경로 Packet 다른 곳으로 우회 (변경)
+- 2. 'route-eth1' -> 리부팅 후, 지속적 설정 유지
+- 3. 'route del' -> Routing 삭제
