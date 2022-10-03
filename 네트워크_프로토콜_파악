@@ -121,3 +121,24 @@ Datagram (비연결) 과 가상회선 방식 (논리적 연결)
 
 단말장치 (DTE) ---- Data 전송 Option ---- 통신 제어 장치 (CCU) ---- Computer
 |---------------------- Data 전송계 -----------------------|----- Data 처리계 --- |
+
+
+III. TCP / UDP Header 구조
+1. 정의 -> Protocol 차이는 Header (식별 정보) 의 구조에 잘 나타나 있음
+2. TCP Header 구조
+- 1. 송신자 Port 번호 (Source Port)
+- 2. 수신자 Port 번호 (Destination Port)
+- 3. 순서 번호 (Sequence Number) -> 송신자가 전하는 Data 전송 순서
+- 4. 응답 번호 (Acknowledgement Number) -> 제대로 수신했는지 여부를 수신자 측으로부터 전달 받음
+- 5. Data 오프셋 -> Header 의 크기
+- 6. 예약 Field -> 다른 사용 목적으로 확보된 Field, 실제 사용만 함
+- 7. Window 크기 (Windows: 수신 Window 의 Buffer 크기 지정)
+- 8. Checksum -> Header 와 Data 오류 검출
+- 9. 긴급 포인터 (Urgent Pointer) -> 긴급 Data 처리용
+- 10. 제어 Bit -> 긴급 Field 설정, 응답 번호 유효 여부 Check
+
+3. UDP Header 구조
+- 1. 송신자 Port Number (Source Port)
+- 2. 수신자 Port Number (Destination Port)
+- 3. 길이 (UDP Length) -> UDP Header 와 Data 를 포함한 질의
+- 4. 체크성 (UDP Checksum) -> 오류 검사 기능
