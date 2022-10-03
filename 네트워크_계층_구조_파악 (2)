@@ -125,3 +125,11 @@ DataLink   Data  TCP Header  IP Header  Mac 주소
 ----------------------------------------------
 
 - 랜카드가 있어야만 2대 Computer 끼리 통신 (Data Link) 가능
+
+
+V. MAC Address 확인
+1. Windows System
+- 시작 버튼 -> CMD -> ipconfig/all -> Mac 주소 확인
+
+2. Linux, Unix
+- 'root@hostname:~#ifconfig' -> Mac 주소 확인
