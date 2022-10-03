@@ -1,0 +1,22 @@
+I. 프로토콜 (Protocol)
+1. 정의 -> Computer 통신, Computer 상호 간 또는 Computer 와 단말기 간 Data 송수신 하기 위한 통신규약
+2. Protocol 의 기본 요소 (구타의미)
+- 1. 구문 (Syntax) : Data 형식
+- 2. 타이밍 (Timing) : 순서, 속도 조절
+- 3. 의미 (Semantics) : 오류, 제어 정보
+
+3. Protocol 의 기능
+- 1. 캡슐화 (요약화): Data + 제어정보 (Protocol 제어 정보, Error 검출 코드, 주소) => 기법: HDLC (2계층 Protocol)
+- 2. HDLC (High-Level Link Control): Bit Frame 동기 방식, Data Link 제어 Protocol
+  = 1. 각 Frame, Bit 열 삽입, 전송 제어 (문자, BYTE 방식 X)
+  = 2. HDLC Frame 구조 (Flag, 주소부, 제어부, 정보부, FCS, Flag)
+  
+- 3. 플래그 (Flag) -> Frame 시작과 끝 (01111110), 동기 유지 => 혼선 방지
+- 4. 주소부 -> 송수신 Station (Computer, 단말기) 구별
+- 5. 제어부 
+  -> Frame 종류 
+    = 1. 정보 Frame: 사용자 Data
+    = 2. 감독 Frame: 오류 제어
+    = 3. 비번호 Frame: Link 동작 모드) 
+
+- 6. FCS (Frame Check Sequeunce Field, 검사부) -> Frame 내용에 대한 오류 검출
