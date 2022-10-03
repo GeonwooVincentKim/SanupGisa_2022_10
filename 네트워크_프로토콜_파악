@@ -58,3 +58,52 @@ OSI 계층     TCP / IP     기능
                           
 Data Link  Network Access  - 1. 실제 Data (Frame) 송수신 역할
                            - 2. IEEE 802, Ethernet, HDLC, X.25, RS-232C, ARQ
+
+3. 응용 계층
+- 1. SNMP (Simple Network Management Protocol, 간이 망 관리 Protocol)
+  = Network 장비를 관리, 감시 목적, UDP 상에 정의된 응용 계층 표준 Protocol
+  
+- 2. 전송 계층
+  = 1. TCP (Transmission Control Protocl) => 1:1 과외
+    -> 1. 가상 회선 연결 상태 => 신뢰성 (안정성) ↑
+    -> 2. Packet 다중화, 순서 제어, 오류 제어, 흐름 제어 (오류 제어 및 흐름 제어는 IP 없음)
+    
+  = 2. UDP (User Datagram Protocol) => 학교 수업
+    -> 비연결형 => 신뢰성 ↓, 속도 ↑ (실시간 전송 유리)
+
+*** Packet 처리 방식에 따라
+Datagram (비연결) 과 가상회선 방식 (논리적 연결)
+
+- 3. Internet 계층
+  = 1. IP (Internet Protocol)
+    -> 1. OSI 7계층, Network 계층
+    -> 2. DataGram 기반, 비연결형 서비스 (안정성 X)
+    -> 3. Packet 분해 / 조립, 주소 지정, 경로 선택 기능 (오류 & 흐름 제어 X)
+ 
+  = 2. ICMP (Internet Control Message Protocol, Internet 제어 Message Protocol)
+    -> TCP / IP 에서 신뢰성 없는 IP 대신, 송신 측으로 Network IP 상태 및 Error Message 전달해주는 Protocol
+  
+  = 3. IGMP (Internet Group Management Protocol, MultiCast Routing)
+    -> Local Network, Router 와 Host, MultiCast (1:다) 환경 제공 => Group 관리 위한 Protocol
+ 
+- 4. Network Access 계층
+  = 1. IEEE802 : LAN 표준 Protocol
+  = 2. Ethernet (IEEE 802.3) : CSMA / CD 방식 LAN
+  = 3. HDLC : Bit 위주 Data Link 제어 Protocol
+  = 4. X.25 : Packet 전송, DTE / DCE 접속 규격
+  = 5. RS-232C : DTE 와 DCE 를 상호 접속하는 물리적 Interface
+  = 6. ARQ (Automatic Repeat reQuest, 자동 반복 요청)
+    -> 통신 경로 오류 발생 시, 수신 측은 오류 발생 송신 측에 통보, 송신 측은 오류가 발생한 Frame 을 재전송
+    
+- 5. 정지 대기 (Stop and Wait) ARQ
+  = 1. 송신 측 : 하나의 Block 전송, 
+  = 2. 수신 측 : Error 발생 점검, Error 발생 유무 신호 
+  = 3. (긍정 : ACK, 부정 : NAK) 보내올 때까지 기다리는 방식 (오버헤드 가장 큼)
+  
+- 6. 연속 ARQ > Go-Back-N ARQ
+  = 여러 Block 을 연속적으로 전송, 부정 응답 (NAK) 이후 모든 Block 재전송
+
+- 7. 연속 ARQ > Selective-Repeat ARQ (선택적 재전송)
+  = 여러 Block 을 연속적으로 전송, 부정 응답 (NAK) 이 있던 Block 만 재전송
+  
+
