@@ -43,3 +43,12 @@ I. Packet 스위칭
 3. AAL (ATM Adaptation Layer) 계층 -> Packet 을 작은 조각인 Shell 로 전송한 후, 다시 조립하여 원래의 Data 로 복원
 
    
+II. 서킷 스위칭 (Circuit Switching)
+1. 정의 - 서킷 (Circuit, 연결) 을 두 장비 사이에 만들어서 통신에 사용 -> ex ) 전화 System => 속도 & 성능 일정
+2. Packet Switching 과 달리 Network Resource 를 특정 사용층이 독점
+3. Network 를 독점적 사용, 전송 보장 (Guaranteed)
+4. Circuit 을 확보하기 위한 작업 진행, 실 Data 를 전송, Circuit 을 닫는 Process 로 진행
+5. 작업 진행 중, 다른 기기들은 해당 경로 사용 불가
+6. Circuit Switching 방식 -> Data 일부 송수신, 전달 경로 파악 및 확보, 실 Data 전달
+7. Packet 전달 방식 -> Header 주소 정보에 따라 수신 측으로 Data 를 전송
+
