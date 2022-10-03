@@ -1,0 +1,78 @@
+I. Network
+- 정보 전송하기 위한 기반 Infra -> Network
+- 정보 전달 시 약속 규칙 -> Protocol
+
+1. 거리에 따른 Network 분류
+- 1. LAN (Local Area Network, 근거리 Network)
+  = 구내나 동일 건물 내 자원(Program, File, 주변장치) 공유 가능 Computer 통신망
+
+- 2. WAN (Wide Area Network, 광대역 Netowrk, Internet)
+  = 1. 각기 다른 LAN 을 통합한 광역 통신망 (연관 기관)
+  = 2. 광범위한 지역 연결 Network
+  = 3. LAN 보다 속도가 느리고 Error 윺 높음
+  = 4. 전용 회선 방식
+    -> 통신 사업자, 사전 계약 체결한 송신자, 수신자 데이터 교환
+  
+  = 5. 교환 회선 방식
+    -> 공중망, 다수 사용자, 선로 공유
+  
+  = 6. LAN 에 비해 전송거리 넓고, Routing Algorithm 필요
+  
+  
+II. Internet
+1. 특징
+- 1. 미국방성 ARPANET
+- 2. TCP / IP Protocol
+- 3. 백본 (Backbone) -> 다른 Network, 같은 Network 연결, 그 중추 역할하는 Network
+- 4. 장비 -> Bridge, Router, Gateway
+
+2. Internet Service (TCP / IP 상에서 운용되는 Service)
+- 1. WWW (World Wide Web) = HTTP (Hyper Text Tranfer Protocol) Service
+  = 1. HyperText, 멀티미디어
+  = 2. WebBrowser -> www 효과적 검색 도와주는 Program (E-Mail, FTP, HTTP)
+  
+- 2. E-Mail (전자우편)
+  = 1. SMTP -> 메일 전송
+  = 2. POP3 -> 메일 수신
+  
+- 3. FTP (File Transfer Protocol)
+  = Internet 에서 File 전송 Service
+  
+- 4. Telnet (원격 접속)
+  = 가상 터미널 -> 원격지에서 Computer 접속
+  
+
+** Protocol
+1. 통신 System 데이터 교환하기 위한 통신 규칙 (TCP / IP)
+2. OSI 7 계층, 각 계층 Protocol 서로 독립적이라고 간주
+3. `계층1 = 계층1` 끼리 통신, `계층2 = 계층2` 끼리 통신
+
+
+** TCP / IP
+1. Transmission Control Protocol + Internet Protocol
+2. 서로 다른 기종 Computer, 데이터 주고 받기 가능, Internet 표준 Protocol 
+
+
+III. IP 주소 
+1. 정의
+- 1. Internet 연결 위한 모든 Computer 자원 구분하기 위한 고유한 주소
+
+** Example
+- 211.48.179.177 (Domain 주소, www.gisafirst.com)
+
+- 2. 숫자로 8 Bit 씩 4부분, 총 32 Bit
+- 3. A ~ E Class 까지 총 5개 Class (IPv4)
+
+** Example
+- 11010011, 00110000, 10110011, 10110001
+
+2. A Class
+- 1. 시작 주소 -> 0 ~ 127 (0, 127 은 예약된 주소, 실질적으로 1 ~ 126 으로 진행)
+- 2. 연결 가능 Host 수 -> 256 * 256 * 256 = 2 ^ 24
+- 3. A Class -> 국가나 대형 통신망
+- 4. B Class -> 중대형 통신망
+- 5. C Class -> 소규모 통신망
+
+** Example
+- [ 11010011 ], 00110000, 10110011, 10110001
+- [] 표시한 부분이 Network 주소, 표시안한 부분이 Host 주소
