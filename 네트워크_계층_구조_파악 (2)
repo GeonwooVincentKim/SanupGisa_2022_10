@@ -112,7 +112,6 @@ IV. Protocol Data 단위 (PDU; Protocol Data Unit)
 3. Mac 주소 (Media Access Control Address) 
 - 통신을 위해 랜카드 등에 부여된 주소 (물리적 주소)
 
-
 -----------------------------------------------
 응용
 표현
@@ -164,3 +163,28 @@ LAN => [ Com 1, Com 2, Com 3, ( Hub ) ]
 2. Cut Through -> Data 목적지 주소만 확인, 스위칭
 3. Fragment Free: Store and forwarding 장점 + Cut-Through 장점
 
+5. 라우터 (Router): OSI 3계층 장비
+- 1. Network 계층 연동, 경로 설정 및 전달
+- 2. Network 연결 (LAN & LAN, LAN & WAN) + 경로 설정
+- 3. 1 ~ 3 계층 사이 Protocol, 서로 다른 Network 상호 접속
+- 4. Gateway 기능 지원
+- 5. Routing Protocol -> 경로 설정, 원하는 목적지, 지정된 Data 가 안전하게 전달
+
+6. Gateway: OSI 4계층 장비
+- 1. Protocol 이 전혀 다른 Network 사이를 결합
+- 2. Protocol 구조가 전혀 다른 외부 Network 접속하기 위한 장비 (출입구)
+- 3. Switch 분류
+  = 1. L2 Switch: OSI 2계층 장비
+    -> 1. 가장 원초적인 Switch
+    -> 2. 상위 Layer (OSI 3계층, Network 계층) IP 이해 불가 (Routing 불가)
+    
+  = 2. L3 Switch: OSI 3계층 장비
+    -> IP Layer (OSI 3계층, Network 계층, IP) 스위칭 수행 -> 외부 전송
+  
+  = 3. L4 Switch: OSI 4계층 장비 (L3 + 로드 밸런서: Traffic 분산)
+    -> 1. TCP / UDP 기반 스위칭 수행
+    -> 2. 정교한 로드밸런싱 수행 불가
+    
+  = 4. L7 Switch: OSI 7계층 장비 -> 세밀한 로드밸런싱 수행
+  
+    
