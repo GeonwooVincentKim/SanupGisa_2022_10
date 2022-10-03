@@ -109,4 +109,18 @@ III. IP 주소
 4. 다른 종류들
 - 1. Unicast -> 특정 1인 송신 (1:1)
 - 2. Broadcast -> 불특정 다수인 송신
-- 3. Anycast -> Ip
+- 3. Anycast 
+  -> 1. IPv6 에서 BroadCast 없어지고 생김
+  -> 2. 수신자들을 하나의 Group 으로 나타낸 주소
+  -> 3. Group 내 가장 가까운 Host 에게만 전송 (1:1)
+  
+
+IV. IPv6 (Internet Protocol version 6)
+1. IPv4 주소 공간 X 4배 = 128 Bit Internet 주소 체계
+2. 3 가지 주소 체계 (Unicast, Multicast, Anycast)
+3. IPv4 (32 Bit) 고갈 문제 해결, IP 주소공간 128 Bit
+4. Packet 처리에 대한 오버헤드(부하) 를 줄이기 위해 새로운 Header Format (형식) 도입
+5. 128 Bit 를 여덟 부분으로 나누어 각 부분을 콜론(:) 으로 구분, 16 진수
+6. 일정한 수준 QoS
+7. 인증, 데이터 무결성, 데이터 기밀성을 지원하도록 보안 기능 
+
