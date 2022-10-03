@@ -1,0 +1,45 @@
+I. Packet 스위칭
+1. 정의 -> WAN 을 통해 Data 를 원격지로 송부, X.25, Frame Relay 및 ATM 과 같은 다양한 기술들을 필요
+2. X.25
+- 1. 정의 및 특징
+  = 1. Packet (Data Block) 을 사용, 대용량 Data 를 다수의 Packet 으로 분리 & 송신
+  = 2. 수신 측 -> 다수의 Packet 결합하여 원래 Data 로 복원
+  = 3. OSI 7 계층상의 Layer 1 ~ 3 계층까지 담당
+  = 4. 강력한 오류 체크 가능 => 신뢰성 높음
+  = 5. X.25 는 Data 송수신의 신뢰성 확보, 양자 간 통신 연결 확립 Process
+    -> 1. 초기 -> Error 제어, 흐름 제어를 위한 복잡한 기능 => 자체 성능상 오버헤드 발생
+    -> 2. 현재 -> Frame Relay 나 ISDN, ATM 등 고속망으로 대체
+       => 가장 중요한 기능 --> 다중화
+    
+- 2. X.25 3계층 구조
+  = 1. Packet 계층 (OSI Network)
+    -> 1. Data 전송 시 오류 제어, 순서 제어, 흐름 제어, Data 전송 제어 가능
+    -> 2. 호 (Call) 를 설정한 후 호 (Call) 해제, 가상 회선 이용 및 통신 경로 유지, Packet 안전한 전송 가능
+    
+  = 2. Frame 계층 (OSI DataLink)
+    -> Packet 원할한 전송, Data Link 제어
+      = 전송 제어, HDLC Protocal 의 변형인 LAPB 사용
+      
+  = 3. 물리 계층 (OSI 물리)
+    -> 1. 단말 장치 (DTE), Packet 교환망 (DCE) 간 물리적 접속, Interface 정의
+    -> 2. X.21 (동기식) 사용
+  
+- 3. Frame Relay
+  = 1. ISDN (전화선으로 음성과 데이터 등을 동시에 전송) 을 사용하기 위한 Protocol
+  = 2. ITU-T 에 의해 표준 작성
+  = 3. X.25 고정된 대역폭, Frame Relay 사용자 요청에 따라 유연한 대역폭
+  = 4. 망 성능 향상을 위한 Error 제어 기능, 흐름 제어 기능 단순화
+  = 5. X.25 OSI 계층 1 ~ 3 Layer 담당, Frame Relay 는 1 ~ 2 Layer 담당
+  = 6. 전용선보다 가격 저렴, 기술적으로는 X.25 에 비해 우위
+  
+ - 4. ATM (Asynchronous Transfer Mode)
+   = 1. B-ISDN (Broadband ISDN, 광대역 ISDN) 실현
+   = 2. Data 전송에서 대량의 정보 => Shell, 짧은 Packet 분할하여 비동기로 고속 Digital 정보 다중 전송
+   = 3. ATM Shell (53 Byte) : Header (수신처 정보) 5 Byte, 사용자 정보 (Payload) 48 Byte
+ 
+** ATM 은 OSI 7계층과는 다른 고유한 참조 모델을 가지고 있다
+1. 물리 계층 (Physical Layer) -> 물리적 전송 매체
+2. ATM 계층 -> Shell 과 Shell 전송, Shell Layout 을 정의, Header Field 가 의미하는 것을 알려 줌 => 회선 연결 및 해제, 혼잡 제어도
+3. AAL (ATM Adaptation Layer) 계층 -> Packet 을 작은 조각인 Shell 로 전송한 후, 다시 조립하여 원래의 Data 로 복원
+
+   
