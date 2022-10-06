@@ -28,3 +28,21 @@ II. DB 사용자
 4. Data 관리자 (Data Administrator) -> Data 정의, 체계화, 감독 및 보안 업무 -> Data 관리 총괄
 5. Data 설계자 (Data Architect) -> 조직 업무 수행, Data 구조 체계적 정의
 6. DBA - DB 구조 관리, DB Schema 정의, 사용자 통제 및 감시 (X)
+
+
+III. Schema 와 Instance
+1. Schema
+- 1. DB 구조와 제약조건에 관한 명세를 기술한 것 (설계도)
+- 2. 개체, 속성, 관계, Data 조작, Data 값들이 있는 제약조건에 관한 정의 총칭
+
+2. Instance
+- 1. 정의된 Schema 에 따라 DB 에 실제로 저장된 값
+- 2. 시간에 따라 동적으로 변함
+
+3. 객체
+- 1. DB 를 구성하는 모든 것
+- 2. Table, Index, View, Stored Procedure, Trigger
+
+4. 개체
+- 1. 현실 세계에서 운영하는데 꼭 필요한 사람, 사물과 같이 구별되는 모든 것
+- 2. Example : 학생, 운전면허증
