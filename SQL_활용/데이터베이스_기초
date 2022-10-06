@@ -39,10 +39,34 @@ III. Schema 와 Instance
 - 1. 정의된 Schema 에 따라 DB 에 실제로 저장된 값
 - 2. 시간에 따라 동적으로 변함
 
-3. 객체
+** 객체
 - 1. DB 를 구성하는 모든 것
 - 2. Table, Index, View, Stored Procedure, Trigger
 
-4. 개체
+** 개체
 - 1. 현실 세계에서 운영하는데 꼭 필요한 사람, 사물과 같이 구별되는 모든 것
 - 2. Example : 학생, 운전면허증
+
+
+IV. Schema
+1. 외부 Schema (= Sub Schema = 사용자 View)
+- 사용자가 보는 관점 (사용자에 따라 다름, 여러 개 존재)
+
+2. 개념 Schema (= Schema = 전체적인 View, 범기관적, 총괄적 입장)
+- DB 전체적인 논리적 구조
+
+3. 내부 Schema (실제 Data 를 저장)
+- DB 전체적인 물리적 구조 -> DBA 관리
+
+4. 특징
+- 1. Data 사전 (= System Catalog) 에 저장
+- 2. DB 구조 (개체, 속성, 관계)에 대한 정의
+- 3. Meta Data (Data 의 Data)
+- 4. Schema 는 시간에 따라 불변인 특성 가짐
+
+** 논리적 데이터 독립성
+- Data 논리적 구조를 변경시키더라도 응용 Program 은 변경되지 않음
+
+** 물리적 데이터 독립성
+- 기존 응용 Program 에 영향을 주지 않고, Data 물리적인 구조를 변경할 수 있는 것
+
