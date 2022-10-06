@@ -2,14 +2,29 @@ I. 데이터베이스
 1. 정의
 - 특정 조직이 업무 수행하는데 필요한 관련성 있는 자료들의 집합체
 
-2. DB 종류
+2. DB 도입 배경
+- File System 의 문제점을 해결
+  = 독립된 File 단위, 업무 관련된 Data 저장 
+    -> 1. Data 중복성 & 종속성 발생
+    -> 2. Data 무결성 위배 가능성 높음
+  
+3. DB 종류
 - 1. 통합된 데이터 (Integrated Data) -> Data 중복 배제, 최소화
 - 2. 저장된 데이터 (Stored Data) -> Computer 가 접근 가능한 저장 매체에 저장된 Data 집합
 - 3. 운영 데이터 (Operational Data) -> 조직의 업무를 수행하는데 있어서 존재 가치 확실, 필수적
 - 4. 공용 데이터 (Shared Data) -> 프로그램들이 공동 이용
 
-3. 특징
+4. 특징
 - 1. 실시간 접근 (Real Time Accessibility) - 언제든지 바로 접근하여 자료 처리
 - 2. 계속적인 변화 (Continuous Evolution) - Data 삽입, 삭제, 갱신, 항상 최선의 Data 를 유지
 - 3. 동시 공용, 공유성 (Concurrent Sharing) - 여러 사용자 같이 사용
 - 4. 내용에 의한 참조 (Content Reference) - 위치나 주소가 아닌 Data 내용 (값)
+
+
+II. DB 사용자
+1. 응용 프로그래머 (Application Programmer) - DB 활용, 사용자 Interface 제공
+2. 일반 사용자 (End User) - Data 삽입, 삭제, 갱신, 검색 등 목적으로 DBMS 이용
+3. DB 관리자 (DBA) -> DB 설계, 조작에 대한 책임, 행정적 책임, System 감시 및 성능 분석
+4. Data 관리자 (Data Administrator) -> Data 정의, 체계화, 감독 및 보안 업무 -> Data 관리 총괄
+5. Data 설계자 (Data Architect) -> 조직 업무 수행, Data 구조 체계적 정의
+6. DBA - DB 구조 관리, DB Schema 정의, 사용자 통제 및 감시 (X)
