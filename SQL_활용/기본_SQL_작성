@@ -67,3 +67,41 @@ CREATE VIEW 여학생_view (이름, 성별) AS
     FROM 학생
     WHERE 성별 = '여'
     WITH CHECK OPTION;
+    
+7. INDEX
+- 1. 자동으로 기본 키가 Index 로 정의됨
+- 2. UNIQUE -> Index 로 정의되는 속성 값이 중복 X (생략 시 중복 허용)
+- 3. 정렬 -> ASC (오름차순, 생략 시), DESC (내림차순)
+- 4. CLUSTER -> Clustered Index 생성 시, 물리적으로 Data 정렬 (기본 오름차순, 내림차순),
+  = 1. Non-Clustered Index 보다 검색 속도 빠름 (물리적으로 인접)
+  = 2. 한 Table 에서 하나의 Clustered Index 만 생성 가능
+
+- 5. Index 정의하면 Table 검색 속도 증가, 수정, 삽입 시 수행 속도가 느려질 수 있음 -> 기억공간 낭비
+- 6. 예시
+
+CREATE UNIQUE INDEX 이름_idx
+ON 학생(이름 ASC)
+CLUSTER;
+
+** Index
+- 1. 검색을 빠르게 하기 위해 만든 보조적인 Data 구조
+- 2. CLUSTER 옵션 생략 가능
+
+8. ALTER TABLE
+- 1. Table 구조 변경 -> 속성 변경
+- 2. ALTER -> MS-SQL, MODIFY -> ORACLE
+- 3. 예시
+
+ALTER TABLE 학과 ADD 연락처 CHAR(18); --> 새로운 속성 추가
+ALTER TABLE 학과 ALTER 학과명 SET DEFAULT '정보'; --> 기본 값 변경
+ALTER TABLE 학과 DROP 학과명; --> 속성 제거
+
+9. DROP TABLE
+- 1. 참조 무결성 위배 피하기
+  = 1. CASCADE -> 참조하는 Table 연쇄적 제거
+  = 2. RESTRICT -> 참조하는 Table 있을 경우 제거 안 됨 (생략 가능)
+    -> DELETE, UPDATE 명령어 옵션 사용 가능
+
+- 2. 예시
+
+DROP TABLE 학과 CASCADE;
