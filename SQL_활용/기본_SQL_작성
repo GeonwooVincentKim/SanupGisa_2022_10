@@ -105,3 +105,10 @@ ALTER TABLE 학과 DROP 학과명; --> 속성 제거
 - 2. 예시
 
 DROP TABLE 학과 CASCADE;
+
+
+10. INSERT
+1. INSERT INTO 수강생 VALUES ('김길현', '정보', '남구', 100); --> 수강생 Table 에 김길현, 정보, 남구, 100 을 넣어라
+2. INSERT INTO 수강생(이름, 수강생) VALUES ('이상인', 120); --> 수강생 Table 에 이름, 수강료에 이상인, 120을 넣어라
+3. INSERT INTO 정보수강생 (이름, 과목, 수강료)
+   SELECT 이름, 과목, 수강료 FROM 
