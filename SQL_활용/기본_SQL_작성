@@ -1,0 +1,60 @@
+I. SQL (Structured Query Language) 특징
+1. 관계대수, 관계해석을 기초로 한 고급 Data 언어
+2. 대화식 질의어, Data 정의, 조작, 제어 기능 제공
+3. COBOL, C, PASCAL 등의 언어에 삽입 -> 내장 SQL
+4. DBMS 에서 사용되는 비절차적 대화형 Language
+
+** 절차적 언어
+- 1. Program 언어와 같이 기본적인 절차가 있는 언어
+- 2. public static void main(String[] args) {}
+
+** 질의어, Query
+- 정보 수집에 대한 요청에 쓰이는 Data 언어
+
+5. 구분
+- 1. DDL (CREATE, ALTER, DROP)
+- 2. DML (SELECT, INSERT, UPDATE, DELETE)
+- 3. DCL (GRANT, REVOKE, COMMIT, ROLLBACK)
+
+
+II. DDL
+1. Domain, Table, View, Index 정의, 변경, 제거하는 언어
+2. DDL 로 정의된 내용은 Meta Data 가 되며, System Catalog 에 저장
+3. Meta-Data -> Data 에 대한 Data => 성별은 문자로 2자리, '남' or '여' 만 입력 가능
+
+4. Domain
+- 1. 도메인 무결성, 반복되는 Data Type 을 사용자 정의 Data Type 으로 정해서 효율적으로 사용 가능
+- 2. DEFAULT -> 기본 값, 입력안했을 때 자동으로 입력되는 값
+- 3. CONSTRAINT -> DB 에 저장된 Data 의 정확성 보장, 정확하지 않은 Data 가 DB 에 저장되는 것 방지 (제약조건 지정)
+- 4. 예시
+
+// 여기서 GENDER 는 사용자 정의 Data Type (Domain)
+CREATE DOMAIN GENDER CHAR(2)
+DEFAULT '남'
+CONSTRAINT GENDER_ck CHECK (GENDER='남' OR GENDER='여')
+
+5. Table
+- 1. 기본 키는 NOT NULL, UNIQUE 로 자동 설정됨
+- 2. UNIQUE 무결성 -> 해당 속성은 유일해야 함 (이름 중복 X)
+- 3. NULL 무결성 -> 해당 속성은 Null 값을 가질 수 없음 (Null X)
+- 4. FOREIGN KEY ~ REFERENCES
+  = 1. ON DELETE [UPDATE] CASDADE -> 부모 Table 이 수정/삭제되면 관련된 자식 Table 들도 연쇄 수정/삭제
+  = 2. ON DELETE [UPDATE] SET NULL -> NULL 이 됨
+  = 3. ON DELETE [UPDATE] SET DEFAULT -> DEFAULT 가 됨
+  = 4. 무 옵션 -> 실행 X
+
+- 5. 예시
+
+CREATE TABLE 학생 (
+  학번 CHAR(18) PRIMARY KEY,  --> 또는 학번 CHAR(18) ... PRIMARY KEY(학번)
+  이름 CHAR(18) NOT NULL,
+  학과코드 CHAR(10),
+  성별 GENDER,
+  생년월일 DATE,
+  UNIQUE(이름),
+  FOREIGN KEY(학과코드) REFERENCES 학과(학과코드),
+  CHECK (생년월일 >= '1974-05-01')
+);
+
+6. View
+-
