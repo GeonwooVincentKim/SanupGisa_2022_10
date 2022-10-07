@@ -70,3 +70,37 @@ IV. Schema
 ** 물리적 데이터 독립성
 - 기존 응용 Program 에 영향을 주지 않고, Data 물리적인 구조를 변경할 수 있는 것
 
+
+V. 데이터 사전 (Data Dictionary)
+1. 개념
+- 1. 시스템 자신 필요로 하는 여러 가지 객체에 관한 정보를 포함하고 있는 System DB
+- 2. 시스템 카탈로그 (System Catalog)
+- 3. 사용자 SQL 이용하여 검색 (DBMS 스스로 갱신 유지 가능, 사용자 갱신 안됨)
+- 4. 객체 -> 기본 Table, View, Index, DB, 접근 권한
+
+2. DBMS 에서 사용되는 모든 File, 속성, 변수 목록
+- DB 내 어떤 자료가 있는지, 자료가 어떻게 정의되어 있는지 확인
+
+* Meta Data
+- Data Dictionary 에 저장된 Data 를 Meta Data 라 부름
+
+
+VI. Index 설계
+1. Index - 빠른 검색, <키 값, Pointer> 쌍으로 구성
+2. 키 값 - 이름
+3. Pointer - 주소(물리적 주소 - MAC Address)
+4. 키 - Record 식별, 저장 위치 계산해 낼 수 있는 정보를 갖고 있는 Field
+
+* Clustered Index
+- 1. 물리적으로 Data(Table) 정렬
+- 2. 인덱스 검색 X, 빠른 검색 가능
+- 3. 한 Table 에 하나씩 생성 가능
+- 4. Data 삽입, 삭제 발생 시 재정렬
+
+* Non-Clustered Index
+- 1. Index Key 값만 정렬
+- 2. Index 검색 후 Data 찾음
+- 3. 한 Table 에 여러 개 만들 수 있음
+
+
+VII. View 설계
