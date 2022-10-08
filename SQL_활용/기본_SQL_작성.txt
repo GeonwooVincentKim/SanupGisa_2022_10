@@ -147,3 +147,12 @@ DROP TABLE 학과 CASCADE;
 
 ** ALL
 - 제한 없이 모두 검색 (일반적으로 생략)
+
+- 5. 집계함수
+  = 1. COUNT(속성) : Group 별 Tuple 수
+  = 2. AVG(속성) : Group 별 평균
+  = 3. SUM(속성) : Group 별 합계
+  = 4. MAX(속성) : Group 별 최대값
+  = 5. MIN(속성) : Group 별 최소값
+  = 6. STDDEV(속성) : Group 별 표준편차
+  = 7. VARIAN(속성) : Group 별 분산
