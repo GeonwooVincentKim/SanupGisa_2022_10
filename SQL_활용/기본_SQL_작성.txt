@@ -185,4 +185,8 @@ SELECT 과목, COUNT(*) AS 수강생수 from 수강생 WHERE 수강료 >= 100 GR
     -> 1. 차집합 연산자
     -> 2. 일부 DB 는 MINUS 를 사용
 
- 
+SELECT * FROM 수강생
+UNION
+SELECT * FROM 정회원;
+--> 수강생 Table 과 정회원 Table 의 모든 Tuple 을 중복 없이 하나의 결과로 병합 검색
+
