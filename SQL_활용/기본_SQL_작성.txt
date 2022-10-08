@@ -120,5 +120,7 @@ DROP TABLE 학과 CASCADE;
   = 2. '%김' --> '김'으로 끝남
   = 3. '%김%' --> '김'이 중간에 포함되어 있음
 
-- 2. 
+- 2. SELECT * FROM 수강생 WHERE 수강료 BETWEEN 30 AND 90; --> 수강생 Table 에서 수강료가 30 이상 90 이하인 모든 Tuple 검색
+- 3. SELECT * FROM 수강생 WHERE 과목 IS NULL; --> 수강생 Table 에서 과목이 NULL 인 모든 Tuple 검색
+
   
