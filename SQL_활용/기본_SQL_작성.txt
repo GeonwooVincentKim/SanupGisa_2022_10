@@ -201,4 +201,57 @@ SELECT 과목, COUNT(*) AS 수강생수 from 수강생 WHERE 수강료 >= 100 GR
 IV. DCL (Data 제어어)
 1. DBA 가 Data 관리를 목적으로 사용하는 언어, 보안, 회복, 사용자 권한 정의
 2. GRANT (권한부여), REVOKE (권한 취소)
+- 1. 권한 부여
+  = 1. GRANT SELECT ON 수강생 TO KWS;
+    -> 1. KWS 에게 수강생 Table 에 대한 SELECT 권한 부여 (KWS 는 다른 사람에게 권한 부여 X)
+    -> 2. 권한 => ALL, SELECT, INSERT, UPDATE, DELETE
+
+  = 2. GRANT SELECT ON 수강생 TO KWS WITH GRANT OPTION
+    -> WITH GRANT OPTION => KWS 는 다른 사람에게 권한 부여 O
+  
+- 2. 권한 취소
+  = 1. REVOKE SELECT ON 수강생 FROM KWS CASCADE;
+    -> KWS 로부터 수강생 Table 에 대한 SELECT 권한 취소 (KWS 로부터 권한을 부여 받은 사용자도 연쇄적으로 취소)
+  
+  = 2. REVOKE GRANT OPTION FOR SELECT ON 수강생 FROM KWS;
+    -> KWS 로부터 수강생 Table 에 대한 SELECT 권한을 다른 사람에게 권한 부여할 수 있는 권한 삭제
+
 3. COMMIT (Trasaction 완료 -> DB 적용), ROLLBACK (Transaction 취소 -> DB 적용 안됨), SAVEPOINT (저장됨)
+- 1. 인출 과정 -> Transaction => 직업의 논리적 단위
+- 2. 작업 성공 시 Commit, 작업 실패 시 Rollback 진행
+
+4. SAVEPOINT
+- 1. Transaction 내 ROLLBACK 할 위치인 저장점 지정
+- 2. 예시
+
+INSERT INTO 학과 VALUES ('A001', '정보');
+COMMIT;
+--> COMMIT 명령 수행, ROLLBACK 명령 되돌릴 수 없음
+
+UPDATE 학과 SET 학과명 = '사무' WHERE 학과코드 = 'A001';
+SAVEPOINT sp;
+--> SAVEPOINT 지정
+
+DELETE FROM 수강생 WHERE 과목 = '사무';
+ROLLBACK TO sp;
+--> 삭제 작업 취소
+
+ROLLBACK;
+--> COMMIT 시점 바로 이후의 DB 상태로 되돌아감
+
+** TCL (Transaction Control Language, Transaction 제어어)
+- 일부 DCL 중 Transaction 제어하는 명령어 -> COMMIT, ROLLBACK, SAVEPOINT 만을 따로 분리해 TCL 로 분류하기도 함
+
+** TRUNCATET TABLE
+- 1. Table 에서 모든 Tuple (행) 을 삭제하는 Data 정의어 (DCL) => DELETE 문은 DML
+- 2. DELETE
+  = 1. Data 하나씩 제거 (WHERE 절)
+  = 2. Data 지워짐, Table 용량 줄어들지 않음
+  = 3. 삭제 후 잘못 삭제한 것을 되돌릴 수 없음
+  (COMMIT 과 ROLLBACK 사용)
+  
+- 3. TRANCATE
+  = 1. 전체 Data 한 번에 삭제
+  = 2. DELETE Table 명 다음에 WHERE 절 없는 구문과 동일
+  = 3. Table 용량 줄어듦, 실행 후 자동으로 Commit
+  (COMMIT 을 하므로 TRUNCATE 를 실행한 Table 은 Rollback 불가)
