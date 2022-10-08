@@ -150,6 +150,10 @@ DROP TABLE 학과 CASCADE;
 
 - 5. 집계함수
   = 1. COUNT(속성) : Group 별 Tuple 수
+    -> 1. COUNT(*) -> Tuple 건수 => NULL 포함
+    -> 2. COUNT(속성명) -> Tuple 건수 => NULL 제외
+    -> 3. COUNT(DISTINCT 속성명) -> NULL, 중복 제외된 건수 현황
+
   = 2. AVG(속성) : Group 별 평균
   = 3. SUM(속성) : Group 별 합계
   = 4. MAX(속성) : Group 별 최대값
