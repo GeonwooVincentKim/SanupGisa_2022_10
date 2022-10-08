@@ -126,5 +126,24 @@ DROP TABLE 학과 CASCADE;
 
 - 2. SELECT * FROM 수강생 WHERE 수강료 BETWEEN 30 AND 90; --> 수강생 Table 에서 수강료가 30 이상 90 이하인 모든 Tuple 검색
 - 3. SELECT * FROM 수강생 WHERE 과목 IS NULL; --> 수강생 Table 에서 과목이 NULL 인 모든 Tuple 검색
-
+- 4. 확장 구조
+  = 1. DISTINCT -> 중복 배제
+  = 2. GROUP BY -> 그룹별 검색
+  = 3. ORDER BY -> 정렬 검색
   
+  SELECT [DISTINCT] 속성
+  FROM Table
+  [WHERE 조건]
+  [GROUP BY 속성 [HAVING 조건]]
+  [ORDER BY [ASC | DESC]];
+  
+** TOP
+- 1. ORDER BY 에 정렬된 순서에서 검색되는 Tuple 수
+- 2. ex -> TOP 10 : 10개 Tuple 만 검색
+
+** DISTINCTROW
+- 1. 모든 Tuple 값을 기준으로 중복 배제
+- 2. 검색할 속성과 무관
+
+** ALL
+- 제한 없이 모두 검색 (일반적으로 생략)
