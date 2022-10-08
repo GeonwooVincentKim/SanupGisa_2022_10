@@ -160,3 +160,9 @@ DROP TABLE 학과 CASCADE;
   = 5. MIN(속성) : Group 별 최소값
   = 6. STDDEV(속성) : Group 별 표준편차
   = 7. VARIAN(속성) : Group 별 분산
+
+SELECT * FROM  수강생 WHERE 과목 = '정보' ORDER BY 이름 DESC;
+--> 수강생 Table 에서 과목이 '정보'인 Tuple 검색하되, 이름을 기준으로 내림차순 정렬
+
+SELECT 과목, COUNT(*) AS 수강생수 from 수강생 WHERE 수강료 >= 100 GROUP BY 과목 HAVING COUNT(*) >= 2;
+--> 수강생 Table 에서 수강료가 100 이상인 과목을 수강생이 2명 이상인 수강생수를 검색
