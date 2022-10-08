@@ -130,6 +130,7 @@ DROP TABLE 학과 CASCADE;
   = 1. DISTINCT -> 중복 배제
   = 2. GROUP BY -> 그룹별 검색
   = 3. ORDER BY -> 정렬 검색
+  = 4. 구조
   
   SELECT [DISTINCT] 속성
   FROM Table
@@ -137,6 +138,8 @@ DROP TABLE 학과 CASCADE;
   [GROUP BY 속성 [HAVING 조건]]
   [ORDER BY [ASC | DESC]];
   
+- 5. 예시 (예제 포함)
+
 SELECT * FROM  수강생 WHERE 과목 = '정보' ORDER BY 이름 DESC;
 --> 수강생 Table 에서 과목이 '정보'인 Tuple 검색하되, 이름을 기준으로 내림차순 정렬
 
@@ -184,9 +187,11 @@ SELECT 과목, COUNT(*) AS 수강생수 from 수강생 WHERE 수강료 >= 100 GR
   = 4. EXCEPT
     -> 1. 차집합 연산자
     -> 2. 일부 DB 는 MINUS 를 사용
+ 
+  = 5. 예시
 
-SELECT * FROM 수강생
-UNION
-SELECT * FROM 정회원;
---> 수강생 Table 과 정회원 Table 의 모든 Tuple 을 중복 없이 하나의 결과로 병합 검색
+  SELECT * FROM 수강생
+  UNION
+  SELECT * FROM 정회원;
+  --> 수강생 Table 과 정회원 Table 의 모든 Tuple 을 중복 없이 하나의 결과로 병합 검색
 
