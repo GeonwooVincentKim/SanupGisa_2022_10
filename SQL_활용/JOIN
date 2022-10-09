@@ -8,7 +8,8 @@ I. JOIN
 - 1. 서로 다른 Table 에 있는 동일한 열 이름을 사용할 경우, 열 이름이 중복되어 구별이 어려운 문제가 발생할 수 있음
 - 2. Table 이름과 열 이름 사이에 점(.) 으로 구분하여야 함
 
-II. Join 의 조율
+
+II. Join 의 종류
 1. CROSS JOIN (Cartesian Product -> 카티션 프로덕트)
 - 1. Join 된 Table 사이에 조건이 걸리지 않을 경우에 발생, Table 간 모든 경우의 수에 대해서 Low 가 생성되는 Join 방식
 - 2. CROSS JOIN 은 실제 많이 사용하지는 않지만, SQL 성능 Tuning 에 사용하기도 함
@@ -29,8 +30,7 @@ A003      인사부                      김옥분      A002                A001
                                                                      A003      인사부    김옥분      A002
                                                                      
 
-
-III. INNER JOIN (내부 Join -> JOIN)
+2. INNER JOIN (내부 Join -> JOIN)
 - 1. 일반적으로 부르는 JOIN
 - 2. Table 간 관계에서 참조 무결성 관계를 통해 발생된 Column 에 의해 Join 발생
 - 3. 예제
@@ -67,3 +67,7 @@ A003      인사부                      김옥분      A002
      
   -> 3. Non-EQUI JOIN
      => '=' 조건 아닌 나머지 비교 연산자 (<, <=, >=, >, <>) 를 사용하는 JOIN
+
+3. OUTER JOIN (외부 JOIN)
+- 1. Join 되는 A Table 에서 B Table 에 연결되는 Column 값이 존재하지 않더라도 (즉, NULL 값) A Table 들의 Data 를 가져올 수 있는 JOIN 방법
+
