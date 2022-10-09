@@ -45,7 +45,10 @@ III. INNER JOIN (내부 Join -> JOIN)
 4) SELECT 부서, 부서번호, 부서명, 사원이름 FROM 부서 JOIN 사원 USING(부서번호);
 --> 동일한 Column 이 두 개 이상일 경우, JOIN ~ USING 문장으로 Column 을 제어
 
-부서                                 사원
-
+부서                                 사원                            부서번호   부서명    사원이름
+부서번호   사원명                     사원 이름   부서번호              A001     생산부     김윤환
+A001      생산부       INNER JOIN     김윤환      A001         =>     A001      생산부    장기영
+A002      자재부                      장기영      A001                A002      자재부    김옥분
+A003      인사부                      김옥분      A002
 
 - 4. INNER JOIN 의 종류
