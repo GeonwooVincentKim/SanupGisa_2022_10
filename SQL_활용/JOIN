@@ -1,0 +1,51 @@
+I. JOIN
+1. 개념
+- 1. 하나의 SQL 명령문으로 여러 Table 에 저장된 Data 를 한 번에 검색할 수 있는 강력한 기능
+- 2. 잘못 사용하면 오히려 질의(Querying) 처리 성능을 저하시키는 경우도 발생 가능
+- 3. 두 개 Table 을 연결하는 Join 속성이 있어야 함
+
+2. Join 에서 속성명 중복 해결 방법
+- 1. 서로 다른 Table 에 있는 동일한 열 이름을 사용할 경우, 열 이름이 중복되어 구별이 어려운 문제가 발생할 수 있음
+- 2. Table 이름과 열 이름 사이에 점(.) 으로 구분하여야 함
+
+II. Join 의 조율
+1. CROSS JOIN (Cartesian Product -> 카티션 프로덕트)
+- 1. Join 된 Table 사이에 조건이 걸리지 않을 경우에 발생, Table 간 모든 경우의 수에 대해서 Low 가 생성되는 Join 방식
+- 2. CROSS JOIN 은 실제 많이 사용하지는 않지만, SQL 성능 Tuning 에 사용하기도 함
+- 3. 예제
+
+1) SELECT * FROM 부서, 사원;
+2) SELECT * FROM 부서 CROSS JOIN 사원;
+
+부서                                 사원                            부서번호   생산명   사원이름   부서번호
+부서번호   사원명                     사원 이름   부서번호              A001     생산부     김윤환     A001 
+A001      생산부       CROSS JOIN     김윤환      A001         =>     A002      자재부    김윤환      A001
+A002      자재부                      장기영      A001                A003      인사부    김윤환      A001
+A003      인사부                      김옥분      A002                A001      생산부    장기영      A001
+                                                                     A002      자재부    장기영      A001
+                                                                     A003      인사부    장기영      A001
+                                                                     A001      생산부    김옥분      A002
+                                                                     A002      자재부    김옥분      A002
+                                                                     A003      인사부    김옥분      A002
+                                                                     
+
+
+III. INNER JOIN (내부 Join -> JOIN)
+- 1. 일반적으로 부르는 JOIN
+- 2. Table 간 관계에서 참조 무결성 관계를 통해 발생된 Column 에 의해 Join 발생
+- 3. 예제
+
+1) SELECT 부서, 부서번호, 부서명, 사원이름 FROM 부서, 사원 WHERE 부서.부서번호 = 사원.부서번호;
+2) SELECT 부서, 부서번호, 부서명, 사원이름 FROM 부서 INNER JOIN 사원 ON 부서.부서번호 = 사원.부서번호;
+--> INNER 생략 가능
+
+3) SELECT 부서, 부서번호, 부서명, 사원이름 FROM 부서 NATURAL JOIN 사원;
+--> 두 Table 의 동일한 이름을 가지는 Column 은 모두 Join 됨
+
+4) SELECT 부서, 부서번호, 부서명, 사원이름 FROM 부서 JOIN 사원 USING(부서번호);
+--> 동일한 Column 이 두 개 이상일 경우, JOIN ~ USING 문장으로 Column 을 제어
+
+부서                                 사원
+
+
+- 4. INNER JOIN 의 종류
