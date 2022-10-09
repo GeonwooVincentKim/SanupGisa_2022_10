@@ -172,3 +172,9 @@ VII. JS
 5. HTML Event 처리
 - 1. Button Click 되면 myFunction() 함수 실행
 - 2. document.getElementById("exam").innerHTML = "Alter" -> ID 가 "exam" 인 요소 "Alter 로 변경
+
+6. onclick -> 사용자 Click
+7. onmousedown, onmouseup -> 마우스 누를 때, 마우스 놓았을 때
+8. onmouseover, onmouseout -> 마우스 Pointer 위로 올라왔을 때, 벗어날 때
+9. onchange -> <input>, <select>, <textarea> 요소, 입력 Focus 를 다른 곳으로 이동할 때
+10. onload -> <body>, 해당 Page 와 해당 Page 연결된 외부 내용물이 완전히 로딩되었을 때
