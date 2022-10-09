@@ -18,4 +18,77 @@ I. UI 메뉴 구조 관련 용어
   = 순서, 특정 구조 없이 수 많은 Page 로 나열해 놓은 자료
 
 2. Navigation (사용자의 이동)
-- 1. Site 에서 원하는 정보를 찾도록 
+- 1. Site 에서 원하는 정보를 찾도록 안내
+- 2. 메뉴, 버튼, 링크
+- 3. 사용자가 직관적으로 자신이 찾고 있는 정보를 알고 찾아가는데 도움을 줄 수 있도록 설계
+
+3. Use Case
+- 1. 정의 및 특징
+  = 1. 사용자 측면에서의 요구사항, 기능 사항, 시스템에서 수행해야 하는 내용
+  = 2. 실제 수행 방법 구현, 외부 시스템이나 서브 시스템과의 의사소통 수단
+  = 3. 하나의 단위 업무에 대한 독립적인 기능 수행할 수 있도록 표현
+
+- 2. 유스케이스 명세서
+  = 1. Actor, System 간 상호작용 과정을 글로 자세히 표현한 문서
+  = 2. 정상 흐름, 대안 흐름, 예외 흐름
+  
+
+II. UI 표준 및 지침
+1. UI 표준 - UI 에 공통적으로 적용될 규약
+2. UI 지침
+- 1. 정의 -> UI 설계 시 지켜야 할 세부사항을 규정 (UI 요구사항 구현 시 제약사항 등)
+
+** 제약 사항 (Constraints Requirements)
+- 1. 시스템 설계, 구현 시 관련되는 기술, 표준, 규정
+- 2. 기술 제약사항 -> 개발 연관 정책, 업무규칙, 특정 S/W 나 Program 사용, Data 사용과 관련된 제약 사항
+- 3. 표준 적합 제약사항 -> 개발할 때 적용할 업무 영역의 표준이나 법규
+
+- 2. W3C (World Wide Web Consortium)
+  = 월드 와이드 웹 (WWW) 국제적인 컨소시엄 조직
+ 
+** WWW
+- 1. 인터넷, 전 세계적인 정보 공간
+- 2. 웹 사이트 개발 시 고려해야 하는 웹 3요소
+  = 1. 웹 표준 (Web Standards) -> 웹 규칙, 기술
+  = 2. 웹 접근성 (Web Accessbility) -> 웹 사이트에서 제공하는 모든 정보를 접근 및 이용
+  = 3. 웹 호환성 (Cross Browsing) -> 서로 다른 환경에서도 동등한 서비스 제공
+
+
+- 3. 한국형 웹 콘텐츠 접근성 지침 (KWCAG, Korea Web Accesbility Guidelines)
+  = 1. 장애인, 비장애인이 동등하게 웹 콘텐츠 접근 -> 웹 콘텐츠 제작하는 방법에 관해 기술
+  = 2. 인터넷 웹 콘텐츠 접근성 지침 (KICS.OT-10.0003) 에 해외 웹 관련표준 및 기술 동향 최대한 반영하여 개정
+  = 3. 해외의 '웹 콘텐츠 접근성 가이드라인 2.0 (WCAG 2.0) 을 국내 설정에 맞게 반영
+  
+- 4. 전자정부 웹 표준 지침 -> 특정 운영체제나 웹 브라우저에 상관없이 접속 가능, 최소한의 규약
+
+
+III. Server, Client
+1. Server
+- 1. Client 에게 정보나 서비스 제공
+- 2. HTTP 요청 받아들이고, HTML 문서(웹 페이지)를 반환
+- 3. HTML 문서(웹 페이지) 에는 그림, CSS, JS 가 포함
+- 4. 대표 프로그램
+  = 1. Apache -> Apache 재단, Open Source
+  = 2. IIS -> MS, 상용 사용 가능
+  = 3. nginx (엔진 X) -> NGGX, 오픈 소스, Proxy Server
+  = 4. GWS -> 구글, 유료 서비스
+
+2. Client
+- 1. Server System 상의 Computer 에 원격 서비스 접속 가능
+- 2. URL 입력, Web Server 로 웹 페이지에 대한 요청 전달
+- 3. 대표 프로그램
+  = 1. 인터넷 익스플로러 (IE) -> MS, Window 운영체제
+  = 2. FireFox -> Mozilla, 개방형 Browser
+  = 3. Chrome -> Google, 다양한 운영체제
+  = 4. Safari -> Apple, Apple Device
+  = 5. Opera -> Opera S/W, 낮은 인지도, 웹 표준 많이 구현하는 Browser
+
+
+IV. Web Site, Web Page
+1. 웹 사이트 (Web Site) - 웹 페이지들의 의미 있는 묶음
+2. 웹 페이지 (Web Page)
+- 1. WWW 상에 있는 개개의 문서
+- 2. Web Page 편집 도구
+  = 1. 메모장 -> 어떤 종류의 Format 도 지원하지 않는 Editor, Web Site 에서 사용하였던 모든 Format 제거해 주어 사용 편리
+  = 2. Dream Weaver -> 매크로 미디어, 웹 개발 응용 프로그램, CSS, JS 등 Programming 언어 및 Framework -> 웹 기술 지원
+  = 3. Studio -> 다양한 언어 Programming 가능, MS 의 IDE (통합 게발 환경), 프로그램, Web Site, Web Program 개발 가능
