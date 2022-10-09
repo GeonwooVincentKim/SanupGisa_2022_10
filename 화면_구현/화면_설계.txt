@@ -92,3 +92,41 @@ III. UI 설계 도구
     -> 1. PowerPoint, 아크로뱃, 비지오, Adobe, HTML 등
     -> 2. 재사용 필요시 사용, 산출물과 비슷한 효과, 숙련된 전문가
     
+
+IV. UI Framework (UI Framework)
+1. UI/UX Design 일관성 있고, 효율적 제작 도와주는 도구
+2. Framework -> 미리 만들어진 Container Box 를 쌓아 올림
+3. 기획 및 개발과정 단순화
+4. Framework 에서 지원하는 기본 UI 요소만 사용할 경우, Design 제한적
+5. Framework 에서 지원하는 형식, 개별 문법 학습해야 함
+6. 종류
+- Bootstrap, Vuetify.js, Element, Quasar Framework
+
+
+V. HTML (Hyper Text Markup Language)
+1. Markup 언어, Web Page 표현
+2. Tag 특징
+- 1. <!DOCTYPE html -> HTML Version 알려주는 선언문
+- 2. <html></html> -> HTML 문서 시작과 끝
+- 3. <head></head> -> Style 과 Script 선언하는 부분
+- 4. <title></title> -> Browser 제목 표시
+- 5. <body></body> -> 사용자에게 보여주는 실제 내용 구현되는 부분
+
+** Markup 언어
+- 1. Tag 등 이용, 문서, Data 구조 명기하는 언어
+- 2. 문서 논리적 구조, 배치 양식에 대한 정보 표시
+- 3. Tag (Markup 요소) 이용하여 문서 구성
+- 4. <style></style> -> 글꼴, 색상, 너비, 높이 규정
+- 5. <script></script> -> JS 같은 다른 Programming 언어 연결시키는 Tag
+
+3. HTML Tag 이해
+- 1. 모든 Tag 시작과 끝 Tag 로 이루어져 있음
+- 2. 속성 지정 가능, Web Browser 에 보여지는 내용들을 표시
+
+4. HTML 의 Layout 관련 Tag
+- 1. Header -> Page Header (Logo, 회사명, 사이트 맵, 로그인/회원가입 Button, 검색 Button)
+- 2. Navigation -> 본문 주요 메인 메뉴 영역 지정
+- 3. Section -> Page Contents 영역 지정 (Header, Footer Tag 와 비교해서 영역 구분)
+- 4. Article -> 독립적인 Content 항목에 대한 영역 지정
+- 5. Aside -> 본문 내용 이외에 기타 내용 있을 경우 영역 지정, Sub-Menu
+- 6. Footer -> 본문 내용의 아래에 위치하도록 설정 (개인정보 보호정책, 회사 주소)
