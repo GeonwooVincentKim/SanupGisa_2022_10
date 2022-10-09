@@ -172,5 +172,13 @@ VII. UI 관련 용어
 - 사람들 (Ethnos) + 기록 (Grapho) -> 다른 문화 관찰, 기록하는 연구 방법에서 시작됨
 
 5. Card Sorting
-- 1. Idea 와 Concept 을 작은 Card 에 작성
-- 2. 
+- Idea 와 Concept 을 작은 Card 에 작성, 분류 및 정렬하여 정보를 구조화
+
+6. 정량적 리서치 (Quantitative Research) 
+- 1. 통제된 조건에서 수치화 된 데이터
+- 2. 경쟁사 사이트, 벤치마킹 사이트 또는 이전 디자인과 비교
+- 3. 예) 동선, 무엇, 몇 분
+
+7. 정성적 리서치 (Qualitative Research) 
+- 1. 행동 원인, 의도, 상황 파악 (수치화 X)
+- 2. 사용자 행동과 관련된 정황, 인사이트를 얻기 위한 방법
