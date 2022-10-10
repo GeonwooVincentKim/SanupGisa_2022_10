@@ -1,0 +1,83 @@
+I. SW (Application) Test 의 이해
+1. SW Test 의 개념
+- 1. 정의 -> S/W 의 결함을 찾아내는 활동
+- 2. Test 에 대한 시각
+  = 1. 확인 (Validation) Test
+    -> 1. 사용자 입장
+    -> 2. 고객의 요구사항에 맞게 구현되었는지 확인 => 결과
+    
+  = 2. 검증 (Verfication) Test
+    -> 1. 개발자 (시험자) 입장
+    -> 2. 설계 명세서에 맞게 만들어졌는지 점검 => 생산 과정
+
+2. SW Test 의 필요성
+- 1. 오류 발견 관점 -> Program 오류 발견, 수정하여 올바른 Program 을 개발하는 활동
+- 2. 오류 예방 관점 -> Program 실행 전, Code Review, 동료 검토, Inspection 을 통해 오류를 사전에 발견하는 예방 차원의 활동
+- 3. 품질 향상 관점 -> 사용자 요구사항, 기대 수준 만족, 반복적인 Test -> 제품 신뢰도를 향상하는 품질 보증 활동
+
+** Inspection
+- 요구사항 명세서 작성자를 제외한 다른 검토 전문가들이 요구사항 명세서 확인, 결함 발견하는 형태의 검토 방법
+
+3. SW Test 의 원리
+- 1. Testing 은 결함이 존재함을 밝히는 활동
+  = 잠재적인 결함 줄일 수 있지만, 결함이 발견되지 않아도 결함이 없다고 증명할 수 없음
+  
+- 2. 완벽한 Testing 은 불가 -> 리스크 분석과 우선순위를 토대로 Test 에 집중
+- 3. Testing 은 개발 초기에 시작
+  = Application 개발 단계에 Test 를 계획, SDLC (Software Development Life Cycle) 의 각 단계, 전략적으로 접근하는 것을 고려
+  
+- 4. 결함 집중 (Defect Clustering)
+  = 1. Application 결함 대부분, 소수 특정한 모듈에 집중되어 존재
+  = 2. 파레토 (Pareto) 법칙 -> 전체 결함의 80% 는 S/W 제품 전체 기능 중 20% 에 집중
+  = 3. 낚시의 법칙 -> S/W 제품 결함도 특정 기능, 모듈, 라이브러리에서 결함이 많이 발견
+  
+- 5. 살충제 패러독스 (Pesticide Paradox)
+  = 1. 살충제 내성
+  = 2. 동일한 Test Case 로 반복 실행 -> 결함 발견 X => 주기적으로 TC (Test Case) 를 Review 및 개선
+  
+- 6. Testing 은 정황 (Context, 맥락, 관계)에 의존
+  = 정황 (SW 특성, 테스트 환경, 테스트 역량 등)과 Business Domain (영역, 범위)에 따라 Test 다르게 수행
+
+- 7. 오류-부재의 궤변 (Absense of Errors Fallacy)
+  = S/W 결함 모두 제거해도 사용자 요구사항 만족 X -> 해당 SW 는 품질 높다고 말할 수 없음
+
+- 8. 기타 -> Test 는 별도 Team 에서 수행, 작은 부분에서 시작해서 점차 확대하며 진행
+
+4. Test Process
+- 1. 순서
+  = Test 계획 -> Test 분석 및 Design -> Test Case 및 시나리오 작성 -> Test 수행 -> Test 결과 평가 및 Reporting
+  
+- 2. Test 계획 
+  = Test 목적, 범위 정의, 대상 System 구조 파악, Test 일정 정의, 종료 조건 정의, 조직 및 비용 산정
+
+- 3. Test 분석 및 Design 
+  = Test 목적, 원칙 검토, 요구사항 분석, Risk 분석 및 우선순위 결정, Test Data 준비, Test 환경 및 도구 준비
+
+- 4. Test Case 및 시나리오 작성
+  = TC 작성, Test 용 Script 작성, TC 검토 및 확인, Test 시나리오 작성
+
+- 5. Test 수행 -> 초기 Data 로딩, Test 수행, 결함 Reporting
+- 6. Test 결과 및 Reporting 
+  = Test 결과 정리, Test Process Review, Test 결과 평가, Test Reporitng
+
+- 7. S/W Test 산출물
+  = 1. Test 계획서 -> Test 수행을 계획한 문서
+  = 2. Test Case -> 입력 값, 실행 조건, 기대 결과로 구성된 Test 항목의 명세서
+  = 3. Test 시나리오 -> Test Case 의 집합으로 Test Case 의 동작 순서를 기술한 문서
+  = 4. Test 결과서 -> Test 결과를 정리한 문서
+
+
+II. SW (Application) Test 유형
+1. Test 목적에 따른 분류
+- 1. 회복 (Recovery) Test
+  = System 에 고의로 실패를 유도, System 정상 복귀하는지 Test
+
+- 2. 안전 (Security) Test -> 보안적인 결함을 미리 점검
+- 3. 강도 (Stress, 부하) Test
+  = System 과부하, System 이 정상적으로 작동되는지 검증
+  
+- 4. 성능 (Performance) Test 
+  = System 응답하는 시간, 특정 시간 내 처리하는 업무량, System 반응하는 속도
+  
+- 5. 구조 (Structure) Test
+  = System 내부 논리 경로, Source Code 복잡도 평가
