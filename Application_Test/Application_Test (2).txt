@@ -164,4 +164,44 @@ VIII. Test Oracle
 
 
 IX. Test 시나리오 (Test Scenario)
-1. 정의 -> 
+1. 정의 -> TC 집합, TC 동작 순서 기술한 문서이며 Test 를 위한 절차 명세한 문서
+2. Test 시나리오 작성 시 유의점
+- 1. Test 시나리오 분리 작성 -> System 별, 모듈별, 항목별 Test 시나리오 분리 작성
+- 2. 고객 요구사항과 설계 문서 -> Test 시나리오 작성
+- 3. 식별자 번호, 순서 번호, Test Data, TC, 예상 결과, 확인 항목 포함
+
+
+X. Test Data 및 Test 조건의 이해
+1. Test Data
+- 1. System 적합성 시험하기 위해 특별히 개발된 Data 집합, 조건을 갖춘 Data
+- 2. Test Data 의 필요성 -> 잘못된 Data 를 사용하면 잘못된 결과가 도출되어 시간 낭비
+- 3. Test Data 의 유형 -> 실제 Data, 가상 Data 
+- 4. Test Data 준비 -> 실제 운영 Data 복제하여 준비 (실제 Data), Script 를 통해서 생성 (가상 Data)
+
+2. Test 조건
+- 1. Test 시작 조건 -> 단계별 또는 회차별 Test 수행을 위해 모든 조건을 만족하지 않아도 Test 시작 가능
+- 2. Test 종료 조건 -> 정상적인 Test 를 모두 수행, Test 일정이 만료, 비용을 모두 소진
+- 3. Test 성공과 실패의 판단 기준
+  = 1. 예상 결과 만족하면 성공, 아니면 실패 (기능 및 비기능 Test 시나리오) 
+  = 2. 같은 결과가 나올 떄 성공으로 판단 가능 (동일 Data, Event 중복)
+  
+
+XI. Test 환경 구축
+1. 정의 -> 실제 운영 System 과 동일, 유사한 사양의 H/W, S/W, Network 등의 시설 구축
+2. Test 환경 구축의 유형
+- 1. H/W 기반 Test 환경 구축
+  = 서버 장비 (WAS, DBMS), Client 장비 (노트북, PC), Network (내부 LAN, 공용 인터넷라인) 장비 설치
+
+- 2. S/W 기반의 Test 환경 구축 
+  = 응용 S/W 를 설치, 필요한 Data 를 구축
+
+- 3. 가상 System 기반의 Test 환경
+  = 독립된 Test 환경 구축하기 힘든 경우, 가상 머신 (Virtual Machine), Network => VLAN
+
+** 가상머신 (Virtual Machine)
+- Computer 를 Emulator 하는 S/W, 응용 Program 을 설치 및 실행 가능
+
+** VLAN (Virtual Local Area Network)
+- 물리적인 망 구성과는 상관없이 가상적으로 구성된 근거리 통신망 (LAN)
+
+
