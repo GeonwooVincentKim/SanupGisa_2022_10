@@ -81,3 +81,43 @@ II. SW (Application) Test 유형
   
 - 5. 구조 (Structure) Test
   = System 내부 논리 경로, Source Code 복잡도 평가
+
+- 6. 회귀 (Regression) Test
+  = 변경 또는 수정된 Code 에 대하여 새로운 결함 발견 여부를 평가
+  
+- 7. 병행 (Parallet) Test
+  = 변경된 System 과 기존 System 에 동일한 Data 를 입력 후, 결과 비교
+  
+2. Test 종류에 따른 분류
+- 1. 명세 기반 Test
+  = 1. 주어진 명세를 기반으로 빠짐없이 TC 로 구현하고 있는 확인
+  = 2. 동등 분할, 경계 값 분석
+  
+- 2. 구조 기반 Test
+  = 1. S/W 내부 논리 흐름에 따라 TC 를 작성하고 확인
+  = 2. 구문 기반, 조건 기반
+ 
+ - 3. 경험 기반 Test
+   = 1. Tester 의 경험을 토대로, 직관과 기술 능력 기반 수행
+   = 2. 오류 예측 검사
+ 
+ - 4. Program 실행 여부에 따른 분류
+   = 1. 정적 Test (Static Test)
+     -> 1. Program 실행 없이 Source Code 의 구조 분석
+     -> 2. Code 검사, 워크스루, 인스펙션
+     
+   = 2. 동적 Test (Dynamic Test)
+     -> 1. Program 실행을 요구
+     -> 2. 블랙박스 Test, 화이트박스 Test
+     
+** 정형 기술 검토 (FTR: Formal Technical Review)
+- 1. S/W 개발 산출물 대상 요구사항 일치여부 및 결함 발생여부를 검토하는 정적 분석 기법
+- 2. 동료 검토 (Peer Review)
+  = 명세서 내용을 직접 설명, 동료들이 이를 들으면서 결함 발견
+
+- 3. 워크 스루 (Walkthrough)
+  = 1. 요구사항 정의서를 미리 배포하여 사전 검토
+  = 2. 오류 검출에 초점 두고, 해결책은 나중으로 미룸, 해결책 제시
+  
+- 4. 인스펙션 (Inspection)
+  = 전문가들이 요구사항 명세서를 확인하면서 결함 발견하는 형태
