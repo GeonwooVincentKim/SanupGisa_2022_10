@@ -1,1 +1,19 @@
-I. Test 자동화 도수
+I. Test 자동화 도구
+1. 정의
+- 1. 반복적인 Test 작업을 Script 형태로 구현 (자동화된 Test 실행 절차에 대한 명세)
+- 2. Human Error (사람에 의한 Error) 줄이기 가능
+- 3. 도구를 Test 단계별로 적용
+
+Test 단계         자동화 도구                        도구 설명
+Test 계획        요구사항 관리    고객 요구사항 정의, 요수사항 관리 지원
+Test 분석/설계      TC 생성       Test 기법에 따른 TC 작성과 Test Data 생성 지원
+Test 수행         Test 자동화    기능 Test, UI Test 등 단위 Test 및 통합 Test 지원
+                   정적 분석      코딩 표준, 런타임 Error 등을 검증
+                   동적 분석      대상 System 시뮬레이션을 통한 Error 검증
+                  성능 Test      부하생성기 -> 가상 사용자 생성, System 처리능력을 측정하는 도구
+                   모니터링       System 자원 (CPU, Memory 등) 상태 확인, 분석 지원
+Test 관리       Coverage 측정    Test 완료 후 Test 충분성 여부 검증 지원
+                형상관리         Test 수행에 필요한 도구, Data 및 문서 관리
+               결함 추적/관리     Test 에서 발생한 결함 추적, 관리 활동 지원
+               
+
