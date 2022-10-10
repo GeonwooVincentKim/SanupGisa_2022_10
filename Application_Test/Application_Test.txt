@@ -121,3 +121,41 @@ II. SW (Application) Test 유형
   
 - 4. 인스펙션 (Inspection)
   = 전문가들이 요구사항 명세서를 확인하면서 결함 발견하는 형태
+
+
+III. 블랙박스 (Black Box) Test
+1. 정의
+- 1. 사용자 요구사항 명세서를 보면서 Test, 주로 구현된 기능을 Test -> 기능 Test
+- 2. Test 과정 (단위 -> 통합 -> System -> 인수) 의 후반부 적용
+- 3. 종류
+  = 1. 동치 분할 검사 (Equivalence Partitioning, 동등 분할 기법, 동치 Class 분할)
+    -> 1. 입력 자료, TC 만들고 검사, 타당한 입력 자료와 그렇지 않은 자료 개수 균등하게 Test
+    -> 2. 각 영역에 해당하는 입력 값을 넣고 예상되는 출력 값이 나오는지 실제 값과 비교
+    
+  = 2. 경계값 분석 (Boundary Value Analysis)
+    -> 입력 조건의 경계값으로 Test, 동치 분할 검사 보완
+    
+  = 3. 원인-효과 그래프 검사 (Cause-Effect Graphing Testing)
+    -> 입력 자료 간의 관계와 출력, 효용성 높은 TC 선정하여 Test
+  
+  = 4. 오류 예측 검사 (Fault Based Testing)
+    -> 과거 경험이나 Test 의 감각으로 Test => 보충적 검사 기법
+    
+  = 5. 비교 검사 (Comparison Testing)
+    -> 여러 버전 Program 에 동일 자료 제공, 동일 결과 출력 확인
+    
+
+IV. 화이트 박스 (White Box) Test
+1. 정의
+- 1. Program 의 내부 Logic (수행 경로 구조, Loop 등) 을 보며 Test 수행
+- 2. 논리적 경로 제어 (제어 구조, 선택, 반복 부분 수행)
+- 3. 모듈 안 작동 직접 관찰, 원시 코드의 모든 문장 한 번 이상 수행
+- 4. 종류
+  = 1. 기초 경로 검사 (Basic Path Testing, McCabe 제안, 대표적인 기법)
+    -> 1. 절차적 설계의 논리적 복잡성을 측정
+    -> 2. Test 측정 결과는 실행경로의 기초 정의하는데 지침
+  
+  = 2. McCabe 의 순한 복잡도 (Cyclomatic Complexity)
+    -> 1. 원시 Code 복잡도 정량적으로 평가
+    -> 2. 원시 Code 얼마나 복잡한지, 얼마나 많은 논리적인 경로 가지고 있는지 확인
+    -> 3. 공식, 복잡도 - 영역수(폐구간) + 1 = 3
