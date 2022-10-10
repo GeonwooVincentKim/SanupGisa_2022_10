@@ -86,3 +86,23 @@ IV. 상향식 통합 (Bottom Up)
 - 하위 모듈 O, 상위 모듈 X -> 하위 모듈 구동하기 위한 제어 Program (Interface)
 
   
+V. 혼합식 통합
+- 상위 Level (수준) -> 하향식 통합, 하위 Level (수준) -> 상향식 통합 => 최적의 Test
+
+빅뱅
+1. Test 수행 방법 -> 모든 모듈 동시 통합 후, Test 수행
+2. Driver / Stub -> Driver / Stub 없이 실제 Module 로 Test
+3. 장점 -> 단시간 Test O, 작은 System 에 유리
+4. 단점 -> 장애 위치 파악 어렵고, 모든 모듈이 개발되어야 가능
+
+상향식 (Bottom Up)
+1. Test 수행 방법 -> 최하위 모듈부터 점진적, 상위 모듈과 함께 Test
+2. Driver / Stub -> Test Driver 필요
+3. 장점 -> 장애 위치 파악 쉽고, 모든 모듈 개발해야 하는 시간낭비 필요 없음
+4. 단점 -> 중요 모듈들이 마지막에 Test 될 가능성 있음
+
+하향식 (Top Down)
+1. Test 수행 방법 -> 최상위 모듈부터 하위 모듈을 통합하면서 Test
+2. Driver / Stub -> Test Stub 필요
+3. 장점 -> 장애 위치 파악 쉽고, 중요 모듈 선 Test 가능, 설계성 결함 조기 발견
+4. 단점 -> 많은 Stub 필요, 하위 모듈들의 불충분한 Test 수행
