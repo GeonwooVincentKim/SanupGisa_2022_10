@@ -27,7 +27,7 @@ I. SW (Application) Test 의 이해
   = Application 개발 단계에 Test 를 계획, SDLC (Software Development Life Cycle) 의 각 단계, 전략적으로 접근하는 것을 고려
   
 - 4. 결함 집중 (Defect Clustering)
-  = 1. Application 결함 대부분, 소수 특정한 모듈에 집중되어 존재
+  = 1. Application 결함 대부분, 소수 특정한 모듈에 집중되어 존재, 파레토 
   = 2. 파레토 (Pareto) 법칙 -> 전체 결함의 80% 는 S/W 제품 전체 기능 중 20% 에 집중
   = 3. 낚시의 법칙 -> S/W 제품 결함도 특정 기능, 모듈, 라이브러리에서 결함이 많이 발견
   
