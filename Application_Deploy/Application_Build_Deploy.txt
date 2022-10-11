@@ -101,3 +101,16 @@ II. Build 도구
 - 2. 증분 (증가된 Data) Update -> 업무 Application 에 적용
 - 3. 변경사항의 배포에 대한 비용, 시간, 위험 줄일 수 있게 됨
 
+
+III. IDE (Integrated Development Environment, 통합 개발 환경)
+1. 정의 -> Coding, Debug, Compile, Build, Deploy 등 Program 개발 관련된 모든 작업을 하나의 Program 안에서 처리하는 환경을 제공하는 S/W
+2. 대화형 Interface 제공 -> Compiler + Text Editor + Debugger
+3. 종류
+- 1. Eclipse - IBM Eclipse 재단 - (MS-Windows, Linux, OSX -> Cross Platform) - (Java, C, C++, PHP, JSP 등)
+- 2. VS - MS - MS-Wndows - (Basic, C, C++, C#, .net 등)
+- 3. X Code - Apple - MacOS - (C, C++, Object-C, Java 등)
+- 4. Android Studio - Google - (Windows, Linux, MacOS) - (Java, C, C++)
+- 5. Lazarus - Lazarus Team - (MS-Windows, Linux, OS X 등) - (Pascal)
+- 6. IDEA - JetBrains (이전 IntelliJ) - (Windows, Linux, MacOS) - (Java, JSP, XML, Kotlin, PHP 등)
+- 7. C++ Builder - Embarcadero Technologies - MS-Windows - (C, C++)
+- 8. J Builder - Embarcadero Techonologies - MS-Windows - Java
