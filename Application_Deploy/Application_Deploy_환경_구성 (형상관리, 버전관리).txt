@@ -33,3 +33,7 @@ I. 형상 관리 (SCM; Sofeware Configuration Management)
 - 5. 형상 감사 -> BaseLine 의 무결성 평가하기 위해 확인, 검증 과정 -> 공식적으로 승인
 
 
+II. 형상관리 System 에서 사용하는 언어
+1. 형상 관리 (Configuration Management)
+- 계획부터 개발, 운영, 유지보수, 폐기까지 발생하는 모든 활동을 지속적으로 관리
+
