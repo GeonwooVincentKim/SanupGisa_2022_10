@@ -167,7 +167,7 @@ IV. Application 배포 (Release)
 
 ** SW 개발 보안 3요소 (= SW 개발 보안 목표, 정보 보안 3원칙)
 - 1. 기밀성 (Confidentiality)
-  = 인가 (Authenticationm) 된 사용자만 정보 자산에 접근 가능 (ex -> 방화벽, 암호)
+  = 인가 (Authorization) 된 사용자만 정보 자산에 접근 가능 (ex -> 방화벽, 암호)
 
 - 2. 무결성 (Integrity)
   = 1. 적절한 권한을 가진 사용자만 인가된 방법으로 정보 변경할 수 있도록 하는 것
