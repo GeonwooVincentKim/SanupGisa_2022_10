@@ -114,3 +114,28 @@ III. IDE (Integrated Development Environment, 통합 개발 환경)
 - 6. IDEA - JetBrains (이전 IntelliJ) - (Windows, Linux, MacOS) - (Java, JSP, XML, Kotlin, PHP 등)
 - 7. C++ Builder - Embarcadero Technologies - MS-Windows - (C, C++)
 - 8. J Builder - Embarcadero Techonologies - MS-Windows - Java
+
+4. IDE 도구 주요 기능
+- 1. Code 작성 및 실행 자동화 기능
+  = SW 코드 (Source Code) 자동 생성 및 작성 가능, 작성된 Code 실행이 가능한 자동화 기능 제공
+ 
+- 2. Visual 한 Debugging 제공 기능
+  = SW 코드 (Source Code) 실행 및 Test, 식별된 오류를 수정할 수 있는 자동화 도구 (시각화) 기능 제공
+  
+- 3. SW 형상관리 (SCM) 와 연동 기능
+  = 제품(Product), 배포(Release) 버전, 버그 추적, 기능 목록 관리 기능 제공하는 SCM 과 연동 -> 개발에 필요한 정보의 공유 기능 제공
+  
+
+IV. Build Schedule 관리 독
+1. 정의 - Build Script 를 정해진 조건, 시간에 기동
+2. Anthill, CruiseControl, Hudson 등
+3. 구성
+- 1. 별도의 Web Application 으로 구성되어 Web Server 상에 배포
+- 2. 관리자 화면, Build Script, 형상관리 도구 등과 연계
+- 3. Email 통해 관련 개발자, 관리자들에게 Build 수행 결과 제공'
+
+4. 기능
+- 1. Build 작업 Scheduler -> Build 작업의 작업 주기, 작업 시간 설정
+- 2. Build 작업 상태 및 이력관리 -> 대기 중, 진행 중, 완료, 오류 유형으로 구분하여 관리, 수행 이력 기록
+- 3. Build 도구 연계 관리 -> Build 작업 수행, 작성된 Build Script, 접근 가능한 형상관리 도구를 연계 설정
+- 4. Build 수행 결과 Reporting -> Build 수행 결과 오류 사항, Code Inspection 점검 결과, Test 수행 결과 등 Web 화면 표시, 관련자 공유 가능한 Reporting 제공
