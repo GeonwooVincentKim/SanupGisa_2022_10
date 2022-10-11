@@ -3,3 +3,14 @@ I. Source Code 품질 분석 도구
 2. 정적 분석 도구
 - 1. 작성된 Source Code 실행시키지 않고, Coding 표준, Code 복잡도, Code Style 적정 여부, 잔존 결함 발견 여부 확인
 - 2. Code Inspection -> Source Code 대상, 결함 발견
+
+3. 구분
+- 1. 정적 분석 도구
+  = 1. PMD -> Java 및 타 언어 Source Code 에 대한 Bug, Dead Code 분석 (Linux, Windows)
+  = 2. CppCheck -> C/C++ Code Memory 누수, Overflow 등 문제 분석 (Windows)
+  = 3. SonarQube -> Source Code 품질 통합 Platform, Plug-In 확장 (Cross-Platform)
+  = 4. CheckStyle -> Java Code Coding 표준 준수 검사 도구 (Cross-Platform)
+
+- 2. Code 복잡도
+  = 1. CCM -> 다양한 언어의 Code 복잡도 분석 도구, Linux, Mac 환경 CLI (Cross-Platform)
+  = 2. Cobertura -> jcoverage 기반 Test Coverage (Test 검증 기준) 측정 도구 (Cross-Platform)
