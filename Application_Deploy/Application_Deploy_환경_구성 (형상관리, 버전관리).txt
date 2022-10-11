@@ -183,3 +183,18 @@ VI. 버전 관리 도구 종류
     -> 2. git checkout 브랜치명 
        => 1. master branch (main Project) 에서 해당 Branch 로 commit Pointer 이동
        => 2. 이후 작업 내용은 Branch 에 commit
+
+  = 7. 병합 (Merge)
+    -> 1. git checkout master -> master Branch 로 이동
+    -> 2. git merge 브랜치명 -> Branch 를 master Branch 에 병합
+    -> 3. git branch --d Branch 명 -> Branch 삭제
+    
+  = 8. 원격 저장소에 지정
+    -> 1. git remote add 별칭명 원격 저장소 경로 / 사용자 이름 / 원격 저장소 명.git => 원격 저장소
+    -> 2. git push 별칭명 master -> master Branch 를 원격 저장소에 저장
+    
+  = 9. Clear Case
+    -> 1. IBM 에서 제작
+    -> 2. 복수 Server, 복수 Client 구조 => 확장성
+  
+
