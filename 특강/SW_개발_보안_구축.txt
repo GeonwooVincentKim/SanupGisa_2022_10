@@ -98,3 +98,36 @@ III. S/W 취약점
 ** Symbol Link (기호 연결) -> Window 바로 가기 기능과 유사
 ** Jacking -> 거짓을 사실이라 주장하는 행위
 ** FTP (File Transfer Protocol) -> Internet 에서 File 전송하는 Service, Port Number = 21
+
+
+IV. Secure Coding
+1. 정의 -> 보안 취약점 사전에 제거, 개발 중인 S/W 의 보안 취약점을 사전에 보완하면서 Programming 하는 것
+2. Secure Coding 정책
+- 1. 보안 취약점과 결함 방지 -> 사전 정보 System 의 보안 취약점 사전에 대응 또는 제거하여 개발
+- 2. 안전한 대고객 Service 확대 -> ICT 신기술 통하여 Internet 을 통해 제공, 지속적 진단 및 효율적 관리 방안 마련
+- 3. 안정성 및 신뢰성 확보 -> 신뢰성 기반, 안정성 기반 보안확보, 정보 System 의 기초 단계 ~ 설계 개념 및 Secure Code 수준 대응조치 제안, 보안성 강화
+
+3. Secure Coding 적용 방안
+- 1. S/W 취약점 최소화, 초기 설계 단계부터 보안요소를 고려하여 진행
+- 2. 결함 발생 후 수정비용은 Secure Coding 비용의 수십 배에 달하는 것으로 파악
+  = 1. 보안 정책 수립
+  = 2. Secure Coding Guide 작성
+  = 3. Secure Coding Guide 교육
+  = 4. Secure Coding 자동화 도구
+
+
+V. Secure Coding 점검 내용 (SW 보안 약점 항목)
+1. 정의 -> SW 응용 프로그램의 각 기능 안전하게 서비스하기 위해 보안 항목 식별
+2. 입력 데이터 검증 및 표현 -> 입력 값 검증 누락, Data Type 잘못 지정 (SQL Injection, XSS)
+3. 보안 기능 -> 보안 기능 (인증, 접근 제어 등) 부적절 (취약한 암호 알고리즘, Hard Code)
+4. 시간 및 상태 -> 여러 개 Process 동작 (무한 루프)
+5. 에러 처리 -> Error 처리 미흡, 중요 정보 노출 (오류 Message 를 통한 정보 노출)
+6. Code 오류 -> Programming 시 잘못된 Code 작성 (부적절한 자원 해제)
+7. 캡슐화 -> 캡슐화 불충분 (제거되지 않고 남은 Debug Code)
+8. API 오용 -> 의도하지 않은 방법으로 API 사용, 보안 취약한 API 사용 (취약한 API 사용)
+9. Session 통제 -> 이미 연결 종료된 Client 정보 삭제 X (잘못된 Session 에 의한 정보 노출)
+
+** API (Application Programming Interface)
+- 1. 응용 프로그램 개발 시, 제공하는 라이브러리를 이용할 수 있도록 규칙 정의해놓은 Interface (매개체)
+- 2. API -> 개발에 필요한 Library 제공, 원하는 기능 쉽게 구현 가능
+- 3. Open API -> 누구나 무료 사용할 수 있게 공개된 API
