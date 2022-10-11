@@ -1,0 +1,13 @@
+I. Source Code Build 과정의 이해
+1. 정의 -> 실행할 수 있는 제품 S/W 로 변환하는 과정 (결과물), Programming 언어 유형에 따라 Build 과정 다름
+2. Compile 언어 (C, C++ 등)
+- 1. 전체 번역하여 실행, 가장 속도 빠르고 보안에 유리
+- 2. Compile 과정 통해 Build 작업 수행 -> Build 과정 오래 걸림
+- 3. Build 과정
+  = 1.전처리기 (PreProcessor)
+    -> Compile 직전 사전 처리 위해 먼저 실행 (#include)
+
+  = 2. 구문 분석 (Parser) -> 문장 해석 (문법 검사 등)
+    |
+    
+  = 3.  
