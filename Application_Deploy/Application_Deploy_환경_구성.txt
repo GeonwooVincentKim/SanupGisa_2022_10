@@ -58,3 +58,43 @@ II. 개발 S/W 환경
 
 - 5. DBMS (Database Management System) -> Data 저장, 관리를 위한 DB S/W
 
+2. 개발 S/W
+- 1. 요구사항 관리 도구
+  = 1. 목표 System 기능, 제약 조건 등 고객 요구사항 수집, 분석, 추적
+  = 2. IBM Rational DOORS (Data Object Oreient Repository System), JIRA, inteGREAT, Trello, Reqtify
+
+- 2. 설계/Modeling 도구
+  = 1. 기능 논리적 통합 -> 통합 모델링 언어 (UML; Unified Modeling Language) 지원, DB 설계 지원 => 설계 및 Modeling 지원하는 도구
+  = 2. StarUML, ArgoUML, PlantUML, DB Designer 등
+  
+** UML (Unified Modeling Language)
+- 객체 지향 분석 / 설계용의 Modeling 언어, 산출물들을 Visual 하게 제공, 개발자, 고객 간 상호 의사소통 원할 가능하게 하는 Modeling 표기법
+
+- 3. 구현 도구 -> 구현 및 개발, Eclipse, VS, IntelliJ IDEA, NetBeans, node.js
+
+** Debugging -> Debug, Debugging 은 Computer Program 논리적인 오류(Bug) 를 찾아 수정하는 과정
+** Debugger -> Debug 돕는 도구, 코드 중단점 지정, Program 실행 중단, Code 단계적으로 실행하여 값 확인
+
+** 개발언어 선정 기준
+- 1. 적정성 -> System, 응용 Program 의 목적에 적합
+- 2. 효율성 -> 노력에 비해 훌륭한 결과 얻을 수 있는 기능 => Programming 효율성
+- 3. 이식성 -> 일반적인 PC 및 OS 에 개발환경이 설치 가능해야 함
+- 4. 친밀성 -> Programmer 의 언어 이해 및 사용
+- 5. 범용성 -> 과거 개발 실적 및 사례 존재, 광범위한 분야에 사용
+- 6. 기타
+  = Algorithm, 계산상 난이도, S/W 수행 환경, 자료 구조 난이도, 개발 담당자 경험과 지식
+  
+- 4. Build 도구
+  = 1. Source 에 대한 Build 및 배포 지원, Library (필요한 프로그램을 모아 놓은 집합체)
+  = 2. Maven, Ant, Gradle
+
+** Build -> Source Code File 을 실행가능한 File 로 만드는 일련의 과정
+
+- 5. 형상관리 도구
+  = 1. 변경사항 버전별로 관리, System 품질 향상 지원하는 도구
+  = 2. CVS, Subversion, Git, Mercurial
+
+** 형상 관리 -> S/W 생산물 (Program, 문서, Data 등) 확인, S/W 통제, 변경 상태 기록
+
+- 6. Test 도구 -> 요구사항에 적합하게 구현되어 있는지 Test 지원, Spring Test, CppUnit, JUnit, HttpUnit
+
