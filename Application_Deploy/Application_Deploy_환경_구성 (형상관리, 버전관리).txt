@@ -88,3 +88,66 @@ III. 제품 S/W 버전 관리
 - 5. 차이 (Diff)
   = 파일 수정 기록 확인, 추가한 파일과 이후 변경된 파일의 차이 (Diff) 확인
 
+
+IV. 버전 관리 (Version Control, Revision Control) 도구
+1. 정의 -> 버전 관리 도구, 현업에서 다양한 방향으로 버전 관리 진행
+2. 버전 관리 도구 사용 시 유의 사항
+- 1. 효율적인 버전 도구 관리-> 다양한 기능 활용, 지속적인 버전 관리와 버전 관리 기준
+- 2. 버전 관리 도구 사용 관련, 문제 발생 시 해결 매뉴얼 사전 준비 필요
+- 3. 제품 S/W 기능 작을수록 적절히 조정
+- 4. 버전 관리 항목 정하고, 변경 사항은 공식적인 합의에 의하여 실시
+- 5. 배포 후 수정 중인 SW 의 버전 관리 도구 사용은 신중하게 진행
+
+
+V. 방식에 따른 버전 관리 독
+1. 공유 폴더 방식 (RCS, SCSS) 등
+- 1. 개발 완료 파일은 약속된 위치의 공유 폴더에 복사
+- 2. 담당자 한 명, 매일 공유 폴더의 파일 복사 후, 컴파일 -> Error 확인과 정상 동작 여부 확인
+- 3. 정상 동작 -> 개발자들이 동작 여부 다시 확인
+
+2. Client / Server 방식 (CVS, SVN 등)
+- 1. 중앙에 Version 관리 System 이 항시 동작
+- 2. 개발자들의 현재 작업 내용, 이전 작업 내용 축적 용이
+- 3. 서로 다른 개발자가 같은 File 작업 시, 경고 출력
+- 4. Trac 과 같은 GUI Tool 이용, 모니터링 가능
+
+** Trac (트랙)
+- Open Source Web 기반 Project 관리 겸 버그 추적 등
+
+3. 분산 저장소 방식 (Git, Bitkeeper 등)
+- 1. Local 저장소, 원격 저장소
+- 2. 원격 저장소에서 Local 에 Clone -> 개발자 자신 만의 Local 저장소 생성
+  = git clone 원격저장소경로
+
+- 3. 개발 완료한 파일, 수정 이후 Local 저장소 Commit, 다시 원격 저장소에 반영 (Push)
+
+
+VI. 버전 관리 도구 종류
+1. CVS (Concurrent Versions System)
+- Server, Client 구성, 다수의 인원이 동시 접근 => Client 가 Eclipse (구현 도구, IDE 도구) 에 내장
+
+2. Subversion (서브버전, SVN)
+- GNU 버전 관리 System, CVS 장점은 이어받고 단점은 개선, 2000년 발표 -> 업계 표준
+
+** GNU
+- 1. 자유 S/W 재단 (Free Software Foundation) 의 종합적인 Project
+- 2. 정보를 돈으로 주고 구입하는 것을 반대
+
+** Trunk (나무 몸통, Main) -> 가장 최신의 Source
+** branch (나뭇 가지, 분기) -> 다른 방향으로 개발하는 Source (Main 에서 뻗어진 가지)
+** tag (꼬리표) - 이전 버전 Source 보관
+** Trunk Directory, Branch Directory -> Trunk Directory 와 병합 (Merge)
+
+- 3. RCS (Revision Control System)
+  = CVS 와 달리 Source File 수정을 한 사람만으로 제한, 다수 사람이 File 동시 수정 불가하도록 File 잠금
+
+- 4. Git
+  = 1. Version Control 을 하는 BitKeeper 대체
+  = 2. 속소 중점 분산형 Version 관리 System (DVCS), 대형 Project
+  = 3. Commit 은 Local 저장소에서 이루어 지고, push 로 원격 저장소애 반영
+  = 4. Pull, Fetch -> Server 변경된 내역 받아오기 가능
+  = 5. GNU 일반 공중 사용 허가서 v2 하에 배포되는 자유 S/W
+  = 6. 파일의 변화를 Snapshot 으로 저장
+  
+** GNU GPL v2.0
+- 파생된 Program 역시 같은 CopyLeft [Copy Right (지적 소유권) 와 반대, 공유] 를 가져야 하는 의무 조항 포함
