@@ -1,0 +1,60 @@
+I. 개발환경 구축
+1. 정의 
+- 1. Project 목적과 구축 설계에 대한 명확한 이해가 필요, H/W, S/W 의 선정
+- 2. ex) 사진 편집 = Computer + Photoshop
+
+2. 일반적으로 사용되는 System 환경
+- 1. Program 개발 -> 개발 환경
+- 2. Test -> Test 환경
+- 3. System 운영 -> 운영환경 & 백업환경
+
+
+II. 개발 S/W 환경
+1. System S/W
+- 1. 운영체제 (OS; Operation System)
+  = Windows, Linux, UNIX (HPUX, Solaris, AIX) 등
+  
+- 2. JVM (Java Virtual Machines)
+  = Java 관련 응용 프로그램을 기동하기 위한 Interpreter 환경, 동일 버전 적용하는 것이 좋음
+
+** JVM (Java Virtual Machine)
+- Java 로 작성된 응용 Program (Java ByteCode), Windows, Unix 와 같은 Computer 운용체계서 원활히 운용, S/W
+
+- 3. Web Server
+  = 1. 정적 Web Servivce, MiddleWare, 정적 파일 제공
+  = 2. Apache HTTP Server, IIS, 엔진x, GWS
+
+** Web Server 기능
+- 1. HTTP/HTTPS Request, Response 처리
+- 2. HTML, CSS, JS, Image 등 정적 파일 저장/관리
+- 3. 사용자 인증 (Authentication)
+- 4. 하나의 Server, 여러 Domain 이름 연결하는 가상 호스팅 (Virtual Hosting)
+- 5. 처리한 요청들을 Log File 에 기록
+- 6. 응답 속도 (대역폭) 를 제한
+
+** HTTPS (HyperText Transfer Protocol over Secure Socket Layer) -> HTTP 보안 강화된 버전
+** CSS (Cascading Style Sheets)
+- HTML, XML 등 Markup 언어, Layout, 구성 요소들의 Style 담당하는 언어
+
+- 4. WAS (Web Application Server)
+  = 1. Web Server + JSP / Servlet Application 수행을 위한 Engine
+  = 2. Apache Tomcat, IBM WebSphere, Oracle WebLogic
+  
+** Servlet
+- 1. Web Page 동적 생성, Server 측 Program
+- 2. Servlet Class -> Java Logic 처리, Controller Page
+
+** JSP (Java Server Pages)
+- 1. HTML 내 Java Code 삽입, Web Server 에서 동적, Server 측 Script 이며 다양한 운영체제에서 사용 가능
+- 2. JSP File -> Java 화면 처리, View Page
+
+** 사용자 Web Browser 요청하는 경우
+- 1. Web Server -> 정적 Data (Image, JS 등) 처리, WAS 동적 Contents (DB 접속, 외부 System 연동) Service 요청
+- 2. Server 자원 효율적으로 처리
+
+** HTTP Server
+- 1. URL Request, 미리 Mapping 되어 있는 Content, Response 형태로 전송
+- 2. Servlet Class 또는 JSP File -> HTTP Server 는 Web Container 에서 처리하도록 Client 요청 넘겨줌
+
+- 5. DBMS (Database Management System) -> Data 저장, 관리를 위한 DB S/W
+
