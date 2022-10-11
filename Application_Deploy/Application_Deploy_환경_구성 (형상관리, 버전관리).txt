@@ -35,5 +35,56 @@ I. 형상 관리 (SCM; Sofeware Configuration Management)
 
 II. 형상관리 System 에서 사용하는 언어
 1. 형상 관리 (Configuration Management)
-- 계획부터 개발, 운영, 유지보수, 폐기까지 발생하는 모든 활동을 지속적으로 관리
+- 1. 계획부터 개발, 운영, 유지보수, 폐기까지 발생하는 모든 활동을 지속적으로 관리
+- 2. 식별 표시를 붙여 추적 가능하게 만들고, 형상항목들에 대한 변경 제어하고 관리하는 Process 필요
+
+2. 형상 항목 (Configuration Item)
+- 1. 형상관리 대상이 되는 형상 (항목)
+- 2. 유일한 식별자 부여, 개발적으로 관리되는 Source File, 문서, 기타 사항
+
+3. 베이스라인 (BaseLine, 기준선, 변경 통제 시작)
+- 1. 공식적으로 검토되고 협의되어 향후 기준이 되는 형상 항목의 집합체
+- 2. `기준선 -> 변경 통제 도와줌`, 정식적인 변경 통제 절차 통해서만 변경 가능
+
+4. 마이그레이션 (Migration)
+- 개발 완료된 System 운영 단계로 전환, 관련 Source File 을 Repository (저장소) 로 이관
+
+5. Repository (저장공간, 저장소)
+- 저장공간, File 의 현재 버전과 변경 이력 정보를 저장하는 저장소
+
+6. 워크플로 (Workflow)
+- 1. 미리 정해진 절차가 형상관리 System 안에 구현
+- 2. Git 의 Workflow (Git 을 사용한 협업 방법
+  = 1. Centralized Workflow (중앙 저장소 사용)
+  = 2. Feature Branch Workflow (기능별 Branch)
+
+
+III. 제품 S/W 버전 관리
+1. 정의 -> SW 개발, Code 와 Library, 관련 문서 등 시간 변화에 따른 변경을 관리하는 전체 활동
+2. 버전 관리 주요 용어
+- 1. 저장소 (Repository) -> 파일 현재 버전, 변경 이력 정보 저장
+- 2. 가져오기 (Import) -> 버전 관리 되지 않은 Repository 에 Local Directory File 을 처음으로 복사
+- 3. Check Out -> Program 수정, Repository 파일 받기
+- 4. Check In -> Program 수정 후 Repository 에 새로운 버전으로 갱신
+- 5. 갱신 (Commit) -> 갱신 사항 있으면 충돌 (Conflict) 알림, Diff 도구 이용 수정, Commit 수행
+- 6. 동기화 (Update) -> 자신의 작업 공간을 Repository 의 최신 버전으로 동기화
+
+** Diff 도구 -> 파일 내용 비교하여 서로 다른 부분을 찾아 주는 도구
+** CVS (형상관리 도구)
+- 중앙 집중형 서버 저장소를 두고 Client 가 접속해서 Version 관리 실행
+
+3. 작업 단계별 버전 등록 기법
+- 1. 가져오기 (Import) 또는 추가 (Add)
+  = 개발자가 신규로 어떤 파일을 저장소 (Repository) 에 추가
+
+- 2. 인출 (CheckOut) -> 추가되었던 파일을 개발자가 인출 (Check-Out)
+- 3. 예치, 커밋 (Commit)
+  = 개발자가 인출된 파일 수정, 저장소에 예치 (Commit) 하면서 설명 붙임
+
+- 4. 동기화 (Update)
+  = 1. Commit 작업 후, 새로운 개발자가 자신 작업공간을 동기화 (Update)
+  = 2. 기존 개발자가 추가했던 File 이 전달
+  
+- 5. 차이 (Diff)
+  = 파일 수정 기록 확인, 추가한 파일과 이후 변경된 파일의 차이 (Diff) 확인
 
