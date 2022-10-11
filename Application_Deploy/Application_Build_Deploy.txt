@@ -163,3 +163,16 @@ IV. Application 배포 (Release)
 ** property File -> 자주 변경되지 않는 Data 를 저장한 파일 (ex -> DB 접속 관리자 ID = admin)
 ** WEB-INF Folder -> Web Application 실행하는데 필요한 Class File, 설정 File 저장되는 Folder
 ** web.xml File -> Web Application 에 대한 전반적인 설정 정보를 저장하고 있는 File
+
+
+** SW 개발 보안 3요소 (= SW 개발 보안 목표, 정보 보안 3원칙)
+- 1. 기밀성 (Confidentiality)
+  = 인가 (Authenticationm) 된 사용자만 정보 자산에 접근 가능 (ex -> 방화벽, 암호)
+
+- 2. 무결성 (Integrity)
+  = 1. 적절한 권한을 가진 사용자만 인가된 방법으로 정보 변경할 수 있도록 하는 것
+  = 2. ex - 지폐는 오직 정부(적절한 권한을 가진 사용자)만이 한국은행을 통해(인가된 방법으로만) 만들거나 변경할 수 있음
+
+- 3. 가용성 (Availability)
+  = 1. 정보 자산에 대해 적절한 시간 (시점) 에 접근 가능한 것
+  = 2. 가용
