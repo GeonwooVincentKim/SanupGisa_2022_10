@@ -1,0 +1,125 @@
+I. Design Pattern
+1. 정의 -> 가장 적합한 설계를 일반화, 체계적으로 정리해 놓은 것, S/W 개발에서 효율성과 재사용성 높일 수 있음
+2. 반복적으로 나타나는 문제점들에 대해 전문가들의 경험을 정리하여 해결방안 제시
+3. GoF 의 분류 많이 사용
+
+
+II. GoF (Gang of Four) Design Pattern
+1. Erich Gamma, Richard Helm, Ralph Johnson, John Vissides 가 제시한 Design Pattern
+2. 객체지향 개념에 따른 설계 중 재사용할 경우, 유용한 설계 Design Pattern 으로 정립
+
+
+III. Design Pattern 구성 요소
+1. Pattern 이름, 구분 -> Pattern 을 부를 때 사용하는 이름, Pattern 유형
+2. 문제 및 배경 -> Pattern 사용되는 분야, 배경, 해결하는 문제
+3. 해법 -> Pattern 을 이루는 요소들, 관계, 협동 (Collaboration) 과정 (해결 방법)
+4. 사례 -> 간단한 적용 사례
+5. 결과 -> Pattern 을 사용하면 얻게 되는 이점이나 영향
+6. Sample Code -> Pattern 이 적용된 원시 Code
+
+
+IV. 생성 Pattern
+1. 정의 - 객체 생성 과정을 캡슐화 -> 객체가 변경되어도 Program 구조에 영향 크게 받지 않도록 하여 Program 에 유연성 더해줌
+2. Factory Method (범위 -> Class)
+- 1. 어떤 객체 생성할지를 SubClass 가 결정, 책임 위임하는 방식
+- 2. 객체 생성을 위한 Interface 정의, 어떤 Class 의 Instance (객체) 를 생성할 지에 대한 결정은 SubClass 가 정의
+- 3. 객체 생성, 사용 분리 -> S/W 의존성 최소화
+
+** 필수 4요소
+- 1. Pattern 이름 (Name)
+- 2. 문제 (Problem)
+- 3. 해법 (Solution)
+- 4. 결과 (Consequence)
+
+** Interface
+- Class 들이 구현해야 하는 기능을 지정하는데 사용되는 추상 Class
+
+** 추상 (Abstract)
+- 하위 Class 들에 존재하는 공통적인 Method 를 Interface 로 정의
+
+interface Human {
+    public abstract void eat();
+    public abstract void sleep();
+}
+
+3. Abstract Factory (추상 Factory, 범위 -> 객체)
+- 1. 서로 관련성 O, 의존적인 여러 객체 Group 을 생성할 때 유용
+- 2. 연관된 Sub Class 를 묶어 한 번에 교체하는 것이 가능
+
+4. Builder (빌더, 범위 -> 객체)
+- 1. 생성 단계 캡슐화, 구축 공정 동일
+- 2. 생성 과정과 표현 방법 분리하여 동일한 생성 절차를 통해 서로 다른 결과를 만들 수 있게 해주는 Pattern
+- 3. 생성 절차는 항상 동일, 결과는 다르게 만들어줌
+
+5. Prototype (범위 -> 객체)
+- 1. 원본 객체를 복사(견본), 새 객체를 생성할 수 있도록 하는 Pattern
+- 2. 시간 / 자원 효율성 ↑
+
+6. Singleton (범위 -> 객체)
+- 1. 오직 하나의 객체만을 가지도록 하는 Pattern
+- 2. 불필요한 Memory 낭비 최소화
+
+
+V. 구조 Pattern
+1. 정의 - Class 나 객체들을 조합하여 더 큰 구조로 만들 수 있게 해주는 Pattern => 객체 (Class) 결합
+2. Adapter (범위 -> Class)
+- 1. 구조가 다른 Class 연결
+- 2. 기존 Class 이용하고 싶지만, Interface 가 일치하지 않을 때 사용
+
+3. Bridge (범위 -> 객체)
+- 1. 구현부에서 추상층 분리, 각자 독립적으로 확장, 결합도를 낮춘 Pattern
+- 2. 기능과 구현을 두 개의 별도 Class 로 구현
+
+4. Composite (컴포지트, 범위 -> 객체)
+- 1. 부분-전체 계층을 표현하며, 개별 객체와 복합 객체를 동일하게 다루도록 하는 Pattern
+- 2. 객체들을 Tree 구조로 구성, 복합 객체 안에 복합 객체 포함
+- 3. 개별 객체 -> File, 복합 객체 -> Directory
+
+** 복합객체 -> 한 객체가 다른 객체를 포함하는 객체
+
+5. Decorator (범위 -> 객체)
+- 1. Source 변경하지 않고 기능 확장
+- 2. 부가적인 기능 추가, 다른 객체들을 덧붙이는 방식
+
+6. Facade (퍼사드, 범위 -> 객체)
+- 1. 공유 -> 많은 유사한 객체들을 효과적으로 지원하는 Pattern
+- 2. 메모리 절약 가능, 게임의 배경 표현하는 것과 같이 다수 유사 객체 생성 및 조작할 때 사용
+
+7. Proxy (프록시, 범위 -> 객체)
+- 1. 객체의 대리자, 원래 객체의 작업을 대신 처리하는 Pattern
+- 2. 접근 어려운 객체, 연결하려는 객체 사이, Interface 역할 수행 (ex. 대용량 객체 접근시)
+
+
+VI. 행위 Pattern
+1. Class 나 객체들이 서로 상호작용하는 방법이나 책임 분배 방법을 정의
+2. 여러 객체로 분배하면서 결합도 생성 -> 객체 (Class) 간 Communication (행위)
+3. Interpreter (인터프리터, 범위 -> Class)
+- 통역, 언어 규칙 Class 이용 -> 언어 문법 정의하고 해석 (ex. SQL 처리)
+
+4. Template Method (템플릿 Method, 범위 -> Class)
+- 1. 알고리즘 골격 구조 정의
+- 2. 특정 단계에서 수행하는 내역을 바꾸는 Pattern -> Code 중복 최소화
+
+5. Chain of Responsibility (책임 연쇄, 범위 -> 객체)
+- 1. 객체들끼리의 연결 고리 생성, 내부적으로 전달
+- 2. 한 객체가 처리하지 못하면 다음 객체에게 요청\
+
+6. Command (커맨드, 범위 -> 객체)
+- 1. 요청 캡슐화, 매개 변수 써서 다른 요청 추가
+- 2. 캡슐화 되어 있음 -> 사용자는 단순히 요청 명령어를 사용하여 요청하면 됨
+- 3. Example
+  = 1. command("전등 ON"); -> 요청
+  = 2. PushButton(); -> 처리하는
+  = 3. 요청하는 쪽, 처리하는 쪽 분리
+
+7. Iterator (이터레이터, 범위 -> 객체)
+- 1. 내부 표현 보여주기 X, 모든 항목에 순차적으로 접근
+- 2. 반복 필요한 자료구조, 모두 동일한 Interface 를 통해 접근
+
+8. Mediator (미디에이터, 범위 -> 객체)
+- 1. 객체 간 상호 작용 (Interface) 을 캡슐화한 Pattern
+- 2. 객체 사이 의존성 줄여 결합도 감소, 복잡한 관계 단순화
+
+9. Memento (메멘토, 범위 -> 객체)
+- 1. 객체 상태 값 미리 저장, 복구
+- 2. 
