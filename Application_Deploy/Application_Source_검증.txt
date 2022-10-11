@@ -168,3 +168,18 @@ public class CalculatorTest {
     assertEquals(60, result); // 60 과 result 가 일치함 확인
   }
 }
+
+4. Mock 단위 Test Framework
+- 1. Mock 객체 사용하는 Test Framework, 특정 기능 or Module 응답 결과 미리 정의
+- 2. Test Double -> Test 전용 객체, Test 를 위해 실제 객체를 대신해서 사용
+- 3. Mock Test 객체 유형
+  = 1. Dummy -> 객체 전달, 실제로 사용 X, 매개변수 목록 채울 때 사용, 객체 기능 필요하지 않은 경우 사용
+  = 2. Fake -> 실제로 동작하도록 구현, 실제 환경과는 다르게 구현 가능
+  = 3. Stubs 
+    -> 1. 미리 준비한 응답만 제공, 그 외 상황에 대해서는 정상적인 작동을 하지 못하는 것이 일반적
+    -> 2. 특정 상태 (State) 가정, 특정 값, Message 반환 시 사용
+ 
+  = 4. Mocks
+    -> 1. Spec 을 통해 정의된 응답 받고, 다른 응답 받으면 예외 발생하도록 구현
+    -> 2. 응답에 대한 확인 수행
+    -> 3. 행위(Behaviour) 검증
