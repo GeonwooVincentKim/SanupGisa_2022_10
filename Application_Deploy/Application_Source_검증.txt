@@ -1,0 +1,5 @@
+I. Source Code 품질 분석 도구
+1. 정의 -> Source Code 에 대한 Coding Style, 설정된 Coding 표준, Code 복잡도, Code 내 존재하는 메모리 누수 현황, Thread 결함 발견하기 위해 사용하는 분석 도구]
+2. 정적 분석 도구
+- 1. 작성된 Source Code 실행시키지 않고, Coding 표준, Code 복잡도, Code Style 적정 여부, 잔존 결함 발견 여부 확인
+- 2. Code Inspection -> Source Code 대상, 결함 발견
