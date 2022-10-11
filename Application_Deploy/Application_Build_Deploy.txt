@@ -139,3 +139,27 @@ IV. Build Schedule 관리 독
 - 2. Build 작업 상태 및 이력관리 -> 대기 중, 진행 중, 완료, 오류 유형으로 구분하여 관리, 수행 이력 기록
 - 3. Build 도구 연계 관리 -> Build 작업 수행, 작성된 Build Script, 접근 가능한 형상관리 도구를 연계 설정
 - 4. Build 수행 결과 Reporting -> Build 수행 결과 오류 사항, Code Inspection 점검 결과, Test 수행 결과 등 Web 화면 표시, 관련자 공유 가능한 Reporting 제공
+
+
+IV. Application 배포 (Release)
+1. 정의 -> Application 을 실행 및 Test 할 수 있도록 Compile 된 Program, Resource 를 Server 상 적합한 위치로 이동하는 작업
+2. Application 배포 단위
+- 1. 다양한 단위로 묶음 Packging 을 통해서 배포 가능
+- 2. Jar (Java Archive)
+  = 1. Java Library, Resource (Class, Image, 환경 설정 File 등), property 파일 포함
+  = 2. Java Application 동작할 수 있도록 Java Project 를 압축한 File
+  = 3. java file, class File, resources
+  = 4. Program 참조 Library, 구현된 Business Service 배포 시, jar 단위로 Packging 하여 배포
+
+- 3. War (Web Archive)
+  = 1. Servlet / JSP Container, 배치 가능한 Web Application 압축 File Format
+  = 2. Servlet, jar File, WEB-INF Folder 에 있는 web.xml File 로 구성
+  = 3. Web Container 상에 배포, 독립적 Web Application Service 제공 가능
+
+- 4. ear (Enterprise Archive)
+  = jar + war => 하나의 완성된 Web Application Service 제공 가능
+
+** Byte Code -> 고급 언어 Source Code, VM 이 이해할 수 있는 언어로 변환된 중간 Code
+** property File -> 자주 변경되지 않는 Data 를 저장한 파일 (ex -> DB 접속 관리자 ID = admin)
+** WEB-INF Folder -> Web Application 실행하는데 필요한 Class File, 설정 File 저장되는 Folder
+** web.xml File -> Web Application 에 대한 전반적인 설정 정보를 저장하고 있는 File
