@@ -114,4 +114,9 @@ IX. APT (Advanced Persistent Threat, 지능형 지속 공격)
 - 1. 독일 지멘스 사 원격 감시 제어 System (SCADA) 해킹
 - 2. 원자력 발전소, 산업 기반 시설에 사용되는 제어 System 에 침투
 
-2. 
+2. SQL 주입 공격 (SQL Injection)
+- Web 응용 Program 에 강제로 SQL 구문 삽입, 내부 DB Server Data 를 유출 및 변조, 관리자 인증 우회할 수 있음
+
+3. 무작위 대입 공격 (brute force attack, 브루트 포스 공격)
+- 조합 가능한 모든 경우의 수를 다 대입 (사용자 ID, PW)
+
