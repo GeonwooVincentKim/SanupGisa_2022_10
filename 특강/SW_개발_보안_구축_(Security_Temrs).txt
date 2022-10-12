@@ -21,11 +21,24 @@ III. SYN Flooding (SYN 플러딩 -> SYN 넘치도록 공격)
 
 ** UDP Flooding -> UDP Packet 대량 발생, Network 과부하 유발시키는 공격 방법
 ** TCP 3-way Handshaking -> 신뢰성 있는 연결 처리
-- 1. 1단계 -> 송신지 => 수신지 - SYN Packet 전송
-- 2. 2단계 -> 수신지 => 송신지 - SYN + ACK Packet 전송
-- 3. 3단계 -> 송신지 => 수신지 - ACK Packet 전송
+- 1. 1단계 -> 송신지(Client) => 수신지(Server) - SYN Packet 전송
+- 2. 2단계 -> 수신지(Server) => 송신지(Client) - SYN + ACK Packet 전송
+- 3. 3단계 -> 송신지(Client) => 수신지(Server) - ACK Packet 전송
+
+--> 1. ACK Packet 을 Client 측에서 ACK 를 보내주어야만 Server 측에서 통신을 시작할 수 있음
+--> 2. Client 에서 ACK 를 보내줄 때까지 대기 => 과부하 발생, 100개를 보냈다면 100개 다 올때까지 기다려야 함
 
 ** 전송 제어 문자
 - 1. SYN (SYNchronous idle) -> 동기 문자
 - 2. ACK (ACKnowledge) -> 긍정 응답
 - 3. NAK (Negative AcKnowledge) -> 부정 응답
+
+
+IV. 스머핑 (Smurfing, Ping Flood, Ping 홍수)
+1. 엄청난 양 접속신호를 한 Site 에 집중적으로 보냄 (IP, ICMP 특성 악용)
+2. IP -> 비연결형 서비스 (안정성 X)
+3. ICMP (Internet Control Message Protocol)
+- 1. 신뢰성 없는 IP 대신, 송신측으로 Network IP 상태 및 Error Message 전달
+- 2. Server, Gateway 사이에서 Message 제어하고 알려주는 Protocol
+
+4. BroadCast 주소 수신지로 하여 Packet 전송 -> Router BroadCast 로 수신된 Packet, 
