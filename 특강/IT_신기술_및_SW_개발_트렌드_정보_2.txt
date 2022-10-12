@@ -1,0 +1,52 @@
+I. VR (Virtual Reality, 가상현실)
+1. 특정 환경, 상황을 Computer 로 만듦,
+2. 조종법 훈련, 가구 배치 설계, 수술 실습, 게임, 운전 연습
+
+II. AR (Augmented Reality, 증강현실)
+1. 현실 + 가상 Layer (Ex -> 포켓몬고)
+2. 실제 장면 + Computer 가 만들어낸 가상 장면 복합, 합성된 시야
+
+III. MR (Mixed Reality, 혼합 현실)
+1. VR 몰입감 + AR 현실감
+2. 증강 현실 + 증강 가상 (AV: Augmented Virtuality)
+3. 현실과 가상이 자연스럽게 연결 (Ex -> 킹스맨 영화)
+
+IV. 원격 현장감 (Telepresence)
+- 가상 장소를 신체적으로 경험하는 것
+
+V. 몰입 기술, 몰입 경험 (Immersive Experience, Immersive Technologies)
+- 1. VR + AR 심화버전, 몰입형 경험의 '혼합현실 (MR)' 에 초점
+- 2. 가트너 (Gartner), '2019년 Top10 전략기술 Trend' 6번째
+
+VI. AI (Artificial Intelligence, 인공지능)
+- 인간 지능 Process 의 Simulation, John McCathy (존 맥커시)
+
+1. ML (기계 학습) -> 학습 알고리즘, AI 한 분야, Computer 가 학습할 수 있도록 알고리즘, 기술 개발하는 분야
+2. Tensorflow -> Google 에서 개발한 ML Engine
+3. DL (딥러닝, 인공 신경망 알고리즘) -> 인공 신경망 (ANN: Aritificial Neural Network) 기반 ML 기술 (ex -> AlphaGo 바둑)
+4. AutoML (Automated machine learning, 자동화 ML) -> AI 로 또 다른 AI 만들어 내는 기술 = 구글 AutoML (쉽게 AI 사용, 기업간 자원격차 줄이기)
+5. Chatbot (대화 로봇) -> 문자, 음성 대화 기능 있는 Computer Program, AI (ex -> 전화 상담원 대체)
+6. IPA (Intelligent Personal Assistant, 지능형 가상 비서)
+- 1. 개인 비서, 사용자 요구하는 작업 처리, 사용자에게 특화된 서비스 제공하는 S/W Augmented
+- 2. Apple Siri, Google Google Now, MS Cortana
+
+7. 뉴럴링크 (NeuralLink)
+- 테슬라 CEO 일론 머스크, 인간 뇌와 컴퓨터 결합, 생각 업로드, 다운로드할 수 있는 작은 전극을 뇌에 이식하는 것을 목표
+
+8. 온톨로지 (Ontology)
+- 1. 존재하는 사물, 사물 간의 관계 및 여러 개념을 Computer 가 처리할 수 있는 형태로 표현
+- 2. AI, Semantic Web, 자연어 처리 (NLP, Natural Language Processing), 문헌정보학
+
+9. NLP (Natural Language Processing, 자연어 처리)
+- Computer 를 이용해 사람의 자연어 분석하고 처리하는 기술, AI 주요 분야 중 하나
+
+10. Semantic Web (의미론적 Web)
+- 1. 정보자원 뜻 이해, 논리적 추론 할 수 있는 차세대 지능형 Web
+- 2. 사람이 읽고 해석하기에 편리, 현재 Web 대신 Computer 가 이해할 수 있는 형태의 새로운 언어로 표현 -> 기계들끼리 서로 의사소통
+- 3. 팀 버너스 리 (W3C, World Wide Web Consortium) 소장
+
+11. RPA (Robotic Process Automation, 로봇 프로세스 자동화)
+- 1. 업무 과정에 발생되는 Data 정형화, 논리적으로 자동 수행하는 기술
+- 2. 반복되는 단순 업무를 자동화하여 빠르고 정밀 수행
+- 3. 일반 Business 자동화 -> AI + 기계 학습 기술 적용 => Business 관리 위주 Process 로 구축
+- 4. RPA -> 최종 사용자의 관점, 규칙 기반 Business Process 설계 => 사람 대신 단순 반복 작업 끊임없이 대량으로 수행
