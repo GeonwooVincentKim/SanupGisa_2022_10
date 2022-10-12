@@ -68,19 +68,50 @@ VII. DDoS (Distributed Denial of Service attack, 분산 서비스 거부 공격)
 ** BOTNET -> 좀비 PC 들로 구성된 Network
 ** C&C Server (Command & Control Server) -> 좀비 PC 를 조정하는 Server
 
-VIII. Trinoo (트리누)
-1. 해킹당한 Computer 가 다시 제3의 전산망 공격, 분산 공격형 (DDoS) Program
-2. Master Server, 연결된 Server
-3. UDP Flooding 으로 Target System 공격
+1. Trinoo (트리누)
+- 1. 해킹당한 Computer 가 다시 제3의 전산망 공격, 분산 공격형 (DDoS) Program
+- 2. Master Server, 연결된 Server
+- 3. UDP Flooding 으로 Target System 공격
 
 ** Master - 공격자(Attacker) 로부터 직접 명령을 받는 System, 여러 대 Agent 관리 -> C&C Server
 ** Agent - 공격 대상 (Target) 에 직접적인 공격을 가하는 System -> 좀비 PC
 
-IX. TFN (Tribal Flood Network, 트리벌 플러트 Network)
+2. TFN (Tribal Flood Network, 트리벌 플러트 Network)
 - UDP Flooding, TCP SYN Flooding, Smurfing 등 다양한 방법, 트리누의 발전된 형태
 
-X. Stacheldraht (슈타첼드라트)
+3 Stacheldraht (슈타첼드라트)
 - 공격자, Master 간 암호화 통신 보장, Network Packet 분석 어려움
 
-XI. DRDoS 공격 (Distributed Reflection DoS, 분사 반사 Service 거부 공격)
+4. DRDoS 공격 (Distributed Reflection DoS, 분사 반사 Service 거부 공격)
 - 발전한 새로운 DDoS 기법, 정상적인 Service 를 운영 중인 System 을 DDoS 공격의 Agent 로 활용
+
+VIII. 피싱 (Phishing)
+- 개인 정보 (Private Data) 와 낚시(Fishing) 합성어, 낚시하듯 개인정보 빼내감
+
+1. 스피어 피싱 (Spear Phishing)
+- 조직 내 신뢰할만한 발신인으로 위장 -> ID, Password 요구
+
+2. 사회공학적 Hacking (Social Engineering Hacking)
+- System X, 사람 심리, 행동 양식 이용
+
+3. 파밍 (Pharming)
+- 1. 공식운영 중인 Domain 자체 탈취, 사용자는 방문한 Site 를 진짜 Site 로 착각
+- 2. ID, Password 등 개인정보 노출하게 하는 수법
+- 3. 피싱에서 진화
+
+4. 큐싱 (Qshing) -> QR Code + 피싱 합성어, QR Code 를 이용한 Hacking
+5. 스미싱 (SMishing) -> SMS + 피싱 합성어, 문자메시지 이용
+
+IX. APT (Advanced Persistent Threat, 지능형 지속 공격)
+- 1. 조직적, 특정 기업, 조직 Network 침투
+- 2. 내부자에게 악성코드가 포함된 Email 장기간 전송
+- 3. Stuxnet -> 악성 코드가 담긴 이동식 Disk (USB), 악성코드에 감염된 P2P Site 접속
+- 4. 악성코드에 감염된 P2P Site
+
+** P2P Site -> 파일 공유 Site, 영화, 드라마 Download 받을 수 있는 곳 (예 -> Torrent)
+
+1. 스턱스넷 (Stuxnet) 
+- 1. 독일 지멘스 사 원격 감시 제어 System (SCADA) 해킹
+- 2. 원자력 발전소, 산업 기반 시설에 사용되는 제어 System 에 침투
+
+2. 
