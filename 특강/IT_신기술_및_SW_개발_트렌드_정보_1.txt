@@ -116,4 +116,31 @@ IX. O2O (Online to Offline)
 - 2. 배달의 민족, Kakao Taxi, Uber
 
 X. GIS (Geographic Information System, 지리 정보 System)
-- 지도에 관한 속성 정보를 Computer 를 이용해서 해석하는 System
+- 1. 지도에 관한 속성 정보를 Computer 를 이용해서 해석하는 System
+- 2. 도시 계획, 토지 관리, 기업 판매 전략 계획
+
+1. NDN (Named Data Networking)
+- 1. Server & IP 주소 기반인 기존 Internet 전달망 (효율적인 Content 분해에 취약)
+- 2. Content 중심 Network (CCN: Content Centric Networking)
+- 3. Internet 주소가 필요 X, Content 자체를 Networking 주체 (Entity) 로 사용 -> 사용자가 원하는 Content 를 가장 가까운 곳에서 가져올 수 있음
+
+2. NGN (Next Generation Network, 차세대 통신망)
+- 1. 이동통신에서 제공하는 완전한 이동성 (Full Mobility)
+- 2. ITU-T, IP Network + 전화망 IP 기술 이용 -> IP 통신망으로 통합하여 현행 공중망 대체하는 차세대 IP Network
+
+3. IoT (Internet of Things, 사물인터넷)
+- Health Care, 원격검침, SmartHome, Smart Car -> 사물을 Network 로 연결해 정보 공유 (ex -> Smart 냉장고)
+
+4. M2M (Machine To Machinew, 기계 대 기계 관계) - 기계 대 기계, 다른 기기와 통신 (자율주행자동차와 도로 신호 System)
+5. 3D Printing (3차원 인쇄) - 인쇄를 하듯 물체를 만들어 내는 방식
+6. 4d Printing 
+- 1. 미리 설계된 시간, 임의 환경 충족 -> 스스로 모양 변경, 제조하여 새로운 형태로 바뀌는 제품 (Object) 을 3D Printing 하는 기술
+- 2. 스카일러 티빗츠 (Skylar Tibbits) 교수
+
+7. 컴패니언 Screen (Companion Screen)
+- 1. TV 방송 시청 동반, 보조기기 이종 단말기에서 동일한 Content 자유롭게 이용 가능 -> N Screen 의 한 종류
+- 2. SmartPhone, Tablet PC, PC 가 대표적인 기기
+- 3. 여러 단말기로 끊김 없이 이용하는 체계
+
+** N Screen
+- 여러 단말기로 같은 Content 을 끊김없이 이용하는 체계
