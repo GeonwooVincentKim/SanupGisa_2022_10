@@ -147,3 +147,41 @@ XIII. KRACK (Key Reinstallation AttaCKs, 키 재설치 공격)
 
 ** WPA2 (Wi-Fi Protected Access, WPA, Wifi 보호 접속)
 - WiFi 인증 Program, 보안 프로토콜 Network 장비가 준수하고 있음을 나타내는 보안 Protocol
+
+XIV. HoneyPot (허니팟) - Hacker 잡기 위해 유인하는 System
+XV. 그레이웨어 (Grayware)
+- 1. 정상, 악성 S/W 중간에 해당, Adware, Spyware, Trackware 기타 악성 Code, 악성 공유웨어
+- 2. 악성이면서 유용한 S/W
+
+XVI. 가짜 바이러스 (Virus Hoax, 혹스) - 공신력 있는 기관 사칭, 복잡한 기술 용어 사용하여 사용자 속이는 허위 정보
+XVII. 조크 바이러스 (Joke Virus, 조크)
+1. 악의적 목적 X, 사용자 심리적인 동요, 불안 조장 
+2. 모니터 화면 거꾸로 보여주기, CD-ROM Drive 저절로 열리기, H/D Drive Format 하는 화면 보이기
+
+1. ASLR (Address Space Layout Randomization, 주소 공간 Layout 무작위화)
+- 주소 랜덤으로 Process 주소 공간에 배치, 실행할 때마다 Data 주소 바뀌는 기법
+
+2. StackGuard 
+- Program 복귀 주소, 변수 사이에 특정 값 저장, 변경되었을 경우, Overflow 로 가정하여 Program 실행 중단
+
+3. 리커버리 통제 (Recovery Control, 복구 통제) - Data Backup, 피해 방지, 장애 해결
+4. PEM (Privacy Enhanced Mail, 프라이버시 향상 전자 우편) - 전자 우편 내용 암호화
+5. 시스로그 (SysLog) - Log Message 들의 집합
+6. 스파이웨어 (Spyware) - 사용자 동의 없이, 또는 사용자를 속여 설치, 무료로 공개하는 S/W Download 시 사용자도 모르게 함께 설치
+7. 오토런 바이러스 (Autorun Virus) - USB Memory 에 복사되어 옮겨다니며 전파되는 Virus
+
+XVIII. War Driving (워 드라이빙) - 자동차로 배회, 무선 LAN 에 무단으로 접속
+1. 블루 스나핑 (Bluesnarfing) - 휴대폰 보안 취약성, Bluetooth 기기에 저장된 Data 접근, 변형시키고 복사
+2. 블루 재킹 (Bluejacking) - Bluetooth 지원 장치들에게 스팸처럼 자발적인 Message 를 익명으로 퍼뜨림, 10m 이내 기기에 명함을 Spam 처럼 익명으로 퍼뜨림
+3. XSS (Cross Site Scirpting, 크로스 사이트 스크립팅) - 삽입된 악의적인 Script, 공격자에 의해 작성된 Script 가 다른 사용자에게 전달, 검증없이 실행, 사용자 Session 탈취
+4. 하트블리드 (Heartbleed) - Internet 각종 정보 암호화, Open SSL (통신 보안 Protocol) 에서 발견된 결함
+5. 세션 하이재킹 (Session Hijacking) 
+- 1. 다른 사람 Session 상태를 훔치거나 도용하여 Access
+- 2. Session 하이재킹 탐지 방법
+  = 1. 비동기화 상태 탐지
+  = 2. ACK STORM 탐지
+  = 3. Packet 유실 및 재전송 증가 탐지
+  = 4. 예상치 못한 접속 Reset 탐지
+
+- 3. ACK STORM (ACK = 응답)
+  = Sequence 번호 (순서 번호: 송신자가 전하는 Data 전송 순서), ACK (Acknowledgement, 응답) Packet
