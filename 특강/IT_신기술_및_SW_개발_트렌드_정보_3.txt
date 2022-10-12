@@ -1,0 +1,60 @@
+I. 멤리스터 (Memristor)
+- 1. Memory + Register 합성어, 기존의 상태를 모두 기억하는 소자, Register, 커패시터, 인덕터, 전자 회로 구성 요소, 차세대 기억 소자, 회로 등에 응용
+- 2. Memristor 를 Computer System Memory 등에 이용, Energy 소모와 부팅 시간을 획기적으로 줄일 수 있음
+
+1. RAID (Redundant Array of Inexpansive Disk , 복수 배열 독립 Disk)
+- 1. Computer 저장장치, 하나의 대형장치 대신 다수의 일반 Hard 를 Array 로 구성
+- 2. Data 분할해서 분산 저장, 다중화 -> Disk 고장 대비하여 Data 의 안정성 높인 Computer 저장 장치
+- 3. 값싼 Disk 를 여러 개 묶어 대용량 저장공간을 만들고자 함
+
+2. 4K 해상도 (4K Resolution)
+- 약 4,000 Pixel, X축 해상도, Digital Image -> 극장용 Digital 영화 등의 표준
+
+3. Phablet (패블릿)
+- Phone + Tablet 합성어, 5인치 이상 대화면 SmartPhone (ex -> Galaxy Note)
+
+4. C형 USB (USB Type-C, USB-C, Universal Serial Bus Type-C)
+- 단자 위아래 동일한 24핀의 USB, USB-IF (USB Implementers Forum) 에 의해 2014년 USB Type-C 규격 (1.0) 발표
+
+
+II. MEMS (멤스, Micro-Electro-Mechanical Systems, 초소형 정밀기계 등)
+- 21세기 최대 유망 기술, 초미세 기계 구조물을 만드는 기술 (손톱 크기의 H/D), Micro Meter (100만 분의 1미터) 이하 정밀도
+
+1. 트러스트존 (TrustZone)
+- 1. 독립적인 보안 구역 따로 두고, 중요 정보를 보호, H/W 기반의 보안 기술
+- 2. 암(ARM: Advanced RISC Machine) 사에 개발
+- 3. 일반 구역 (Normal World), 보안 구역 (Secure World)
+
+2. M-DISC (엠디스크, Millennial DISC)
+- 1. 한 번의 기록만으로 자료 영구 보관할 수 있는 광 저장 장치
+- 2. Digital Video Disk (DVD), Blue-Ray Disk (DVD 보다 빠르고 용량 큼)
+
+
+III. Big Data (빅 데이터)
+- 1. 처리하기 어려운 막대한 양의 정형, 비정형 Data 집합
+- 2. 정부, 포털 등이 Big Data 를 효과적으로 분석 -> 미래 예측해 최적 대응방안 찾고, 수익 연결, 새로운 가치 생성
+- 3. 용량(Volumn), 다양성 (Variety), 속도 (Velocity)
+- 4. 서울지역 카드결제 정보 이용하여 야간 버스노선 개설
+
+1. 하둡 (Hadoop)
+- 1. 대량의 자료 (Big Data) 를 처리할 수 있는 큰 Computer Cluster (많은 양의 계산 진행, Data 저장하기 위해 여러 대 Computer 를 하나로 묶어 놓은 것)
+- 2. 분산 응용 Program 을 지원하는 자유 Java S/W Framework (Open Source 기반의 분산 Computing Platform)
+- 3. 구글 MapReduce 개발 (2004년), 여러 대 Computer 를 마치 하나인 것처럼 묶어 대용량 Data 처리하는 기술 (비용 절감 가능)
+
+2. 맵리듀스 (MapReduce)
+- 1. 대용량 Data 를 분산 처리하기 위한 목적, 개발된 Programming Model
+- 2. Google 에 의해 고안, 대용량 Data 처리를 위한 병렬 처리 기법
+
+3. Tajo (타조)
+- 1. Hadoop 기반의 대용량 Data 웨어하우스, 2010년 고려대학교 Prototype 에서 시작
+- 2. MapReduce 사용 X, 구조화 질의 언어 (SQL) 를 사용, Hadoop 분산 File System (HDFS: Hadoop Distributed File System) File 을 바로 읽어내는 기술
+
+4. 데이터웨어하우스 (Data Warehouse)
+- 1. 정보 (Data) + 창고 (Warehouse) 합성어, 기업 정보 자산을 효율적으로 활용
+- 2. Data 시계열적 (시간적 순서에 따른 배열) 축적, 통합 목표로 하는 기술의 구조적, 통합적 환경
+- 3. 방대한 조직 내에서 분산 운영되는 각각의 DB 관리 System 들 효율적 통합, 조정 및 관리
+- 4. 효율적인 의사 결정 System 을 위한 기초 제공
+
+5. Broad Data
+- 1. Big Data -> 기대 자료, Broad Data -> 기업 Marketing 에 보다 효율적인 다양한 정보
+- 2. 기존 Data 에 새로운 가치를 더하는 Data (SNS 활동, 위치 정보)
