@@ -9,8 +9,7 @@ I. DoS (Denial Of Service, 서비스 거부 공격)
 II. 죽음의 핑 (Ping of Death)
 - Internet Protocol 허용 범위 (65,536 Byte) 이상의 큰 Packet 을 고의로 전송
 
-** Ping (Packet Internet Groper)
-- IP Datagram 도달 여부 조사 => Server 정상 여부 확인
+** Ping (Packet Internet Groper) - IP Datagram 도달 여부 조사 => Server 정상 여부 확인
 
 
 III. SYN Flooding (SYN 플러딩 -> SYN 넘치도록 공격)
@@ -76,23 +75,17 @@ VII. DDoS (Distributed Denial of Service attack, 분산 서비스 거부 공격)
 ** Master - 공격자(Attacker) 로부터 직접 명령을 받는 System, 여러 대 Agent 관리 -> C&C Server
 ** Agent - 공격 대상 (Target) 에 직접적인 공격을 가하는 System -> 좀비 PC
 
-2. TFN (Tribal Flood Network, 트리벌 플러트 Network)
+2. TFN (Tribal Flood Network, 트리벌 플러트 Network) 
 - UDP Flooding, TCP SYN Flooding, Smurfing 등 다양한 방법, 트리누의 발전된 형태
 
-3 Stacheldraht (슈타첼드라트)
-- 공격자, Master 간 암호화 통신 보장, Network Packet 분석 어려움
+3 Stacheldraht (슈타첼드라트) - 공격자, Master 간 암호화 통신 보장, Network Packet 분석 어려움
 
 4. DRDoS 공격 (Distributed Reflection DoS, 분사 반사 Service 거부 공격)
 - 발전한 새로운 DDoS 기법, 정상적인 Service 를 운영 중인 System 을 DDoS 공격의 Agent 로 활용
 
-VIII. 피싱 (Phishing)
-- 개인 정보 (Private Data) 와 낚시(Fishing) 합성어, 낚시하듯 개인정보 빼내감
-
-1. 스피어 피싱 (Spear Phishing)
-- 조직 내 신뢰할만한 발신인으로 위장 -> ID, Password 요구
-
-2. 사회공학적 Hacking (Social Engineering Hacking)
-- System X, 사람 심리, 행동 양식 이용
+VIII. 피싱 (Phishing) - 개인 정보 (Private Data) 와 낚시(Fishing) 합성어, 낚시하듯 개인정보 빼내감
+1. 스피어 피싱 (Spear Phishing) - 조직 내 신뢰할만한 발신인으로 위장 -> ID, Password 요구
+2. 사회공학적 Hacking (Social Engineering Hacking) - System X, 사람 심리, 행동 양식 이용
 
 3. 파밍 (Pharming)
 - 1. 공식운영 중인 Domain 자체 탈취, 사용자는 방문한 Site 를 진짜 Site 로 착각
@@ -120,3 +113,37 @@ IX. APT (Advanced Persistent Threat, 지능형 지속 공격)
 3. 무작위 대입 공격 (brute force attack, 브루트 포스 공격)
 - 조합 가능한 모든 경우의 수를 다 대입 (사용자 ID, PW)
 
+4. 제로 데이 공격 (Zero Day Attack)
+- 보안패치 발표되기 전 해당 취약점을 이용해 이뤄지는 Hacking, 악성 Code 공격, 공격 신속성 = Zero-Day
+
+5. 랜섬웨어 (Ransomware)
+- 내부 문서, 스프레드시트, 그림 파일 등을 암호화, 송금하면 해독용 열쇠 Program 전송 -> 금품 요구 악성 Program
+
+6. 트랩도어 (Trap Door) = Back Door
+- 1. System 보안 제거된 비밀 통로, Service 기술자, 유지 보수 Program 작성자 Access 편의를 위해 고의로 만듦
+- 2. Back Door 탐지 방법
+  = 1. 동작 중인 Process 와 열린 Port 확인
+  = 2. SetUID (권한) File 검사
+  = 3. Back Door 탐지 도구 사용
+  = 4. 무결성 검사
+  = 5. Log 분석
+
+7. Worm Virus (웜 바이러스) - 자기 자신 복제하면서 통신망 등을 통해 널리 퍼짐
+8. 키로거 공격 (Key Logger Attack) - Computer 사용자의 Keyboard 움직임 탐지
+9. 스니핑 (Sniffing) - Network 중간에서 남의 Packet 정보 도청, 스니퍼 = 도청장치
+10. 스누핑 (Snooping) - 남의 정보 염탐하여 불법으로 가로채는 행위
+11. 스푸핑 (Spoofing) - 승인받은 사용자인 것처럼속이는 것, IP Spoofing (IP 속임), ARP Spoofing (MAC 주소 속임)
+12. 스위치 재밍 (Switch Jamming)
+- 1. 위조된 MAC 주소를 지속적으로 Network 로 흘려 보내 Switch 저장 기능 혼란, Dummy Hub 처럼 작동하도록 공격
+- 2. Dummy Hub -> 신호 증폭 기능만 가진 Hub, Node 증가할 수록 Network 속도 저하
+
+
+X. 루트킷 (RootKit) - 차후 침입을 위한 백도어, 사용되는 기능들을 제공하는 Program 들의 모음
+XI. 트립와이어 (TripWire) - 설정 File 변경 시, 분석하는 도구, System 특정 파일 변화를 모니터링 및 알림, 무결성 도구
+XII. Nimda (님다) - 2001년 9월 발생 Virus, Windows 계열 Server PC 공격대상
+XIII. KRACK (Key Reinstallation AttaCKs, 키 재설치 공격)
+- 1. 정상적으로 설치된 Key 를 재설치, 정보 읽는 공격
+- 2. WiFi 보안 표준 WPA2 의 결함
+
+** WPA2 (Wi-Fi Protected Access, WPA, Wifi 보호 접속)
+- WiFi 인증 Program, 보안 프로토콜 Network 장비가 준수하고 있음을 나타내는 보안 Protocol
