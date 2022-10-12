@@ -50,3 +50,56 @@ VI. AI (Artificial Intelligence, 인공지능)
 - 2. 반복되는 단순 업무를 자동화하여 빠르고 정밀 수행
 - 3. 일반 Business 자동화 -> AI + 기계 학습 기술 적용 => Business 관리 위주 Process 로 구축
 - 4. RPA -> 최종 사용자의 관점, 규칙 기반 Business Process 설계 => 사람 대신 단순 반복 작업 끊임없이 대량으로 수행
+
+12.전문가 System (Expert System)
+- 전문가가 지닌 전문 지식과 경험, 노하우 등을 Computer 에 축적
+
+VII. 분산 원장 기술 (DLT; Distributed Ledger Technology)
+- 1. 중앙 관리자, 중앙 Data 저장소 존재 X
+- 2. P2P 망 내 참여자들에게 모든 거래 목록이 분산 저장 -> 거래 발생할 때마다 지속적 갱신되는 Digital 원장
+
+1. 블록체인 (BlockChain)
+- 1. 온라인 금융 거래 정보를 블록으로 연결, P2P Network 분산 환경에서 중앙 관리 Server X
+- 2. 참여자 (Peer) 들이 개인 Digital 장비에 분산, 저장 -> 공동 관리
+- 3. 공공 거래 장부, 분산 거래 장부 (Distributed Ledgers)
+
+2. BitCoin -> 2009년 1월 사토시 나카모토, 가상화폐
+
+VIII. 해시 (Hash)
+- 임의의 길이의 입력 Data 나 Message, 고정된 길이의 값, Key 로 변환 => 전자화폐, 전자서명
+
+1. QKD (Quantum Key Distribution, 양자 암호 Key 분배)
+- 양자 역학적 특성 이용한 비밀 Key 를 분배, 관리하는 기술
+
+2. PIA (Privacy Impact Assessment, 개인정보 영향평가 제도)
+- 1. 개인 정보 활용하는 새로운 정보 System 의 도입, 기존 정보 System 의 중요한 변경 시, System 구축, 운영
+- 2. 기업 고객, 국민 사생활에 미칠 영향에 대해 미리 조사, 분석, 평가하는 제도
+- 3. 개인 정보 침해 위험성을 사전에 발견, 정보 System 구축 및 운영에서 시행착오 예방, 효과적인 대응책을 수립하기 위해 도입하는 제도
+- 4. 개인정보보호법에 의하여 공공기관은 의무화되어 있음
+
+3. PET (Privacy Enhancing Technology, 프라이버시 강화 기술)
+- 개인 정보위험 관리 기술, 다양한 사용자 Privacy 보호 기술을 통칭
+
+4. DRM (Digital Rights Management, Digital 저작권 관리)
+- 1. 저작권 보호하기 위한 System
+- 2. Data 암호화, 전자 워터 마크, 또는 이와 유사한 방법으로 Content 를 표시
+- 3. 지적 재산 보호
+
+5. DevOps (데브옵스, 디봅스)
+- Development, Operations 의 합성어, System 개발과 운영을 병행 및 협업하는 방식
+
+6. MSA (MicroService Architecture)
+- 1. 단독으로 실행 가능, 독립적으로 배치될 수 있는 작은 단위(Module) 로 기능 분해하여 Service 하는 Architecture
+- 2. SOA 방식보다 더 세분화됨
+
+7. SOA (Service Oriented Architecture, Service 지향 Architecture)
+- 1. 정보 System 을 공유, 재사용 가능한 Service 단위, Component 중심으로 구축하는 정보 기술 Architecture
+- 2. 1996년 가트너, IT System 을 Business 에 맞춰 유연하게 사용 가능 (장점) -> ex) Lego Block (Service 단위) 으로 Process 정의
+
+8. CEP (Complex Event Processing, 복잡 Event 처리)
+- 1. 의미가 있는 것만을 추출할 수 있도록 사건 발생 조건 정의, Data 처리 방법
+- 2. 금융, 통신, 전력, 물류, 국방 등 실시간으로 대용량 Data Stream (흐름, 연속된 Data) 에 대한 요구에 대응하기 위해 개발된 기술
+
+IX. 에스크로 (임치) Service (Escrow Service)
+- 1. 전자 상거래, 구매자 & 판매자 사이 중개 Service 회사가 개입, 상품 인도와 대금 지불을 대행해주는 Service
+- 2. 소비자의 피해 최소화하기 위해 도입된 제도
