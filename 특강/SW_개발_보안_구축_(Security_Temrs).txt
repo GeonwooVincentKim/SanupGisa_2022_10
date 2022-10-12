@@ -41,4 +41,46 @@ IV. 스머핑 (Smurfing, Ping Flood, Ping 홍수)
 - 1. 신뢰성 없는 IP 대신, 송신측으로 Network IP 상태 및 Error Message 전달
 - 2. Server, Gateway 사이에서 Message 제어하고 알려주는 Protocol
 
-4. BroadCast 주소 수신지로 하여 Packet 전송 -> Router BroadCast 로 수신된 Packet, 
+4. BroadCast 주소 수신지로 하여 Packet 전송 '
+- Router BroadCast 주소로 수신된 Packet 은 해당 Network 내 모든 Computer 로 전송됨
+
+5. 무력화 - 각 Network Router 에서 IP BroadCast 주소를 사용할 수 없게 미리 설정
+
+
+V. LAND 공격 (Local Area Network Denial Attack)
+1. 나쁜 상태에 빠지게 하다
+2. Packet 출발지 주소 (Address), Port 를 임의 변경, 출발지와 목적지 주소 (or Port) 를 동일하게 함 (무한 응답)
+3. 무력화 - 수신되는 Packet 중 출발지 주소 (or Port), 목적지 주소 (or Port) 가 동일한 Packet 들을 차단
+
+VI. TearDrop 공격
+1. Packet 제어 Logic 악용, System 자원 고갈, Data 송/수신 과정의 분할 순서를 알 수 있도록 Fragment Offset 값 함께 전송
+2. 수신 측에서 Packet 재조립 시 과부하가 발생하도록 공격
+
+VII. DDoS (Distributed Denial of Service attack, 분산 서비스 거부 공격)
+1. 감염된 대량의 숙주 Computer, 특정 System 마비시키는 Cyber 공격
+2. 일반 Computer 를 감염 (좀비 PC), 다량의 Packet 이 무차별로 전송
+3. 트로이 목마에 감염, 여러 손상된 System 이 Service 거부 공격을 일으키는 단일 System 대상
+4. 종류
+- Trinoo, TFN (Tribe Flood Network), Stacheldraht, DRDoS
+
+** 좀비 PC -> DoS, DDoS 공격 수행하도록 설정된 Computer (Server)
+** 트로이 목마 (Trojan Horse) -> 악성 Code 중 유용한 Program 인 것처럼 위장
+** BOTNET -> 좀비 PC 들로 구성된 Network
+** C&C Server (Command & Control Server) -> 좀비 PC 를 조정하는 Server
+
+VIII. Trinoo (트리누)
+1. 해킹당한 Computer 가 다시 제3의 전산망 공격, 분산 공격형 (DDoS) Program
+2. Master Server, 연결된 Server
+3. UDP Flooding 으로 Target System 공격
+
+** Master - 공격자(Attacker) 로부터 직접 명령을 받는 System, 여러 대 Agent 관리 -> C&C Server
+** Agent - 공격 대상 (Target) 에 직접적인 공격을 가하는 System -> 좀비 PC
+
+IX. TFN (Tribal Flood Network, 트리벌 플러트 Network)
+- UDP Flooding, TCP SYN Flooding, Smurfing 등 다양한 방법, 트리누의 발전된 형태
+
+X. Stacheldraht (슈타첼드라트)
+- 공격자, Master 간 암호화 통신 보장, Network Packet 분석 어려움
+
+XI. DRDoS 공격 (Distributed Reflection DoS, 분사 반사 Service 거부 공격)
+- 발전한 새로운 DDoS 기법, 정상적인 Service 를 운영 중인 System 을 DDoS 공격의 Agent 로 활용
