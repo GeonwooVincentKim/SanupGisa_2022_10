@@ -1,0 +1,49 @@
+I. Cloud Computing
+1. 정의 - IT 자원 구매, 소유할 필요 X, 필요한 만큼 사용료를 주고 쓰는 Service
+2. Service 유형
+- 1. SaaS (Software as a Service, Service 로서의 S/W)
+  = S/W (ex. Naver Cloud)
+
+- 2. IaaS (Infrastructure as a Service, Service 로서의 Infrastructure)
+  = Server, Storage, Network 장비 등 IT Infra 장비 (ex. Netflix)
+
+- 3. PaaS (Platform as a Service, Service 로서의 Platform) (ex. Lego Block)
+
+3. 배포 유형
+- 1. Public Cloud - Cloud Service 를 필요로 하는 모든 사용자를 대상, 누구나 비용 지불하면 사용 가능 (AWS, Google Cloud, Azure)
+- 2. Private Cloud - 기업 및 기관 내부에 Cloud Service 환경 구성, 해당 기업/기관에 속하지 않으면 사용 불가
+- 3. Hybrid Cloud - 공유 원하지 않는(노출 X) Data -> private Cloud, 나머지 Service -> Public
+
+II. Open Stack
+- 1. IaaS 형태, Open Source Project, Cloud 환경 구축 가능한 Open Source S/W
+- 2. AMD, Intel, 캐노니컬, 수세 Linux, Red-Hat, 시스코 Systems, DELL, HP, IBM, NEC, VM Ware, 야후! 등 150개 이상 회사 참여, Linux 기반
+
+III. Intercloud Computing 
+- 둘 이상 Cloud Service 제공자 간 상호 연동 가능케 하는 기술, Computer 자원의 동적 할당
+
+IV. Multi Cloud
+- 서로 다른 업체에서 2개 이상의 Public Cloud 이용, 하나의 Service 를 운영
+
+V. Edge Computing (에지 컴퓨팅) 
+- 1. 단말기 주변 (edge), 단말기 자체에서 Data 처리, Data 처리 시간 짧고 보안성 뛰어남
+- 2. 자율주행자동차, Smart 공장, 사물인터넷 (IoT)
+
+VI. Mobile Cloud Computing - Cloud Computing 의 경제성 + Mobile 이동성 결합
+
+1. WPAN (Wireless Personal Area Network) - 10m 이내 거리, 무선 서비스 제공 무선개인통신망 (Bluetooth 기술)
+2. WBAN (Wireless Body Area Network)
+- 1. 웨어러블 (Wearable), 몸에 심는 (Implant) 형태의 Sensor, 기기를 무선으로 연결 -> 개인 영역 Networking 기술
+- 2. IEEE 802.15.6 작업 Group, Service Model 과 요구 사항 정의
+
+3. SON (Self-Organizing Network, 자동 구성 Network)
+- 1. 주변 상황에 자동적으로 적응, 스스로 망을 구성하는 Network, 경제적 효율성 높이는 것을 목적
+- 2. 인공지능 기술 통신장비에 접목한 기술
+- 3. 일반적인 Network 는 정적이지만, SON 은 동적 Network
+
+4. 애드훅 (Ad-hoc network)
+- 1. 고정된 유선망을 가지지 않고, 이동 Host (Mobile Host) -> Router 역할
+- 2. 동적 경로 설정 가능, 기반 구조 없는 Networking, 다른 Node 에 대해 다중경로 가질 수 있음
+- 3. 스스로 망을 구성하는 Network
+
+
+
