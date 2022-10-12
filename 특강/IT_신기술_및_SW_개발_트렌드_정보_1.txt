@@ -144,3 +144,32 @@ X. GIS (Geographic Information System, 지리 정보 System)
 
 ** N Screen
 - 여러 단말기로 같은 Content 을 끊김없이 이용하는 체계
+
+8. 연결 및 표시 기술
+- 5G, LTE (4G), 표시 -> UHD-TV, VR과 AR
+- 좀 더 빠르게, 좀 더 편리하게, 좀 더 많이 접속 (Access) -> 생산성 향상
+
+9. Thin Client (신 클라이언트)
+- 1. Program, Network, 5G, LTE (4G), 좀 더 빠르고, 편리, 
+- 2. H/W 없이 Network 접속장치 기능만 가진 Window 기반 단말기 (WBT) 를 Server 에 연결 & 사용
+- 3. Server 기반 Computing 환경
+
+10. 데스크탑 가상화 (VDI, Virtual Desktop Infrastructure)
+- Server 를 Data Center 에 두고 필요 시 Login 시 사용 가능
+
+11. Server 가상화 (Server Virtualization)
+- 1. CPU, Memory, 입출력 등 단일 Platform 상 Server 지원
+  -> 1. 사용자가 여러 Domain, Server Aplication 으로 분할해 사용 가능 기술
+  -> 2. 물리적으로 한 대의 System 상, Window, Linux 등 각기 다른 OS 의 다양한 서버 Application 을 효율적으로 운영 가능
+
+- 2. Network 가상화 (Network Virtualization)
+  = 1. 하나의 물리적 Network 가 마치 여러 개의 다른 기종 Protocol 이 운영, 논리적 Overlay Network 로 운영
+  = 2. Overlay Network (오버레이 Network)
+  -> 기존 Network 를 바탕으로 그 위에 구성된 또 다른 Network, 가상 Network
+
+- 3. Network 기능 가상화 (Network Functions Virtualization, NFV)
+  = 1. H/W 장비의 기능, 처리 기능을 Server 단에 S/W 로 구현하는 기술
+  = 2. Network 장비의 기능을 가상화
+
+12. Host 가상화 (Host Virtualization)
+- 
