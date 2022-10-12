@@ -9,6 +9,8 @@ I. Cloud Computing
 
 - 3. PaaS (Platform as a Service, Service 로서의 Platform) (ex. Lego Block)
 
+** PaaS-Ta -> IT Service 경쟁력 강화를 목표로 개발, 개방형 Cloud Computing Platform
+
 3. 배포 유형
 - 1. Public Cloud - Cloud Service 를 필요로 하는 모든 사용자를 대상, 누구나 비용 지불하면 사용 가능 (AWS, Google Cloud, Azure)
 - 2. Private Cloud - 기업 및 기관 내부에 Cloud Service 환경 구성, 해당 기업/기관에 속하지 않으면 사용 불가
