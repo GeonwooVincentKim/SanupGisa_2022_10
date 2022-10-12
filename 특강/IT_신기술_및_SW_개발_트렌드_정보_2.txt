@@ -103,3 +103,48 @@ VIII. 해시 (Hash)
 IX. 에스크로 (임치) Service (Escrow Service)
 - 1. 전자 상거래, 구매자 & 판매자 사이 중개 Service 회사가 개입, 상품 인도와 대금 지불을 대행해주는 Service
 - 2. 소비자의 피해 최소화하기 위해 도입된 제도
+
+X. S/W 에스크로 (SW Escrow)
+- 1. SW 개발자 지식 재산권 보호, 사용자에게는 저렴한 비용으로 SW 안정적 사용, 유지보수 받을 수 있도록 하기 위함
+- 2. Source Program 과 기술 정보 등을 제3의 기관에 보관하는 것
+
+XI. Digital Twin
+- 1. 물리적인 사물, Computer 에 동일하게 표현되는 가상 모델, 제너럴 일렉트릭 (GE)
+- 2. S/W 로 가상화, 모의실험 (시뮬레이션) 
+- 3. ex -> Energy, 항공, HealthCare, 자동차, 국방 등
+
+XII. 디지털 전환 (Digital Transformation, dx)
+- 1. Digital 기술을 사회 전반에 적용, 전통적인 사회 구조를 혁신
+- 2. ex -> 카카오뱅크: 온라인 업체의 금융업 진출
+
+XIII. 고객 여정 분석 (Customer Journey Analytics)
+- 1. 미래 행동 예측, 고객 상호작용을 최적화시키는 분석
+- 2. 소비자 오프라인 매장 재방문 유도, 온라인 행동 유형 파악, 그 경로를 최적화
+- 3. 복잡한 모바일 결재와 같이 소비자를 가로막는 장애물을 쉽게 파악, 제거 가능
+
+XIV. 베이퍼웨어 (vaporware, 증발품)
+- 1. 판매 계획, 배포 계획 발표, 실제로 고객에게 판매 & 배포 안되고 있는 S/W
+- 2. 박람회 홍보책자에만 존재, 브로슈어웨어 (Brochure ware)
+- 3. 개발 X H/W or S/W 를 마치 완성을 앞둔 것처럼 부풀리는 식의 Marketing 전략
+
+XV. OGSA (Open Grid Service Architecture)
+- 1. Application 공유 -> Web Service 표준, Infra 자원 공유 -> Grid 기술
+- 2. Grid 기술
+  = 초고속 네트워크로 연동, 빠른 시간 안에 대규모 연산이 가능한 기술
+
+XVI. 그레이웨어 (Grayware)
+- 정상 S/W, Virus S/W 의 중간에 해당
+
+XVII. 매시업 (Mashup)
+- 다양한 정보(Content) 와 Servicve 를 혼합하여 새로운 Service 를 개발하는 것
+
+XVIII. RIA (Rich Internet Application)
+- 1. Web Browser 와 한계 극복을 위한 UI 기술
+- 2. HTML 보다 역동적이고 인터랙티브한 Web Page 제공하는 신개념의 Flash Web Page 제작 기술
+
+XIX. 컨테이너 (Container)
+- Application 과 Application 을 구동하는 환경을 격리한 공간 (Linux 에 내장된 기술)
+
+XX. Kubernetes (그리스어로 키잡이)
+- 1. Container 를 쉽고 빠르게 배포/확장, 관리 자동화 해주는 OpenSource Platform
+- 2. 배의 방향을 잡는 Key 를 조종하는 사람
