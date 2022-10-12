@@ -172,4 +172,50 @@ X. GIS (Geographic Information System, 지리 정보 System)
   = 2. Network 장비의 기능을 가상화
 
 12. Host 가상화 (Host Virtualization)
-- 
+- 1. 가상화 SW 이용, 여러 가상 머신을 만들어 주는 기술, VMM (Virtual Machine Monitor) Install
+- 2. Guest OS (VM, 나만의 OS)
+- 3. 전가상화 -> WMware, 반가상화 -> Xen, OS 기반 가상화 -> Linux-Server
+
+** VMM (Virtual Machine Monitor, 가상 머신 모니터)
+- 하이퍼바이저, 하나의 Computer System 에서 여러 개의 OS 가동 가능한 가상화 기술
+
+13. 전가상화 (Full-Virtualization) 
+- 1. HW 완전히 가상화, 이진 코드 변환 기법, Guess OS 수정 필요 X
+- 2. H/W Emulation (H/W 가 진짜 있는 것처럼 속이는 것, 모방) 으로 인한 성능 저하가 단점
+
+14. 반가상화 (Para-Virtualization)
+- 1. H/W 완전히 가상화하지 않고, 하이퍼바이저 (하나의 Computer System 에서 여러 개의 OS 가동할 수 있게 하는 가상화 Engine)
+- 2. H/W Emulation 인한 성능 저하 단점 보완, Guest OS 를 수정해야 함 (단점)
+
+15. OS 기반 가상화
+- 하나의 사용자 공간 Instance (가상화 엔진) X, 여러 개의 격리된 사용자 공간 Instance, Server 가상화 방식
+
+16. Storage 가상화
+- Storage Pool (풀), Network 기반 Disk Array, 다수 저장 장치를 단일의 저장 단위처럼 보이도록 함
+
+17. NFC (Near Field Communication)
+- 1. 10cm 이내 가까운 거리, 다양한 무선 Data 주고받는 통신 기술
+- 2. 무선 태그 (RFID), 13.56MHz, 보안 우수, 가격 저렴, 차세대 근거리 통신 기술
+- 3. SmartPhone 교통카드, Door Lock
+
+18. RFID (Radio Frequency IDentifactiuon, 전자 태그)
+- 1. 극소형 칩에 상품정보 저장, 안테나를 달아 무선으로 Data 송신하는 장치
+- 2. 바코드 대체할 차세대 인식 기술
+
+19. Smart Grid (스마트 그리드)
+- 1. 전력망에 IT 접목, 전력 공급자와 소비자 양방향으로 실시간 정보 교환, 차세대 지능형 전력망
+- 2. 전력 공급자 -> 공급량 탄력 조절, 전력 소비자 -> 사용 현황 실시간 파악
+
+20. 와이선 (Wi-SUN)
+- 1. Smart Grid Service 제공하기 위한 WiFi 기반의 저전력 장거리 통신기술
+- 2. LPWA (Low-Power Wide-Area, 저전력 광역 통신기술) 
+  -> 1. 가로등, 자판기 등 추적, 센싱, 검침 등에 활용
+  -> 2. 소량의 Data 를 넓은 영역에 Service
+  -> 3. 협대역 사물인터넷 (NB-IoT), 로라 (LoRa), 시그폭스 (SigFox), 와이선 (Wi-SUN)
+  -> 4. 와이선 주목 끄는 이유 -> 통신사 제공 Service X, 지자체 자가망 구축 형태로 Service 되기 때문
+
+21. 메시 네트워크 (Mesh Network)
+- 1. N:N Device 간 통신 지원
+- 2. 대규모 Device Network 생성에 최적화
+- 3. Bluetooth SIG
+- 4. 건물 자동화, Sensor Network -> 사물 인터넷 솔루션에 적합
