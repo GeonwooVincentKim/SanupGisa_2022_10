@@ -184,4 +184,13 @@ XVIII. War Driving (워 드라이빙) - 자동차로 배회, 무선 LAN 에 무�
   = 4. 예상치 못한 접속 Reset 탐지
 
 - 3. ACK STORM (ACK = 응답)
-  = Sequence 번호 (순서 번호: 송신자가 전하는 Data 전송 순서), ACK (Acknowledgement, 응답) Packet
+  = 1. Sequence 번호 (순서 번호: 송신자가 전하는 Data 전송 순서), ACK (Acknowledgement, 응답) Packet
+  = 2. 급격한 ACK 비율 증가시 탐지
+
+XIX. 이블 트윈 공격 (Evil Twin Attack) - SNS 에서 악의적인 사용자가 지인 또는 특정 유명인으로 가장하여 활동 (연예인 계정 도용)
+XX. 논리 폭탄 (Logic Bomb) -> 특정 조건 만족 시, Trigger 에 의해 특정 형태의 공격
+
+** Trigger (트리거) -> 미리 정해 놓은 조건을 만족, 어떤 동작이 수행되면 자동적으로 수행되는 Program
+
+1. 사이버 협박 (Cyber-Bullying, 사이버 불링) - Internet 에서 특정인을 집단 따돌림, 집요하게 괴롭히는 행위
+2. OWASP (The Open Web Application Security Project) - 10대 Web Application Vulnerability 을 발표
