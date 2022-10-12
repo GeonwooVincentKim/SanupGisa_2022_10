@@ -200,4 +200,12 @@ XIX. OTT (Over-The-Top, 오버더톱 Service)
 - 1. 종합적 보안 관리를 원격으로 제공하는 Service
 - 2. 보안 Solution 관리, 보안 Network 장비 관리, Server 관리, 침해 예방 및 대응, 백업/복구, 보안 Log 분석, 보안 Solution 임대, 관제 등 Service
 
+15. Data Mining (데이터 마이닝)
+- 1. 유용한 상관관계 발견, 미래에 실행 가능한 정보 추출해내고, 의사 결정에 이용하는 과정
+- 2. Data Mining 도구 (OLAP)
+- 3. 대량 Data 집합으로부터 의미 있는 Pattern 이나 규칙을 발견
+- 4. ex -> 상관관계가 높다면기저귀 옆에 맥주를 배치하여 매출 올림
 
+** Data Mining 을 통해 성공한 기업
+- 1. 지금까지 Amazon 에서 검색하고 구입한 책의 목록, 고객의 취향과 관심 영역을 파악
+- 2. 회원이 전에 보았던 영화를 바탕으로 좋아할 만한 영화를 추천
