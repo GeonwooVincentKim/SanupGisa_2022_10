@@ -1,0 +1,31 @@
+I. DoS (Denial Of Service, 서비스 거부 공격)
+1. 정의 -> System 과도한 부하를 일으켜 정보 System 의 사용 방해하는 공격 방식
+2. 종류
+- 1. 자원 고갈 공격형 (Ping of Death, SYN Flooding, UDP Flooding, Smurfing)
+- 2. 취약점 공격형 (Land, TearDrop)
+- 3. 분산 서비스 거부 (DDos)
+
+
+II. 죽음의 핑 (Ping of Death)
+- Internet Protocol 허용 범위 (65,536 Byte) 이상의 큰 Packet 을 고의로 전송
+
+** Ping (Packet Internet Groper)
+- IP Datagram 도달 여부 조사 => Server 정상 여부 확인
+
+
+III. SYN Flooding (SYN 플러딩 -> SYN 넘치도록 공격)
+1. 정의 -> 대량의 SYN (동기 제어 문자 - 접속 시 사용하는 Packet) Packet 이용, Target Service 사용 불가 상태로 만듦
+2. TCP 3-way Handshaking
+3. ACK Packet 을 보내올 때까지 SYN Received 상태, 일정 시간 기다려야 함 -> Server 에 다시 ACK Packet 을 보내야 연결
+4. 무력화 방법 -> 수신지 SYN 수신 대기 시간 줄임
+
+** UDP Flooding -> UDP Packet 대량 발생, Network 과부하 유발시키는 공격 방법
+** TCP 3-way Handshaking -> 신뢰성 있는 연결 처리
+- 1. 1단계 -> 송신지 => 수신지 - SYN Packet 전송
+- 2. 2단계 -> 수신지 => 송신지 - SYN + ACK Packet 전송
+- 3. 3단계 -> 송신지 => 수신지 - ACK Packet 전송
+
+** 전송 제어 문자
+- 1. SYN (SYNchronous idle) -> 동기 문자
+- 2. ACK (ACKnowledge) -> 긍정 응답
+- 3. NAK (Negative AcKnowledge) -> 부정 응답
