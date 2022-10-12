@@ -58,3 +58,36 @@ III. Big Data (빅 데이터)
 5. Broad Data
 - 1. Big Data -> 기대 자료, Broad Data -> 기업 Marketing 에 보다 효율적인 다양한 정보
 - 2. 기존 Data 에 새로운 가치를 더하는 Data (SNS 활동, 위치 정보)
+
+
+IV. Digital Archiving (디지털 아카이빙)
+- 1. Digital 정보 자원을 장기적으로 보존하기 위한 작업, Meta Data 만들어 DB 화하는 작업
+- 2. 늘어나는 정보 자원의 효율적인 관리, 이용을 위해 필요한 작업
+- 3. Archiving -> File 보관
+
+1. Data Diet (데이터 다이어트)
+- 1. Data 삭제 X, 압축하고, 겹친 정보는 중복 배제, 새로운 기준에 따라 나누어 저장하는 작업
+- 2. 중복 데이터 압축, 제거해주는 S/W 를 사용하면 저장량을 5분의 1로 줄일 수 있음
+
+2. LOD (Linked Open Data, 개방형 링크드 데이터)
+- 1. Web 상 모든 Data, DB 공개 및 연결
+- 2. 인터넷 식별자 (URI) 를 통해 Data 를 서로 연결 (연계 Data)함, Web 에 공개, 연계, 공유
+- 3. 연계 Data (Linked Data), Open Data 결합됨
+
+
+V. Digital 포렌식 (Digital Forensic)
+- Computer 법의학, 휴대폰, PDA, PC, Server 등 Data 수집 분석하는 Digital 수사 과정 -> 포렌식센터가 계설되어 있음
+
+1. 공통 평가 기준 (CC, Common Criterial)
+- 정보 보호 제품 (ex -> Anti-Virus) 의 평가 기준을 규정한 국제 표준 (ISO 15408)
+
+2. RTO (Recovery Time Objective, 목표 복구 시간)
+- 비상사태, 업무중단 시점부터 업무가 복구되어 다시 정상가동 될 때까지의 시간
+
+3. RPO (Recovery Point Objective, 목표 복구 시점)
+- 복구할 수 있는 기준점, 복구가 필요한 업무에 대해 어느 시점까지 Data 필요한가에 따라 시점 정함
+
+4. 트러스트존 (TrustZone)
+- 1. 독립적인 보안 구역 따로 두고, 중요 정보를 보호, H/W 기반의 보안 기술
+- 2. 암(ARM: Advanced RISC Machine) 사에 개발
+- 3. 일반 구역 (Normal World), 보안 구역 (Secure World)
