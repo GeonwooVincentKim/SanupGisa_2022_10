@@ -45,5 +45,75 @@ VI. Mobile Cloud Computing - Cloud Computing 의 경제성 + Mobile 이동성 �
 - 2. 동적 경로 설정 가능, 기반 구조 없는 Networking, 다른 Node 에 대해 다중경로 가질 수 있음
 - 3. 스스로 망을 구성하는 Network
 
+** SON & Ad-hoc
+- 1. 공통점
+  = 주변 상황에 자동적으로 적응하여 스스로 망 구성하는 Network
 
+- 2. 차이점
+  = 1. SON -> 인공지능 기술을 통신장비에 접목한 기술, 경제적 효율성 높이는 것을 목적
+  = 2. Ad-Hoc -> 이동 호스트 (Mobile Host), 하나의 Router
 
+5. UWB (Ultra-Wideband, 초광대역 무선)
+- 1. 기존 IEEE 802.11 과 Bluetooth 에 비해 빠른 속도 (500Mpbs / 1Gbps) & 저전력
+- 2. 평균 10 ~ 20m, 최대 100m
+
+6. USN (Ubiquitous Sensor Network)
+- 1. 각종 센서에서 감지한 정보를 무선으로 수집할 수 있도록 구성한 Network
+- 2. ad-hoc network 기술 발전, u Sensor Network 기술이 매우 활성화될 수 있음, 온도, 가속도, 위치 정보, 압력, 지문, 가스
+- 3. Ubiquitous -> 시간, 장소 구애받지 않고 언제나 Network 접속가능한 통신 환경
+
+7. Piconet (피코넷)
+- 여러 개 독립된 통신장치, Bluetooth 기술, UWB 통신기술 사용, 통신망을 형성하는 무선 Network 기술
+
+** WLAN (Wireless Local Area Network, 무선 LAN)
+- 무선 LAN Card 통신망, IEEE 802.11 표준, WiFi
+
+8. 네트워크 슬라이싱 (Network Slicing)
+- 네트워크 쪼개기, 5G (Generation 세대) 핵심기술, 코어 네트워크를 독립된 다수 가상 Network 로 분리
+
+9. SDN (S/W Defined Network, SW 정의망)
+- 1. H/W 중심 Network 를 S/W 기반으로 전환, S/W Programming 을 통해 Network 경로설정, 제어 및 복잡한 운용관리
+- 2. 차세대 Networking 기술
+
+10. 지능형 초연결망
+- 1. S/W 정의 기술 (SDx) 적용하는 차세대 국가망
+- 2. 2017년 초 한국정보화진흥원 (NIA), 과학기술정보통신부 주관, 2017 ~ 2020
+
+11. S/W 정의 기술 (Software-Defined Everything, SDE, SDx)
+- 1. SDN (S/W Defined Networking)
+- 2. SDS (S/W Defined Storage)
+- 3. SDC (S/W Defined Computing),
+- 4. SDDC (S/W Defined Data Center)
+- 5. SDP (S/W Defined Perimeter, S/W 정의 경계)
+
+** SDS (S/W Defined Storage, S/W 정의 Storage)
+- 일정 조직 내 여러 Storage 를 하나처럼 관리, 운용하는 Computer 이용 환경
+
+** SDDC (S/W Defined Data Center, S/W 정의 Data Center)
+- 1. 모든 Computing infra 가상화하여 Service 하는 Data Center
+- 2. 인력 개입 X, S/W 조작만으로 자동 제어 관리
+- 3. 특정 H/W 와 상관없이 독립적
+- 4. 실제 물리적 환경과 동일하게 구성
+- 5. Computing, Networking, Storage, 관리 등 모두 S/W 로 정의해 Data center 를 구성 및 관리
+
+** SDP (S/W Defined Perimeter, S/W 정의 경계)
+- 1. 권한 있는 사용자 및 Device 에 대해서만 Access 권한 부여
+- 2. DNS 정보, IP 주소를 알 수 없는 Black Cloud Network 로 동작 (Hacker 침입 막기)
+
+VII. 오픈플로 (OpenFlow)
+1. Network 장비의 Packet Forwarding 기능, 제어 기능을 표준 Interface 로 분리
+2. S/W 정의 Networking (SDN: S/W Defined Networking) 기술에 사용
+
+** Packet Forwarding
+- 1. 다양한 Network 연결하는 Switching, Routing 장비에서 수행되는 동작
+- 2. 들어온 Packet Header 정보를 이용, 최종 목적지 Network 를 향해 Packet 내보내 주는 일렬의 단계
+
+VIII. BLE (Bluetooth Low Energy, 저전력 Bluetooth)
+- 10m 도달 반경, 2.4GHz 주파수, 저전력 Bluetooth
+
+IX. O2O (Online to Offline)
+- 1. Online, Offline 이 유기적으로 연결해 새로운 가치 창출하는 Service
+- 2. 배달의 민족, Kakao Taxi, Uber
+
+X. GIS (Geographic Information System, 지리 정보 System)
+- 지도에 관한 속성 정보를 Computer 를 이용해서 해석하는 System
