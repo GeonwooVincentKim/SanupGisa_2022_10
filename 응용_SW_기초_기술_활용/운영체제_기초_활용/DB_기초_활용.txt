@@ -54,3 +54,23 @@ VI. 개념적 설계
 - 1. 개념적 Data Model 의 가장 대표적인 것
 - 2. 1976년 P.Chen 에 의해 처음 제안
 - 3. 개체, 속성, 관계 등에 대해 용이하게 표현할 수 있는 ERD 정의
+
+VII. 논리적 설계
+- 1. 목표 DBMS 에 맞춰 논리적 모델로 설계 (관계형, 객체지향형, 객체관계형, 계층형, 망형, Model)
+- 2. 관계형 Schema (Relation Schema) 작성, Table 형태로 표시
+
+VIII. 물리적 설계
+- 1. 물리적 구조 Data 표현
+- 2. 응답시간, 저장공간 효율성, Transaction 처리량 고려
+
+IX. 관계형 DB 의 Relation 구조
+1. Relation Schema (스킴, 내연) -> 속성 이름들 (Relation 틀, 구조)
+2. Relation Instance (외연) -> Tuple 들의 집합 (Relation 실제 값 (실제 Data))
+3. Tuple -> 행 (Row)
+4. 기본 Key, 주 Key 주식별자 (Primary Key) - ex) 학번
+5. Table (Relation) = 개체 (Entity), 속성 (Attribute) = 열, Column
+
+** Domain -> 한 속성에 나타날 수 있는 값들의 범위 (집합)
+** 차수 (Degree) -> 속성들의 수
+** Cardinality -> Tuple 들의 수
+** Null -> "해당없음", 정보 부재 나타내기 위해 사용, 특수 Data 값 => 공백, 0 (Zero X)
