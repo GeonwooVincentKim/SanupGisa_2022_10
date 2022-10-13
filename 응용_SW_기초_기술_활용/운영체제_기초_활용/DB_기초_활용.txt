@@ -103,24 +103,23 @@ IX. 관계형 DB 의 Relation 구조
 - 2. CRUD -> CRUD Matrix
 
 
-4. 운영체제 설치 및 운용 - 수행 순서
-- 1. OS 선택
-  = 1. Windows OS 선택, 설치
-    -> 1. Windows Home => 개인 사용자
-    -> 2. Windows Pro => 소규모 기업용
-    -> 3. Windows Pro for Workstation => Transaction 몰리거나 복구 기능 필요로 하는 소규모 기업용 OS
-    -> 4. 선택 기준 => 생산성 및 사용자, 환경, 보안, 관리 및 배포, 기본 사항, Server 환경 지원
+XI. 운영체제 설치 및 운용 - 수행 순서
+1. OS 선택
+- 1. Windows OS 선택, 설치
+  = 1. Windows Home -> 개인 사용자
+  = 2. Windows Pro -> 소규모 기업용
+  = 3. Windows Pro for Workstation -> Transaction 몰리거나 복구 기능 필요로 하는 소규모 기업용 OS
+  = 4. 선택 기준 -> 생산성 및 사용자, 환경, 보안, 관리 및 배포, 기본 사항, Server 환경 지원
 
-  = 2. Linux / Unix OS 선택
-    -> 1. Debian GNU/Linux => 개발자에게 최적화
-    -> 2. Ubuntu => 가장 광범위하게 쓰이는 Ubuntu OS
-    -> 3. openSUSE => 안정화된 버전 (openSUSE), Test 중인 버전 (Tumpleweed)
-    -> 4. Fedora => Smart 설정, Update 로 사용자 편의성 제공
-    -> 5. CentOS => Programming 에 최적화된 환경 제공
-    -> 6. Slackware => System 관리자를 위한 복구 툴 내장
+- 2. Linux / Unix OS 선택
+  = 1. Debian GNU/Linux -> 개발자에게 최적화
+  = 2. Ubuntu -> 가장 광범위하게 쓰이는 Ubuntu OS
+  = 3. openSUSE -> 안정화된 버전 (openSUSE), Test 중인 버전 (Tumpleweed)
+  = 4. Fedora -> Smart 설정, Update 로 사용자 편의성 제공
+  = 5. CentOS -> Programming 에 최적화된 환경 제공
+  = 6. Slackware -> System 관리자를 위한 복구 툴 내장
 
-- 2. OS 운용
-  = 최신 Update 유지 및 System 복원 기능 활성화
+2. OS 운용 - 최신 Update 유지 및 System 복원 기능 활성화
 
 ** Server 운용 기준
 - 1. 운용 Architecture 파악, Network 구성 현황 및 장비 메뉴얼 확보
