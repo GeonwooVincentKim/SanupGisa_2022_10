@@ -1,0 +1,18 @@
+I. DB 종류
+1. 계층형 DB 관리 System (HDBMS: Hierarchical Database Management System)
+- 1. Data 상하 종속적인 관계, 계층화 (Tree 구조)
+- 2. 접근 속도 빠름, 변화하는 Data 구조에 유연하게 대응 힘듦
+- 3. 종류 -> IMS, System2000
+
+2. 망형 DB 관리 System (NDBMS: Network Database Management System)
+- 1. Data 구조를 Network 상의 망 형태 (Graph 구조), 논리적 표현한 Data Model
+- 2. 계층형 DB 보단 유연, 설계 복잡
+- 3. 종류 -> IDS, TOTAL, IDMS
+
+3. 관계형 DB 관리 System (RDBMS: Relational Database Management System)
+- 1. 가장 보편화, 상하관계 표시하며 상관관게 정리
+- 2. 변화하는 업무, Data 구조에 대한 유연성 좋아 유지 관리 용이
+- 3. Oracle -> 미국 Oracle 사, DB 관리 System, Linux/Unix/Window 모두 지원, 대형 System 에서 많이 사용
+- 4. SQL Server -> MS 사, 관계형 DB System, Window 지원, C# 등과 가장 잘 호환
+- 5. MySQL -> 썬 MicroSystem 소유한 관계형 DB System 이었으나, Oracle 에서 인수, Linux/Unix/Window 모두 지원, OpenSource 기반
+- 6. Maria DB -> MySQL 출신 개발자가 만든 DB, MySQL 과 완벽 호환
