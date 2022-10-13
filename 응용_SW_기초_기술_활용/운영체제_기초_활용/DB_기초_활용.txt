@@ -63,6 +63,7 @@ VIII. 물리적 설계
 - 1. 물리적 구조 Data 표현
 - 2. 응답시간, 저장공간 효율성, Transaction 처리량 고려
 
+
 IX. 관계형 DB 의 Relation 구조
 1. Relation Schema (스킴, 내연) -> 속성 이름들 (Relation 틀, 구조)
 2. Relation Instance (외연) -> Tuple 들의 집합 (Relation 실제 값 (실제 Data))
@@ -74,3 +75,39 @@ IX. 관계형 DB 의 Relation 구조
 ** 차수 (Degree) -> 속성들의 수
 ** Cardinality -> Tuple 들의 수
 ** Null -> "해당없음", 정보 부재 나타내기 위해 사용, 특수 Data 값 => 공백, 0 (Zero X)
+
+1. Relation 특징
+- 1. 한 Relation 정의된 Tuple 들은 모두 다름
+- 2. 한 Relation 정의된 Tuple 들은 순서 무관
+- 3. Tuple 들은 시간에 따라 변함
+- 4. Relation Schema 구성하는 속성들도 순서 무관
+- 5. 속성 명칭 유일, 속성 값 동일해도 됨
+- 6. 속성 - 원자값 (속성 값 분해 X, 다중 값 X)
+- 7. Relation 구성하는 Tuple 을 유일하게 식별, 속성들의 부분집합을 Key 로 설정
+
+2. Key
+- 1. Super Key -> 속성들의 집합으로 구성된 Key (유일성)
+- 2. 후보 Key -> 모든 Tuple 들을 유일하게 식별할 수 있는 하나, 몇 개의 Attribute 집합
+- 3. 기본 Key -> 후보키 중 선택한 Key (중복 X, Null 값 가질 수 없음)
+- 4. 대체 Key -> 후보키 중 기본 Key 제외한 속성들
+- 5. 외래 Key -> 참조하고자 하는 R 의 기본 Key 와 동일
+
+슈퍼 -----------
+| 후보 --------|
+| | 대체 ----| |
+| | | 기본 | | |
+---------------
+
+3. CRUD Matrix
+- 1. 업무 Process, Data 간 상관 분석표, 행 - 업무 Process, 열 - Entity Type
+- 2. CRUD -> CRUD Matrix
+
+
+4. 운영체제 설치 및 운용 - 수행 순서
+- 1. OS 선택
+- 2. Windows OS 선택, 설치
+  = 1. Windows Home -> 개인 사용자
+  = 2. Windows Pro -> 소규모 기업용
+  = 3. Windows Pro for Workstation -> Transaction 몰리거나 복구 기능 필요로 하는 소규모 기업용 OS
+
+ 
