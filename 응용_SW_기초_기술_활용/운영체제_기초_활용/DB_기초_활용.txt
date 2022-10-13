@@ -131,3 +131,45 @@ XI. 운영체제 설치 및 운용 - 수행 순서
 - 1. 정기적인 Data Backup
 - 2. 주기적 보안 Update, System 백업 장려화
 - 3. 트러블 발생 시 문의처 정보 확인
+
+
+XII. 개발도구 설치 및 운용 - 수행 순서
+1. Programming 언어 설치
+- 1. 개발 목적에 맞게, 대부분 언어는 GUI 제공, Community 활성화되어 있으므로, 자신에게 맞는 것 선택
+- 2. Programming 설치
+  = 언어 선택, Download -> 32bit, 64bit 확인, 설치 후 Update 현황 파악하여 최신 상태 유지
+
+** 언어 선택 시 고려사항
+- 1. 언어 Type -> 정적, 동적 개발 언어
+- 2. 목표 System 특징 -> 일반 System, Domain 특화 System
+- 3. 언어 특징 -> 객체 지향, 명령형, 서술형, 순서형, 선언형
+- 4. 지원 -> 관리도구 지원형, 언어 독립형
+
+** 정적 Type 언어
+- 정적 자료형, Type Error 같은 오류 초기 파악 가능
+
+** 동적 Type 언어
+- 동적 자료형, 자료형이 동적으로 변함, Programmer 입장에선 매번 Type 지정할 필요 없으므로, 개발 속도 빠름
+
+2. 개발 지원 도구 활용
+- 1. 개발 Framework 설치 및 운영 -> Spring Framework, 전자 정부 Framework
+- 2. 버전관리 System 구축 및 활용
+
+
+XIII. 개발환경 선택, Cloud 환경 설정 - 수행 순서
+1. 개발환경을 System 구현 목적에 맞게 결정
+- 1. On-Premise 방식 -> Intranet 망 활용 (외부 차단된 상태), Data 와 정보 외부 유출이 민감할 경우 채택
+- 2. Cloud 방식 -> Amazon, Google, MS 등 Cloud 공급 임대 Service 하는 회사들의 Service 임대, 개발환경 구축
+- 3. HyBrid 방식 -> On-Premise + Cloud 방식 혼용
+
+2. Cloud 기반 개발환경 구축
+- 1. 장비 임대, Storage 대여, 개발자 도구 및 생산성 향상 위한 각종 Utility 지원
+- 2. Cloud 기반 개발환경 Infra 제공 범위
+  = 1. Computing 환경 -> Program 설치, 운용할 H/W 장비 Setting
+  = 2. Storage -> 대규모 Data 저장, 관리, 전송, 이중화하기 위한 저장 장치 Setting
+  = 3. DB -> 실 Data 저장, 관리하기 위한 DB Setting
+  = 4. Networking 전송 -> 구성된 Service, Program, Content 효율적으로 전달
+  = 5. 개발자 도구 -> Program 실제 개발
+  = 6. 보안 환경 구축 -> 외부 침입으로부터 System, Data 보호
+  = 7. 응용 기술 Setting -> AR, VR 개발
+  = 8. 생산성 향상
