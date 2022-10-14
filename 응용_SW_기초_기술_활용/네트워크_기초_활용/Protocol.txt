@@ -1,1 +1,52 @@
+I. Protocol (통신규약)
+- 구문 (Syntax, Data 형식), 타이밍 (Timing, 순서, 속도조절), 의미 (Semantics, 오류, 제어정보)
 
+1. 캡슐화 (요약화) 데이터 - Data + 제어정보 (Protocol 제어정보, Error 검출코드, 주소 => HDLC 2계층)
+2. 동기제어 - 송신, 수신 측 시점 맞추기 (동기 / 비동기식)
+3. 경로 제어 (Routing) - Flooding, RIP, EGP
+4. 에러(오류) 제어 - 전송 중 발생 오류검출 및 정정, Data 나 제어정보의 파손에 대비 (ARQ, 해밍코드)
+5. 흐름 제어 - 데이터 전송량, 전송 속도 조절 (stop-and-wait (정지-대기, Packet 하나씩 보냄), sliding-window (여러 Packet 보냄))
+6. 순서 제어 - 흐름제어, 오류제어 용이
+7. 주소 지정 - 목적지 이름, 주소, 경로 부여
+8. 다중화 
+- 1. 한 개의 통신회선 여러 가입자들이 동시 사용
+- 2. FDM (주파수 분할 다중화), TDM (시분할 다중화), STDM (동기식 시분할 다중화), ATDM (비동기식 시분할)
+
+9. 단편화 - 일정 크기의 작은 블록으로 자르는 작업 (PDU: Protocol Data Unit)
+10. 재결합 - 단편화된 Block 을 원래 Data 로 모으는 것 (역다중화 X)
+
+II. TCP/IP Protocol
+1. 정의
+- 1. 응용계층 -> HTTP, TELNET, FTP, STMP, SNMP, DNS
+- 2. 전송계층 -> TCP, UDP
+- 3. 인터넷계층 -> IP, ICMP, IGMP, ARP(IP 주소 -> Mac 주소), RARP
+- 4. Network Access 계층 -> IEEE802, Ethernet, HDLC, X.25, RS-232C, ARQ
+
+2. 응용계층
+- SNMP (Simple Network Management Protocol, 간이 망 관리 Protocol)
+  = Network 장비 관리, 감시
+
+3. 전송 계층
+- 1. TCP (Transmission Control Protocol) -> 1:1 과외, 가상회선 연결 상태 (신뢰성 및 안전성 증가), Packet 다중화, 순서, 오류, 흐름 제어
+- 2. UDP (User Datagram Protocl) -> 학교수업, 비연결형 (신뢰성 저하, 속도 증대, 실시간 전송 유리)
+
+4. 인터넷 계층
+- 1. IP (Internet Protocol) -> OSI 7계층 Network 계층, Datagram 기반 비연결형 서비스 (안정성 X), 패킷 분해/조립, 주소지정, 경로선택 기능 (오류, 흐름 제어 X)
+- 2. ICMP (Internet Control Message Protocol, 인터넷 제어 메시지 프로토콜)
+  = 신뢰성 없는 IP 대신, Network IP 상태 및 에러 메시지 전달
+  
+- 3. IGMP (Internet Group Management Protocol, 멀티 캐스트 Routing)
+  = Router, Host 간 Multi Case (1:다) 환경 제공 (그룹 관리 위한 Protocol)
+  
+5. Network Access 계층 (망 접속 계층)
+- 1. IEEE802 (LAN 표준 Protocol)
+- 2. Ethernet (IEEE 802.3) -> CSMA/CD 방식 LAN
+- 3. HDLC -> Bit 위주 Data Link 제어 Protocol
+- 4. X.25 -> 패킷 전송, DTE/DCE 접속 규격
+- 5. RS-232C -> DTE, DCE 상호 접속, 물리적 Interface
+- 6. ARQ (Automatic Repeat reQuest, 자동 반복 요청) -> 오류가 발생한 Frame 을 재전송
+  = 1. 정지-대기 (Stop and Wait) ARQ => 하나의 블록 전송, 에러 발생 점검, 에러 발생 유무 신호 (긍정: ACK, 부정: NAK)
+  = 2. 연속 (Go Back N) ARQ => 연속적으로 전송, 부정 응답 이후 모든 블록 재전송
+  = 3. 연속 (Selective Repeat) AQR => 선택적 재전송, 연속적으로 전송, 부정 응답 있던 블록만 재전송
+  = 4. 적응적 (Adaptive) ARQ => 동적 블록 (가변적 Frame) --> 전송 효율 우수 --> 구현 복잡
+  
