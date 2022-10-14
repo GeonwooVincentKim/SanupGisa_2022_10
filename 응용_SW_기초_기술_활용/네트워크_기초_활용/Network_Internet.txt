@@ -39,3 +39,14 @@ III. 전용회선, 교환회선
  
 - 4. 데이터그램 방식 (가상경로 설정 X) -> 주소, 패킷번호 포함 전송
 
+IV. OSI 계층
+1. 물리 계층 - 메체간 Interface: 전기, 기능, 절차적 기능 정의 (표준 프로토콜: RS-232C, X.21), Repeater, Hub
+2. Data Link 계층 - 흐름제어, Frame 동기화, 오류제어, 에러검출 및 정의, 순서제어 (HDLC, LAPB, LLC, MAC, LAPD, PPP), Bridge, Switch, 랜카드
+3. Network 계층 - Network 연결설정, 유지, 해제, 교환기술, 경로설정, 패킷 정보전송 (X.25, IP), Router
+4. 전송(Transport) 계층
+- 1. 종단 System (End-To-End) 간 Data 전송기능 (TCP, UDP), 주소설정, 다중화, Gateway
+- 2. 전송 Service 단계: 연결설정 -> 전송 -> 연결해제
+
+5. Session 계층 - 대화(회화) 제어, Check 점(동기점), 소동기점과 대동기점 연결하여 회화 동기조절, PC
+6. 표현 계층 (Presentation) - 적당한 형태로 변환, 응용 계층에 맞게 변환, 구문검색, 암호화, 형식 변환, 압축, PC
+7. 응용 계층 - 사용자가 OSI 환경 접근, 정보교환, 전자 사서함, 파일 전송, 가상 Terminal, PC
