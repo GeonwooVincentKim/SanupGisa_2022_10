@@ -80,3 +80,15 @@ IV. 화이트박스 (White Box) Test
 
 3. WhiteBox Test 검증 기준 (Test Coverage, 테스트 커버리지)
 - Code (Source Code) Coverage (구문, 결정, 조건)
+
+V. Test 검증 기준 (Test Coverage, 테스트 커버리지)
+1. Test 범위 측정, 적정성
+2. 기능 기반 Coverage -> 전체 기능 모수, 실제 Test 수행된 기능의 수 측정
+3. 라인 Coverage -> 코드 Line 수, Test 수행된 기능 수 / 전체 기능 수
+4. Code (Source Code) Coverage
+- 1. 구조 Code 자체가 얼마나 Test 되었는지 확인
+- 2. 구문 (Statement, 문장) Coverage -> 모든 구문, 제어 구분 X (커버 영역 가장 좁음)
+- 3. 결정 (Decision Coverage) -> 모든 분기문 (조건문)
+- 4. 조건 (Condition Coverage) -> 모든 개별 조건식
+- 5. 조건/결정 Coverage -> 모든 조건문 + 각 개별 조건식
+- 6. 다중조건 Coverage -> 모든 개별조건식의 모든 가능한 논리적인 조합 고려
