@@ -41,3 +41,74 @@ IV. 사용자 중심 Design (User Centered Design)
 
 3. HCI (Huamn Computer Interaction or Interface) - 인간과 Computer 간 상호작용에 관한 연구
 4. 감성공학 (Human Sensibility Ergonomics) - 인체 특성과 감성을 제품 설계예 최대한 반영시키는 기술
+
+V. 사용성 평가 분석서 - 이슈사항 도출
+VI. Task 성공 Matrix
+1. Task 성공, 실패 여부 분석
+2. Error Matrix - 사용자 범한 실수를 수집하여 분석
+3. 효율성 Matrix
+- 1. Task 완료하는데 필요한 단계, 행동 개수, Task 마다 걸린 평균시간과 Task 성공률 비율 측정
+- 2. 걸리는 시간, 인지적 노력, 물리적 노력의 양
+
+4. 시간 기반 Task Matrix - Task 완료 시간 (Task 시간) 수집하여 분석
+5. NEM 기법 - 초심자 (Novice), 숙련자 (Export) 의 수행시간 비교
+
+** Usability Matrix -> 사용자 경험 Data 수집 및 분석
+** Data Logger (Data 이력 기록기) -> 아날로그 입력을 Digital 수로 변환, 자동 기록 장치
+
+VI. UI 관련 용어
+1. UI (User Interface Design) - 사람과 접하는 면을 설계 및 Design, IA 및 Interaction 설계, GUI Design 포함
+** Interface - 물리적, 가상적인 매개체, 인간과의 의사소통 가능하도록 일시적, 영속적 접근 목적
+** IA (Information Architecture) - SiteMap, Site 구조 파악
+** GUI (Graphical UI) - Graphic / Mouse 기반 Interface
+
+2. UX Concept Review (Concept: 차별화 전략) - 사용자 등을 대상으로 리뷰하여 제품 개선
+** UI Conception - 주요 화면 (Key Screen) 에 대한 Concept 설계 및 가시화
+
+3. Concept Model (개념모델) - 다양한 아이디어들을 간편하게 시각화
+4. 멘탈 모델 (심성 모델) - 사람 행동 동기, 사고 과정, 행동하는 감성적, 철학적 배경 깊이 이해, 의미상 가까운 것끼리 모아 놓은 친화도
+** Ethnography - 사람들 (Ethnos) + 기록 (Grapho)
+
+5. Card Sorting - 아이디어와 컨셉을 작은 카드에 적음
+6. 정량적 Research (Quantitiative Research, 통제된 조건, 수치화 Data) - 경쟁사 Site, 벤치마킹Site 또는 미정 Design 과 비교 -> 동선, 무엇, 몇 분
+7. 정성적 Research (Qualitative Research, 행동 원인, 의도 상황 파악, 수치화 X) - 정황과 Inste (깨우침) 얻기 위한 방법
+
+VII. 품질 평가 방법
+1. ISO/IEC 9126 - 품질 요소, 특정 정의, 개발공정에서 품질을 객관적으로 정량화
+2. ISO/IEC 14596 - 품질/측정 절차
+
+VII. ISO/IEC 9126
+1. 품질 모델 (Quality Model) - 품질 요구사항, 품질 평가 기준 제공 특성 집합, 그들간의 상황관계
+2. 기능성
+- 1. 실제 수행 결과, 품질 요구사항 차이 분석, 사용자 요구사항을 정확하게 만족하는 기능 제공
+- 2. 적절성 (적합성), 정밀성 (정확성), 상호 운용성 (상호 작용), 보안성 (비인가된 링크), 준수성 (표준, 규약, 관례, 법적 규제, 유사성 규정 -> 기능과 관련)
+
+3. 신뢰성
+- 1. 작동 시간동안 의도하는 기능을 수행 (오류 없이 믿고 사용)
+- 2. 성숙성 (고장회피), 고장 허용성 (특정 수준 이상의 성능 유지), 회복성 (복구성, Data 복구하고 성능 수준 다시 확보)
+
+4. 사용성
+- 1. 쉽게 인지 -> 향후 다시 사용하고 싶은지 여부
+- 2. 이해성 (SW 논리적인 개념, 적용 가능성 (응용 가능성) 분간), 학습성 (학습), 친밀성 (다시 사용하고 싶어하는 특성)
+
+5. 효율성
+- 1. 한정된 자원, 빨리 처리
+- 2. 시간 효율성 (처리 시간), 자원 효율성 (자원의 양)
+
+6. 유지보수성
+- 1. 요구사항 개선, 확장
+- 2. 분석성 (분석 용이성, 확인에 필요한 노력), 변경성 (수정), 안정성 (예상치 못한 결과물), 시험성 (검증)
+
+7. 이식성
+- 1. 다른 Platform (OS, 환경) 쉽게 적용 가능 여부
+- 2. 적용성 (환경 적응성, 특정 환경 전환 능력), 설치성 (설치 가능성, 설치), 대체성 (대체 가능성, 대신 사용 능력), 공존성 (다른 SW 와 공존)
+
+** 서로 다른 품질 관점 간 관련성 -> 내부속성(명세서, Source Code)은 요구된 외부 행위(기능)를 성취하기 위한 선결과제, 적절한 외부 행위는 사용 품질을 성취하기 위한 선결과제
+
+8. 외부 품질 (명시된 요구, 내제된 요구 충족하는 정도)
+9. 내부 품질 (내부적 S/W 속성 기반, 제품 속성 총체)
+10. 사용 품질 (사용자 관련, 사용자 요구 충족하는 정도)
+
+VIII. ISO/IEC 14598
+1. 제품 품질 향상, 제품 품질 선정 기준 제공
+2. ISO/IEC 9126 규정 따름, SI (System Integraion, 정보 System 통합) -> 정보 System 기획, 개발, 구축, 운영
