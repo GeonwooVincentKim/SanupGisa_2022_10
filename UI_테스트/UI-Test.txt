@@ -1,0 +1,43 @@
+I. UI Test 기법
+1. 휴리스틱 평가 (Heuristic Evaluation) - 전문가의 이론, 경험(Heuristic) 은 근거, 일련의 규칙들, 사용성 공학 방법, 휴리스틱 가이드라인, 결과물 = 평가보고서
+2. 페이퍼 프로토타입 (Paper Prototype) - 제품 전반적 컨셉, 흐름, 실제 출시될 제품 디자인 미리 경험해봄, 결과물 = Prototype
+
+** UI Test 수행 순서
+- 사용성 Test 계획 (UI Test 기법 선정) -> Test 환경 구축 (선정 기법 적합) -> 사용성 Test 계획서 작성 -> 사용성 Test 진행 -> 사용성 평가 분석서 작성 -> Test 결과보고
+
+3. 선호도 (Preference) 평가 - 중요도에 따른 선호도 예측, 사용자 감성 및 Needs (요구) 파악
+4. 성능 (Performance) 평가
+- 1. 사용자 제품 사용, Task (기능) 벌로 평가, 학습, 효율, 기억용이, 오류, 만족도 평가
+- 2. 학습성 (쉽게 학습), 효율성 (신속 사용), 기억 용이성 (능숙), 오류 (오류 적고, 극복), 만족도 평가 (즐겁고 만족)
+
+II. 사용성 (Usability)
+1. 사용자가 업무를 쉽고 편리하게 수행, 특정 맥락 사용에서의 효과성, 효율성, 만족도
+2. 사용자 피드백 받는 제품 개발 형식
+
+** 유용성 (Usefulness) - 얼마나 정확하게 수행, 무엇을 제공할 것인가 (사용자에게)
+
+III. 사용성 Test (Usability Test, UI Test 에 대한 보편적인 방법)
+1. 사용자가 제품 직접 사용, 사용성에서의 문제점 도출하는 행위
+2. Test 중심 사용자, 배포 전 최종 검증
+3. 종류
+- 1. 파일럿 Test -> Program, 소규모 시험 작동 해보기
+- 2. 심층 인터뷰 -> 일대일 면접
+- 3. 포커스 그룹 인터뷰 -> 6 ~ 12명정도 소비자 선발
+- 4. 맥락적 인터뷰 -> 특정 상황, 맥락, 특정 행동 조사
+
+4. 효과 - 제품 만족도 향상, 효율성, 낮은 에러, 쉬운 학습 이해도, 완성도 상승, 사용자 실수 최소화
+5. 사용성 Test 주의 사항 - 감성적인 측면, 기본적인 기능 Test 누락 주의, 자율 Test, 자세한 기능 설명 및 구현 방법, Test 지연 Check
+
+** 옵저베이션 (Observation) - 어떻게 구성, 어떻게 해서 생기는가, 사실을 있는 그대로 확인, 실험 대상이나 과정에 인위적인 간섭가하지 않는 것
+** 테스트 신뢰성 - Test 신뢰성 문제가 있는 Test 결과는 아무런 의미 X, 활용 X
+
+IV. 사용자 중심 Design (User Centered Design)
+1. 사용자 중심, Design 은 인간 사용자의 편의, 복지 실현에 초점, 사용자가 어떻게 사용하고 있고, 어떻게 사용하게 될지 분석, Design Research 활용
+2. Interaction Design
+- 1. Interaction -> Digital System 과 사람이 주고 받는 일련의 의사소통
+- 2. Interaction Design -> 사람 행동과 이에 반응하는 System 의 절차 설계
+- 3. HCI Interaction -> 사용자에게 최적의 경험 제공
+- 4. System Design Interaction -> System 의 행동적인 측면
+
+3. HCI (Huamn Computer Interaction or Interface) - 인간과 Computer 간 상호작용에 관한 연구
+4. 감성공학 (Human Sensibility Ergonomics) - 인체 특성과 감성을 제품 설계예 최대한 반영시키는 기술
