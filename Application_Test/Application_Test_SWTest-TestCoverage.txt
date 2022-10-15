@@ -58,3 +58,25 @@ II. SW (Application) Test 유형
 
 III. 블랙박스 (Black Box) Test 
 1. 사용자 요구사항 명세서, 구현된 기능 Test, 테스트과정 (단위 Test, 통합 Test, System Test, 인수 Test)
+2. 종류
+- 1. 동치분할검사 (Equivalance Partitioning, 동등분할 기법, 동치 Class 분해)
+  = 입력 자료에 초점, TC 생성, 타당한 입력자료와 타당하지 않은 입력자료 개수 균등
+
+- 2. 경계값 분석 (Boundary Value Analysis) -> 입력조건 경계값으로 Test (동치분할 검사 보관)
+- 3. 원인-효과 Graph 검사 (Cause Effect Graphing Testing) -> 입력 자료 간 관계와 출력
+- 4. 오류 예측 검사 (Falut Based Testing) -> 과거 경험, Tester 감각 (보충적 검사 기법)
+- 5. 비교검사 (Comparsion Testing) -> 동일 자료 제공, 동일 결과 출력되는지 Test
+
+IV. 화이트박스 (White Box) Test
+1. 내부 로직 -> 수행 경로 구조, Loop (구조 Test), Program 논리적 경로 제어, 모듈 안 작동 직접 관찰, 원시 코드 모든 문장 한 번 이상 수행
+2. 종류
+- 1. 기초 경로 검사 (Basic Path, Testing, McCabe 제안, 대표적 기법)
+  = 1. 논리적 복잡성 측정, 실행 경로 기초 정의
+  = 2. McCabe 의 순환 복잡도 (Cyclomatic Complexity) 
+    -> 원시 Code 복잡도, 논리적인 경로 수 **(복잡도 = 영역수(폐구간) + 1)
+  
+- 2. 제어 구조 검사
+  = 조건 검사 (논리적 조건), 루프 검사 (반복 구조), 데이터 흐름 검사 (변수 정의, 변수 사용 위치)
+
+3. WhiteBox Test 검증 기준 (Test Coverage, 테스트 커버리지)
+- Code (Source Code) Coverage (구문, 결정, 조건)
