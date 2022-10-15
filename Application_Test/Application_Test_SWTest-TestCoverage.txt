@@ -20,8 +20,38 @@ I. S/W (Application) Test
 - 8. Test 는 별도의 팀에서 수행, 작은 부분에서 시작, 점차 확대 진행
 
 4. Test Process
-- 1. Test 계획 (Test 목적, 범위, 대상 System 구조, Test 일정, 종료 조건 정의, 조작 및 비용 산정)
-- 2. Test 분석 및 Design (Test 목적, 원칙 검토, 요구사항 분석, Risk 분석, 우선순위 결정, Test Data 준비, Test 환경 및 도구 준비)
-- 3. TC 및 Test 시나리오 작성 (TC 작성, Test Script 작성, TC 검토 확인, Test 시나리오 작성)
-- 4. Test 수행 (초기 Data Loading, Test 수행, 결함 Reporting)
-- 5. Test 결과 및 Reporting (Test 결과 정리, Test Process Review, Test 결과 평가, Test Reporting)
+- 1. Test 계획 -> Test 목적, 범위, 대상 System 구조, Test 일정, 종료 조건 정의, 조작 및 비용 산정)
+- 2. Test 분석 및 Design -> Test 목적과 원칙 검토, 요구사항 분석, Risk 분석, 우선순위 결정, Test Data 준비, Test 환경 및 도구 준비)
+- 3. TC 및 Test 시나리오 작성 -> TC 작성, Test Script 작성, TC 검토 확인, Test 시나리오 작성)
+- 4. Test 수행 -> 초기 Data Loading, Test 수행, 결함 Reporting)
+- 5. Test 결과 및 Reporting -> Test 결과 정리, Test Process Review, Test 결과 평가, Test Reporting)
+
+5. S/W Test 산출물
+- 1. Test 계획서 -> Test 수행 계획한 문서)
+- 2. TC (Test Case) -> 입력 값, 실행 조건, 기대 결과로 구성, Test 항목 명세서
+- 3. Test 시나리오 -> TC 집합, TC 의 동작순서 기술 문서
+- 4. Test 결과서 -> Test 결과 정리한 문서
+
+II. SW (Application) Test 유형
+1. Test 목적
+- 1. 회복(Recovery) Test -> System 고의 실패, System 정상 복귀
+- 2. 안전(Security) Test -> 불법적인 S/W 접근, 보안적인 결함 미리 점검
+- 3. 강도(Stress, 부하) Test -> 과부하 시 정상작동 검증
+- 4. 성능(Performance) Test -> System 응답시간, 특정 시간 내 처리 업무량, 사용자 요구에 System 반응속도
+- 5. 구조(Structure) Test -> 내부 논리 경로, Source Code 복잡도
+- 6. 회귀(Regression) Test -> 변경, 수정된 Code 의 새로운 결함 발견 여부 평가
+- 7. 병행 (Parellel) Test -> 변경된 System 과 기존 System 동일한 Data 입력, 결과 비교
+
+2. Test 종류
+- 1. 명세 기반 Test -> 주어진 명세 빠짐없이 TC 구현여부 확인 (동등(동치) 분할, 경계 값 분석))
+- 2. 구조 기반 Test -> 내부 논리 흐름에 따라 TC 작성 (구문 기반, 조건 기반)
+- 3. 경험 기반 Test -> Tester 경험 토대로, 직관 및 기술능력 기반 (오류 예측 검사)
+
+3. Program 실행여부
+- 1. 정적 Test (Static Test) -> Program 실행 없이 Source Code 구조 분석 (Code 검사, 워크스루, Inspection)
+- 2. 동적 Test (Dynamic Test) -> Program 실행 요구 (Black Box Test, White Box Test)
+
+* 정형기술 검토 (FTR; Formal Technical Review) -> 요구사항 일치여부 및 결함 발생여부 검토, 정적 분석 기법
+- 1. 동료 검토 (Peer Review) -> 명세서 내용 동료들(이해관계자) 에게 직접 설명
+- 2. 워크스루 (Walkthrough) -> 오류검출, 해결책은 나중으로 미룸
+- 3. 인스펙션 (Inspection) -> 검토 전문가, 요구사항 명세서 확인, 결함 발견, 검토 방법
