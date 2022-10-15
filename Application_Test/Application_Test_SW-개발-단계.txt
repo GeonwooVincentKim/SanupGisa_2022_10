@@ -1,1 +1,88 @@
+I. SW 생명주기 V Model
+(Test 계획 및 설계) 요구사항 - 분석 - 설계 - 구현 
+(Test 수행) 단위 - 통합 - System - 인수
+
+1. 단위 Test (Unit Test) - 구현(코딩) 된 Module, 기능 수행 여부, 구조 기반 Test (내부 논리 흐름) 수행
+2. 통합 Test (Integration Test) - 모듈 간 Interface 연계 검증, 기능적 요구사항 = Black Box, 비기능적 요구사항 = White Box
+3. 인수 Test (Acceptance Test) 
+- 1. 사용자 요구분석 명세서
+- 2. 사용자 인수 (사용자 System 적절성 여부 확인)
+- 3. 운영상 인수 (System 관리자)
+- 4. 계약 인수 (계약 조건 준수 여부 확인)
+- 5. 규정 인수 (정부 지침, 법규, 규정)
+- 6. 알파 검사 (개발자 & 사용자)
+- 7. 베타 검사 (사용자 & 다수의 사용자)
+
+II. 통합 Test
+1. 모듈 간 Interface 관련 오류, 단위 Test 끝난 모듈 또는 컴포넌트 단위, 설계
+2. 비점증적 통합 - 전체 프로그램 대상, 소규모 SW, 빅뱅 방식 (모듈 간 Interface 를 고려하지 않음, 한꺼번에 결합)
+3. 점증적 통합 - 오류 수정 용이, Interface 와 연관된 오류 완전히 Test
+
+III. 하향식 통합 (Top-Down)
+1. 메인 제어 모듈 (Program, Stub), 아래 방향으로 제어 경로 따라 이동, 하향식, '깊이-우선', '너비-우선'
+2. 하위 제어 모듈 및 모든 하위 컴포넌트, Dummy Module (Stub, Test 용) -> 깊이우선, 너비우선 -> Module, Component 통합 -> Stub 의 실제 Module, Component 로 작성됨
+3. Stub -> 시험용 Module
+
+IV. 하향식 통합 (Bottom Up)
+1. Application 구조, 최하위 Level 의 Module 또는 Component 부터 위쪽 방향으로 제어 경로 따라 이동, 구축 및 Test 시작
+2. 최하위 Level 모듈
+3. (1) Cluster (Component 하위 Module 기능 수행) 결합
+4. (2) Dummy Module 인 Driver (제어 프로그램) 작성
+5. (3) 각 Cluster 들은 Program 위쪽으로 결합, Driver 는 실제 Module or Component 로 대체
+6. Driver -> 하위 Module 구동 위한 제어 Program (Interface)
+
+V. 혼합식 통합 - 상위 Level (상향식 통합) + 하위 Level (하향식 통합) => 최적 Test
+VI. 회귀 Test
+1. 통합 Test 완료 후, 변경된 Module 및 Component, 새로운 오류 여부 확인
+2. 회귀 TC 선정 방법 - TC 대표 Sample 도출 -> 영향도 가장 높은 Application 추가적으로 TC 도출 -> 실제 수정 발생한 Module, Component 추가적으로 TC 도출
+3. 변경된 부분 Test
+
+VI. Test Case (TC, 테스트 케이스)
+1. 명세 기반 Test 설계 산출물, 입력 값, 실행 조건, 기대 결과로 구성된 Test 항목 명세서
+2. 작성 순서 - 정확, 재사용성, 간결성
+- 1. Test 계획 검토, 자료 확보 -> Test 계획 재검토
+- 2. 위험 평가, 우선순위 결정 -> 결함 위험 정도, 우선순위 결정
+- 3. Test 요구사항 정의 -> System 요구사항, Test 대상 재검토
+- 4. Test 구조 설계, Test 방법 결정 -> TC 일반적 형식 결정, TC 분류 방법 결정, Test 절차, 장비, 도구 Test 문서화 방법 결정
+- 5. TC 정의 -> TC 작성, 입력 값, 실행 조건, 예상결과 기술
+- 6. TC 타당성 확인, 유지보수 -> 기능, 환경 변화에 따라 TC 갱신, 유용성 검토
+
+VII. Test Oracle
+1. 사전에 정의된 참 값 입력하여 비교
+2. 유형
+- 1. 참(True) Oracle -> 모든 입력 값, 기대결과 생성
+- 2. Sampling Oracle -> 특정 몇 개의 입력 값
+- 3. Heuristic Oracle -> 나머지 값들에 대해서 휴리스틱(Heuristic, 추정) 으로 처리, 확률 및 직관에 의한 예상결과 작성
+- 4. 일관성 검사 (수행 전후 결과 값 동일 여부 확인)
+
+3. Oracle 적용 방안
+- 1. 참 Oracle -> 항공기, Imbedded, 발전소 SW
+- 2. Sampling Oracle, 추정 Oracle -> 일반, 업무용, 게임, 오락
+
+VIII. Test Scenario (테스트 시나리오)
+1. TC 집합체, TC 동작 순서 기술, Test 항목 빠짐없이 작성
+2. 작성 시 유의점
+- 1. TC 분리 작성 -> System, Module, 항목별 Test
+- 2. 요구사항과 설계 문서
+- 3. 식별자 번호, 순서 번호, Test Data, TC, 예상결과, 확인
+
+IX. Test Data 및 Test Condition 이해
+1. Test Data
+- 1. System 적합성 시험, 특별히 개발된 Data 집합, 주관 갖춘 Data
+- 2. Test Data 필요성 -> 잘못된 Data 사용, 잘못된 결과 도출되어 시간 낭비
+- 3. Test Data 유형 -> 실제 Data, 가상 Data
+- 4. Test Data 준비 -> 실제 운영 Data, Script 통해서 생성
+
+2. Test 조건
+- 1. Test 시작 조건 -> 단계별, 회차별 Test 수행, 모든 조건 만족하지 않아도 Test 시작 가능
+- 2. Test 종료 조건 -> 정상적인 Test 모두 수행, Test 일정 만료, 비용 모두 소진
+- 3. Test 성공, 실패 판단 기준 -> 예상 결과 만족 시 성공, 아니면 실패로 판단, 좋은 결과가 나올 때 성공
+
+X. Test 환경 구축
+1. 실제 운영 System 과 동일, 유사한 사양 H/W, S/W, Network 시설 구척
+2. Hardware -> Server (WAS, DBMS), Client (Laptop, PC), Network (내부 LAN, 공용 인터넷)
+3. S/W -> 응용 S/W 설치, 필요한 Data 구축
+4. 가상 System -> 독립된 Test 환경 구축하기 힘든 경우, 가상 머신, Network = VLAN
+5. 가상 Machine -> Computer 를 Emulation 하는 S/W
+6. VLAN -> 근거리 통신망 (LAN), 물리적인 망 구성과 상관없음
 
