@@ -1,1 +1,5 @@
+I. S/W (Application) Test
+1. 개념 - S/W 결함 찾아내는 활동
+2. 확인 (Validation) Test - 사용자 입장, 고객 요구사항, 구현 확인, 결과
+3. 검증 (Verification) Test - 개발자(시험자) 입장, 설계 명세서, 만들어졌는지 확인, 결과
 
